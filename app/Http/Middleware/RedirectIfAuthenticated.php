@@ -18,13 +18,20 @@ class RedirectIfAuthenticated
      * @return mixed
      */
     public function handle(Request $request, Closure $next, ...$guards)
-    {
+    {        
         $guards = empty($guards) ? [null] : $guards;
-
+        
         foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+            if ($guard=='admin' && Auth::guard($guard)->check()) {
+                return redirect(route('admin.dashboard'));
+            }else if ($guard=='guru' && Auth::guard($guard)->check()) {
+                return redirect(route('guru.jadwal'));
+            }else if ($guard=='murid' && Auth::guard($guard)->check()) {
+                return redirect(route('murid.jadwal'));
+            }else if ($guard=='ortu' && Auth::guard($guard)->check()) {
+                return redirect(route('ortu.jadwal'));
             }
+            
         }
 
         return $next($request);

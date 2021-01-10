@@ -46,6 +46,22 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+        'murid' => [
+            'driver' => 'session',
+            'provider' => 'murid',
+        ],
+        'guru' => [
+            'driver' => 'session',
+            'provider' => 'guru',
+        ],
+        'ortu' => [
+            'driver' => 'session',
+            'provider' => 'ortu',
+        ],
     ],
 
     /*
@@ -69,6 +85,22 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+        'guru' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Guru::class,
+        ],
+        'murid' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Murid::class,
+        ],
+        'ortu' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Ortu::class,
         ],
 
         // 'users' => [

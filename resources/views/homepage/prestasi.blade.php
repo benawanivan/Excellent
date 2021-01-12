@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Prestasi Siswa</span>
+                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Prestasi Siswa</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Prestasi Siswa</span>
+                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Prestasi Siswa</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

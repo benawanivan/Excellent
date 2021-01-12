@@ -1,3 +1,6 @@
+
+@include('templates.header1')
+=======
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -49,71 +52,13 @@
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
 
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="Logo Excellent"></a>
-        
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        <!-- end of mobile menu toggle button -->
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Program</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSf_Ffp3yWkq0a9wjgAqQiCIdXTkcKBdJ_WL5xp280HIAyBvew/viewform"><span class="item-text">Reguler</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSf_Ffp3yWkq0a9wjgAqQiCIdXTkcKBdJ_WL5xp280HIAyBvew/viewform"><span class="item-text">Platinum</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="https://forms.gle/hDrpffhV9mzAz4eN7"><span class="item-text">Tanya PR Online</span></a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Mengapa Kami</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">Profil</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Lokasi Cabang</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Keunggulan</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Prestasi Siswa</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">Testimoni</span></a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Log in</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('murid.login')}}"><span class="item-text">Siswa</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="{{route('ortu.login')}}"><span class="item-text">Orang Tua</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="{{route('guru.login')}}"><span class="item-text">Guru</span></a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="https://campsite.bio/daftar.excellent">Daftar Sekarang</a>
-                </li>
-            </ul>
-            <span class="nav-item social-icons">
-                <span class="fa-stack">
-                    <a href="http://api.whatsapp.com/send?phone=6283822837999&text=Halo%20saya%20ingin%20bertanya%20tentang%20program%20belajar%20di%20EXCELLENT">
-                        <i class="fas fa-circle fa-stack-2x whatsapp"></i>
-                        <i class="fab fa-whatsapp fa-stack-1x"></i>
-                    </a>
-                </span>
-            </span>
-        </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+ <!-- Website Title -->
+ <title>EXCELLENT STUDY CENTRE</title>
 
+@include('templates.header2')
+
+@include('templates.navbar')
     <!-- slider -->
     <!--
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -152,6 +97,7 @@
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
+                        <img class="img-fluid" src="images/rank.png">
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
@@ -165,6 +111,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/sistembelajar.png" alt="alternative">
+                    </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="text-container">
@@ -172,14 +121,14 @@
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-check"></i>
-                                <div class="media-body">Siswa akan mendapatkan pendampingan secara personal sesuai dengan kebutuhannya dan kurikulum sekolah</div>
+                                <div class="media-body" style="color:#fff">Siswa akan mendapatkan pendampingan secara personal sesuai dengan kebutuhannya dan kurikulum sekolah</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-check"></i>
-                                <div class="media-body">Perkembangan siswa dengan pemahaman materi sekolahnya akan dipantau menyeluruh</div>
+                                <div class="media-body" style="color:#fff"> Perkembangan siswa dengan pemahaman materi sekolahnya akan dipantau menyeluruh</div>
                             </li>
                         </ul>
-                        <a class="btn-solid-white" href="#">Lebih lengkap</a>
+                        <a class="btn-solid-white" href="{{ url('/keunggulan') }}">Lebih lengkap</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -187,123 +136,60 @@
     </div> <!-- end of basic-2 -->
     <!-- end of details 2 -->
 
-    <!-- Testimoni -->
-    <div class="slider-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/testimonials-2-men-talking.svg" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <h2>Apa kata <span class="orange">MURID KAMI</span></h2>
-
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider">
-                            <div class="swiper-wrapper">
-                                
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-1.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan.</p>
-                                            <p class="testimonial-author">JOCELYN LAU - VII SMP Citra Kasih</p>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-2.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">Sangat membantu dalam mengerjakan ulangan, ujian, tryout do sekolah. Nindy selalu gampang mengingat kalau dapat pembelajaran di Excellent, dan menyenangkan karena bisa request waktu les jika berubah kegiatan di sekolah.</p>
-                                            <p class="testimonial-author">ANINDYA A - VI SD Bhakti</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-3.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">Kesan saya selama belajar di excellent itu seru banget dan saya menjadi mudah mengerti, suasananya bagus, gurunya ramah dan penjelasan yang diberikan sangat jelas dan bagus.</p>
-                                            <p class="testimonial-author">ASHANNA - X SMAN 16</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-                               
-                            </div> <!-- end of swiper-wrapper -->
-        
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-        
-                        </div> <!-- end of swiper-container -->
-                    </div> <!-- end of slider-container -->
-                    <!-- end of card slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-2 -->
-    <!-- end of testimonials -->
-
-    <!-- Details 1 -->
-    <div class="basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <h2>Apakah Anda lulusan Pendidikan, MIPA, atau Teknik?</h2>
-                        <p>Anda memiiki passion berkarir di bidang pendidikan?<br>
-                        Ingin mengembangkan diri di dunia pendidikan, suka tantangan, menyukai anak-anak dan ingin terus berkembang?<br>
-                        Mari bergabung dan berkembang bersama kami dalam tim yang solid.</p>
-                        <a class="btn-solid-reg" href="https://www.jobstreet.co.id/en/companies/776811-pt-bina-juara-indonesia">Lamar Sekarang</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of details 1 -->
+    
 
 
-  
-
-
-    <!-- Pricing -->
-    <div id="pricing" class="cards-2">
+ <!-- Pricing -->
+ <div id="pricing" class="cards-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Program Belajar <br> <span class="orange">SESUAI KURIKULUM SEKOLAH</span></h2>
-                    <p class="p-heading p-large">nasional, nasional, internasional</p>
+                    <p class="p-heading p-large">nasional, nasional plus, internasional</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
+
+                     <!-- Card-->
+                     <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">SMP</div>
+                            <div class="card-subtitle">7,8,9</div>
+                            <div class="price">
+                                <img src="images/smp.png" style="width: 50%">
+                                <span class="currency"></span><span class="value"></span>
+                                <div class="frequency"></div>
+                            </div>
+                            <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Matematika</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Fisika</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Kimia</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Biologi</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
 
                     <!-- Card-->
                     <div class="card">
                         <div class="card-body">
                             <div class="card-title">SD</div>
                             <div class="card-subtitle">3,4,5,6</div>
-                            <hr class="cell-divide-hr">
                             <div class="price">
+                            <img src="images/sd.png" style="width: 50%">
                                 <span class="currency"></span><span class="value"></span>
                                 <div class="frequency"></div>
                             </div>
-                            <hr class="cell-divide-hr">
+  
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-check"></i><div class="media-body">Matematika</div>
@@ -326,43 +212,13 @@
                      <!-- Card-->
                      <div class="card">
                         <div class="card-body">
-                            <div class="card-title">SMP</div>
-                            <div class="card-subtitle">7,8,9</div>
-                            <hr class="cell-divide-hr">
-                            <div class="price">
-                                <span class="currency"></span><span class="value"></span>
-                                <div class="frequency"></div>
-                            </div>
-                            <hr class="cell-divide-hr">
-                            <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Matematika</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Fisika</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Kimia</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Biologi</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
-                     <!-- Card-->
-                     <div class="card">
-                        <div class="card-body">
                             <div class="card-title">SMA</div>
                             <div class="card-subtitle">10,11,12</div>
-                            <hr class="cell-divide-hr">
                             <div class="price">
+                                <img src="images/sma.png" style="width: 50%">
                                 <span class="currency"></span><span class="value"></span>
                                 <div class="frequency"></div>
                             </div>
-                            <hr class="cell-divide-hr">
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-check"></i><div class="media-body">Matematika</div>
@@ -384,61 +240,35 @@
     </div> <!-- end of cards-2 -->
     <!-- end of pricing -->
 
-    
-    <!-- Footer -->
-    <div class="footer">
+
+    <!-- Details 1 -->
+    <div class="basic-1">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="footer-col">
-                        <h4>EXCELLENT STUDY CENTRE</h4>
-                        <p>Bimbingan Belajar<br>Matematika, Fisika, Kimia<br>SD-SMP-SMA<br>Nas, Nas+, Inter</p>
-                    </div>
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h2>Apakah Anda lulusan Pendidikan, MIPA, atau Teknik?</h2>
+                        <p>Anda memiiki passion berkarir di bidang pendidikan?<br>
+                        Ingin mengembangkan diri di dunia pendidikan, suka tantangan, menyukai anak-anak dan ingin terus berkembang?<br>
+                        Mari bergabung dan berkembang bersama kami dalam tim yang solid.</p>
+                        <a class="btn-solid-reg" href="https://www.jobstreet.co.id/en/companies/776811-pt-bina-juara-indonesia">Lamar Sekarang</a>
+                    </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
-                <div class="col-md-6">
-                    <div class="footer-col last">
-                        <h4>Social Media</h4>
-                        <span class="fa-stack">
-                            <a href="https://www.facebook.com/excellent.bimbel/">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://www.instagram.com/excellentstudycentre/?hl=en">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> 
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/lamarkerja.png" alt="alternative">
+                    </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of details 1 -->
 
 
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://inovatik.com">Inovatik</a> - All rights reserved</p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
+  
+
+
+   
+
     
-    	
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
-</body>
-</html>
+    @include('templates.footer')

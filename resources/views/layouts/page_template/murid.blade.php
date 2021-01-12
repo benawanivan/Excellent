@@ -13,10 +13,10 @@
         </div>
         <div class="sidebar-wrapper" id="sidebar-wrapper">
             <ul class="nav">
-            <li class="@if ($activePage == 'home') active @endif">
-                <a href="/dashboard">
+            <li class="@if ($activePage == 'jadwalMurid') active @endif">
+                <a href="/jadwal">
                 <i class="now-ui-icons design_app"></i>
-                <p>{{ __('Dashboard') }}</p>
+                <p>{{ __('Jadwal Bimbel') }}</p>
                 </a>
             </li>
             <li class="@if ($activePage == 'profile') active @endif">
@@ -34,7 +34,7 @@
 <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
     <div class="container-fluid">
         <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">{{ $namePage }}</a>
+            <a class="navbar-brand" href="#pablo">Selamat Datang {{ \Auth::user()->nama }}</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
         </div>
     </div>
 </nav>
-<div class="panel-header">
+<div class="panel-header" style="height: 0%;padding:35px">
 </div>
 <!-- End Navbar -->
 

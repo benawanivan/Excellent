@@ -17,11 +17,15 @@ use App\Http\Controllers\OrtuController;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-})->name('landing');
-
-
+Route::get('/', 'App\Http\Controllers\PagesController@home');
+Route::get('/reguler', 'App\Http\Controllers\PagesController@reguler');
+Route::get('/platinum', 'App\Http\Controllers\PagesController@platinum');
+Route::get('/tanyapr', 'App\Http\Controllers\PagesController@tanyapr');
+Route::get('/profil', 'App\Http\Controllers\PagesController@profil');
+Route::get('/lokasi', 'App\Http\Controllers\PagesController@lokasi');
+Route::get('/keunggulan', 'App\Http\Controllers\PagesController@keunggulan');
+Route::get('/testimoni', 'App\Http\Controllers\PagesController@testimoni');
+Route::get('/prestasi', 'App\Http\Controllers\PagesController@prestasi');
 
 Route::get('admin/login', 'App\Http\Controllers\Auth\AdminAuthController@getAdminLogin')->name('admin.login');
 Route::post('admin/login', 'App\Http\Controllers\Auth\AdminAuthController@postAdminLogin');
@@ -53,3 +57,6 @@ Route::middleware('auth:ortu')->group(function(){
 
 // Route::get('dashboard','App\Http\Controllers\AdminController@getdashboard');
 Auth::routes();
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

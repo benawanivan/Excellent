@@ -1,7 +1,7 @@
 @extends('layouts.app', [
-    'namePage' => 'Login Admin',
+    'namePage' => 'Login Murid',
     'class' => 'sidebar-mini',
-    'activePage' => 'Login Admin',
+    'activePage' => 'Login Murid',
     ])
 
 @section('content')

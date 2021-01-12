@@ -45,11 +45,10 @@ Route::middleware('auth:guru')->group(function(){
 
 Route::middleware('auth:murid')->group(function(){
 	Route::get('murid/jadwal','App\Http\Controllers\MuridController@viewJadwal')->name('murid.jadwal');
+	Route::post('murid/logout','App\Http\Controllers\Auth\MuridAuthController@postMuridLogout')->name('murid.logout');
 });
 
 Route::middleware('auth:ortu')->group(function(){
 	Route::get('ortu/jadwal','App\Http\Controllers\OrtuController@viewJadwal')->name('ortu.jadwal');
 });
 
-// Route::get('dashboard','App\Http\Controllers\AdminController@getdashboard');
-Auth::routes();

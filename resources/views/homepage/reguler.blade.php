@@ -1,11 +1,11 @@
-@include('templates.header1')
+@include('layouts.header1')
 
  <!-- Website Title -->
  <title>EXCELLENT STUDY CENTRE</title>
 
-@include('templates.header2')
+@include('layouts.header2')
 
-@include('templates.navbar')
+@include('layouts.navbar')
 
     <!-- Header -->
     <header id="header" class="ex-header">
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Program Reguler</span>
+                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Program Reguler</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -229,7 +229,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumbs">
-                        <a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>Program Reguler</span>
+                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Program Reguler</span>
                     </div> <!-- end of breadcrumbs -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -238,4 +238,4 @@
     <!-- end of breadcrumbs -->
 
     
-    @include('templates.footer')
+    @include('layouts.footer')

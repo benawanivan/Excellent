@@ -1,11 +1,11 @@
-@include('templates.header1')
+@include('layouts.header1')
 
  <!-- Website Title -->
  <title>EXCELLENT STUDY CENTRE</title>
 
-@include('templates.header2')
+@include('layouts.header2')
 
-@include('templates.navbar')
+@include('layouts.navbar')
 
     <!-- Header -->
     <header id="header" class="ex-header">
@@ -151,4 +151,4 @@
     <!-- end of breadcrumbs -->
 
     
-    @include('templates.footer')
+    @include('layouts.footer')

@@ -40,20 +40,26 @@ Route::get('ortu/login', 'App\Http\Controllers\Auth\OrtuAuthController@getOrtuLo
 Route::post('ortu/login', 'App\Http\Controllers\Auth\OrtuAuthController@postOrtuLogin');
 
 Route::middleware('auth:admin')->group(function(){
-	Route::get('dashboard','App\Http\Controllers\AdminController@viewDashboard')->name('admin.dashboard');
+	Route::get('admin/dashboard','App\Http\Controllers\AdminController@viewDashboard')->name('admin.dashboard');
+	Route::post('admin/logout','App\Http\Controllers\Auth\AdminAuthController@postAdminLogout')->name('admin.logout');
 });
 
 Route::middleware('auth:guru')->group(function(){
 	Route::get('guru/jadwal','App\Http\Controllers\GuruController@viewJadwal')->name('guru.jadwal');
+	Route::post('guru/logout','App\Http\Controllers\Auth\GuruAuthController@postGuruLogout')->name('guru.logout');
 });
 
 Route::middleware('auth:murid')->group(function(){
 	Route::get('murid/jadwal','App\Http\Controllers\MuridController@viewJadwal')->name('murid.jadwal');
+	Route::get('murid/profile','App\Http\Controllers\MuridController@viewProfile')->name('murid.profile');
+	Route::get('murid/database','App\Http\Controllers\MuridController@viewSoal')->name('murid.soal');
 	Route::post('murid/logout','App\Http\Controllers\Auth\MuridAuthController@postMuridLogout')->name('murid.logout');
+	
 });
 
 Route::middleware('auth:ortu')->group(function(){
 	Route::get('ortu/jadwal','App\Http\Controllers\OrtuController@viewJadwal')->name('ortu.jadwal');
+	Route::post('ortu/logout','App\Http\Controllers\Auth\OrtuAuthController@postOrtuLogout')->name('ortu.logout');
 });
 
 

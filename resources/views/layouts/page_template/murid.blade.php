@@ -14,13 +14,19 @@
         <div class="sidebar-wrapper" id="sidebar-wrapper">
             <ul class="nav">
             <li class="@if ($activePage == 'jadwalMurid') active @endif">
-                <a href="/jadwal">
-                <i class="now-ui-icons design_app"></i>
+                <a href="{{route('murid.jadwal')}}">
+                <i class="now-ui-icons ui-1_calendar-60"></i>
                 <p>{{ __('Jadwal Bimbel') }}</p>
                 </a>
             </li>
-            <li class="@if ($activePage == 'profile') active @endif">
-                <a href="/profile">
+            <li class="@if ($activePage == 'soalMurid') active @endif">
+                <a href="{{route('murid.soal')}}">
+                <i class="now-ui-icons education_paper"></i>
+                <p>{{ __('Database Soal') }}</p>
+                </a>
+            </li>
+            <li class="@if ($activePage == 'profileMurid') active @endif">
+                <a href="{{route('murid.profile')}}">
                 <i class="now-ui-icons users_single-02"></i>
                 <p>{{ __('Profile') }}</p>
                 </a>

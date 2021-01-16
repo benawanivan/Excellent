@@ -15,4 +15,13 @@ class MuridController extends Controller
         return view('murid.viewJadwal');
        
     }
+    public function viewProfile()
+    {
+        return view('murid.viewProfile');
+       
+    }
+    public function viewSoal()
+    {
+        return view('murid.viewSoal');
+    }
 }

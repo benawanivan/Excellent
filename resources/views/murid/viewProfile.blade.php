@@ -1,9 +1,9 @@
 @extends('layouts.app', [
-    'namePage' => 'Lihat Jadwal Siswa',
+    'namePage' => 'Profile Siswa',
     'class' => 'sidebar-mini',
-    'activePage' => 'jadwalOrtu',
+    'activePage' => 'profileMurid',
     ])
 
 @section('content')
-jadwal 
+profile
 @endsection

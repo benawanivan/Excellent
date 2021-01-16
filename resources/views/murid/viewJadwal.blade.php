@@ -5,5 +5,5 @@
     ])
 
 @section('content')
-aaaa
+lihat jadwal
 @endsection

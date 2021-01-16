@@ -45,9 +45,10 @@
                     <div class="text-container">
                         <h3>Excellent Poris Indah</h3>
                         <p>Perumahan Poris Indah Blok C No 36<br>Cipondoh, Tangerang<br> (+62) 813 10000 645</p>
-                        <div class="map-responsive">
+                        {{-- <div class="map-responsive">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6444841176994!2d106.68600831346994!3d-6.178320995527084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f84d7fb974d5%3A0x1f47f47948b4bc0f!2sEXCELLENT%20STUDY%20CENTRE!5e0!3m2!1sen!2sid!4v1610434191632!5m2!1sen!2sid" allowfullscreen></iframe>
-                        </div>
+                        </div> --}}
+                        <div id="googleMap" style="width:100%;height:400px;"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -126,5 +127,15 @@
     </div> <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 
-    
+    <script>
+        function myMap() {
+        var mapProp= {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        </script>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwO6Ik8ZIwwYwTkZwMbKVCpxJ-xsRmj0k&callback=myMap"></script>
     @include('layouts.footer')

@@ -131,7 +131,7 @@
 
 
     <!-- Sistem Belajar Offline -->
-    <div class="basic-2">
+    <div class="basic-2" style="padding-top: 3.75rem;>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -197,7 +197,7 @@
     <!-- end of details 2 -->
 
       <!-- Laporan belajar -->
-      <div class="basic-2">
+      <div class="basic-2" style="padding-bottom: 4rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">

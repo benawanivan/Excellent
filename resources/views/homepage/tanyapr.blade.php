@@ -36,7 +36,7 @@
 
 
     <!-- Sistem Belajar Offline -->
-    <div class="basic-2">
+    <div class="basic-2" style="padding-top: 3.75rem;"> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -48,7 +48,7 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/offline.png" alt="alternative">
+                        <img class="img-fluid" src="images/tanya1.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/online.png" alt="alternative">
+                        <img class="img-fluid" src="images/tanya2.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -82,7 +82,7 @@
     <div class="basic-2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                     <div class="text-container">
                         <p class="white">Kamu bisa refill GOLD kamu dengan kuantiti berikut. Tiap gold memiliki masa aktif 1 bulan dimulai dari tanggal pembelian gold ya</p>
                         <ul class="list-unstyled li-space-lg indent">
@@ -102,9 +102,9 @@
                         <p class="white">Makin besar paket yang kamu ambil, nominal harga per soal akan semakin murah loh</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/whiteboard2.png" alt="alternative">
+                        <img class="img-fluid" src="images/gold.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -113,7 +113,7 @@
     <!-- end of details 2 -->
 
       <!-- Laporan belajar -->
-      <div class="basic-2">
+      <div class="basic-2" style="padding-bottom: 4rem;">
         <div class="container">
             <div class="row" style="text-align:center">
                 <div class="col-lg-12">

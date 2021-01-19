@@ -19,6 +19,13 @@
   <link href="{{ asset('assets') }}/css/now-ui-dashboard.css?v=1.3.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{ asset('assets') }}/demo/demo.css" rel="stylesheet" />
+  <!--   Core JS Files   -->
+  <script src="{{ asset('assets') }}/js/core/jquery.min.js"></script>
+  <script src="{{ asset('assets') }}/js/core/popper.min.js"></script>
+  <script src="{{ asset('assets') }}/js/core/bootstrap.min.js"></script>
+  <script src="{{ asset('assets') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="{{ asset('js/calendar.js') }}"></script>
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 </head>
 
 <body class="{{ $class ?? '' }}">
@@ -39,11 +46,7 @@
       @include('layouts.page_template.guest')
     @endguest
   </div>
-  <!--   Core JS Files   -->
-  <script src="{{ asset('assets') }}/js/core/jquery.min.js"></script>
-  <script src="{{ asset('assets') }}/js/core/popper.min.js"></script>
-  <script src="{{ asset('assets') }}/js/core/bootstrap.min.js"></script>
-  <script src="{{ asset('assets') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  
   <!--  Google Maps Plugin    -->
   {{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> --}}
   <!-- Chart JS -->
@@ -54,6 +57,7 @@
   <script src="{{ asset('assets') }}/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset('assets') }}/demo/demo.js"></script>
+   <script src="{{ asset('js/app.js') }}"></script>
   @stack('js')
 </body>
 

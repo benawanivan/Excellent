@@ -10,6 +10,8 @@ class Guru extends Authenticatable
 {
     use HasFactory, Notifiable;
     protected $table = "guru";
+    public $primaryKey = 'id';
+    public $timestamps = false; 
     /**
      * The attributes that are mass assignable.
      *
@@ -31,4 +33,8 @@ class Guru extends Authenticatable
         'remember_token',
     ];
 
+    public function Cabang()
+    {
+        return $this->belongsTo(Cabang::class,'id_cabang','id');
+    }
 }

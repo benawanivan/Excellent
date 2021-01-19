@@ -31,4 +31,8 @@ class Ortu extends Authenticatable
         'remember_token',
     ];
 
+    public function Murid()
+    {
+        return $this->belongsTo(Murid::class,'id_murid','id');
+    }
 }

@@ -15,4 +15,9 @@ class Cabang extends Model
     {
         return $this->hasMany(Murid::class,'id_cabang');
     }
+
+    public function Guru()
+    {
+        return $this->hasMany(Guru::class,'id_cabang');
+    }
 }

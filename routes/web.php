@@ -46,6 +46,9 @@ Route::middleware('auth:admin')->group(function(){
 
 Route::middleware('auth:guru')->group(function(){
 	Route::get('guru/jadwal','App\Http\Controllers\GuruController@viewJadwal')->name('guru.jadwal');
+	Route::get('guru/editprofile','App\Http\Controllers\GuruController@editProfile')->name('guru.profil');
+	Route::get('guru/database','App\Http\Controllers\GuruController@viewSoal')->name('guru.soal');
+	Route::put('guru/updateProfile','App\Http\Controllers\GuruController@updateProfile')->name('guru.updateProfile');
 	Route::post('guru/logout','App\Http\Controllers\Auth\GuruAuthController@postGuruLogout')->name('guru.logout');
 });
 
@@ -60,6 +63,8 @@ Route::middleware('auth:murid')->group(function(){
 
 Route::middleware('auth:ortu')->group(function(){
 	Route::get('ortu/jadwal','App\Http\Controllers\OrtuController@viewJadwal')->name('ortu.jadwal');
+	Route::get('ortu/editprofile','App\Http\Controllers\OrtuController@editProfile')->name('ortu.profil');
+	Route::put('ortu/updateProfile','App\Http\Controllers\OrtuController@updateProfile')->name('ortu.updateProfile');
 	Route::post('ortu/logout','App\Http\Controllers\Auth\OrtuAuthController@postOrtuLogout')->name('ortu.logout');
 });
 

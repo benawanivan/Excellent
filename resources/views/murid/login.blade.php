@@ -59,7 +59,7 @@
                         </div>
                     </form>
                     <div class="form-group row" style="justify-content: center;">
-                        <p>Belum memiliki akun? <a href="http://api.whatsapp.com/send?phone=6283822837999&text=Halo%20saya%20ingin%20bertanya%20tentang%20program%20belajar%20di%20EXCELLENT">Daftar disini<a></p>
+                        <p>Belum memiliki akun? <a href="http://api.whatsapp.com/send?phone=6283822837999&text=Halo%20saya%20ingin%20bertanya%20tentang%20program%20belajar%20di%20EXCELLENT">Hubungi<a></p>
                     </div>
                 </div>
             </div>

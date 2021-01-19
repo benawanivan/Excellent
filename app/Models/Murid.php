@@ -10,6 +10,8 @@ class Murid extends Authenticatable
 {
     use HasFactory, Notifiable;
     protected $table = "murid";
+    public $primaryKey = 'id';
+    public $timestamps = false;
     /**
      * The attributes that are mass assignable.
      *
@@ -30,5 +32,8 @@ class Murid extends Authenticatable
         'password',
         'remember_token',
     ];
-
+    public function Cabang()
+    {
+        return $this->belongsTo(Cabang::class,'id_cabang','id');
+    }
 }

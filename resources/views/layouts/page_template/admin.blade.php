@@ -38,10 +38,6 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            
-            
-                
-            
                 <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}

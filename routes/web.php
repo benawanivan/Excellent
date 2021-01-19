@@ -53,6 +53,7 @@ Route::middleware('auth:murid')->group(function(){
 	Route::get('murid/jadwal','App\Http\Controllers\MuridController@viewJadwal')->name('murid.jadwal');
 	Route::get('murid/profile','App\Http\Controllers\MuridController@viewProfile')->name('murid.profile');
 	Route::get('murid/database','App\Http\Controllers\MuridController@viewSoal')->name('murid.soal');
+	Route::put('murid/updateProfile','App\Http\Controllers\MuridController@updateProfile')->name('murid.updateProfile');
 	Route::post('murid/logout','App\Http\Controllers\Auth\MuridAuthController@postMuridLogout')->name('murid.logout');
 	
 });

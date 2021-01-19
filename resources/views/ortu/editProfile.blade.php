@@ -6,11 +6,63 @@
 
 @section('content')
 <div class="container">
-<h1>Profile Wali Murid</h1>
-<hr>
-<table>
-        
-</table>
+@include('alerts.errors')
+@include('alerts.success')
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+            <h4 class="card-title"> Profil Wali Murid </h4>
+            </div>
+            <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                    <tr>
+                    <td>
+                        Nama
+                    </td>
+                    <td>
+                    {{ \Auth::user()->nama }}
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        Username
+                    </td>
+                    <td>
+                    {{ \Auth::user()->username }}
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        Wali dari
+                    </td>
+                    <td>
+                    {{ \Auth::user()->murid->nama}}
+                    </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
 
+    {{ Form::open(['action' => ['App\\Http\\Controllers\\OrtuController@updateProfile'], 'method' => 'PUT']) }}
+
+    <div class="form-group">
+        {{ Form::label('password', 'Password: ', ['class' => 'form-label']) }}
+        {{ Form::password('password',['class' => 'form-control'])}}
+    </div>
+    <div class="form-group">
+        {{ Form::label('repassword', 'Confirm Password: ', ['class' => 'form-label']) }}
+        {{ Form::password('repassword',['class' => 'form-control'])}}
+    </div>
+
+    {{ Form::submit('Update Password', ['class' => 'btn btn-primary']) }}
+    {{ Form::close() }}
 </div>
 @endsection

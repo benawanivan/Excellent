@@ -6,12 +6,14 @@
 
 @section('content')
 <div class="container">
+@include('alerts.errors')
+@include('alerts.success')
     <br>
     <div class="row">
         <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-            <h4 class="card-title"> Profile Pengajar </h4>
+            <h4 class="card-title"> Profil Pengajar </h4>
             </div>
             <div class="card-body">
             <div class="table-responsive">
@@ -38,7 +40,7 @@
                         Cabang
                     </td>
                     <td>
-                    {{ \Auth::user()->id_cabang}}
+                    {{ \Auth::user()->cabang->nama}}
                     </td>
                     </tr>
                 </tbody>
@@ -49,5 +51,18 @@
         </div>
     </div>
 
+    {{ Form::open(['action' => ['App\\Http\\Controllers\\GuruController@updateProfile'], 'method' => 'PUT']) }}
+
+    <div class="form-group">
+        {{ Form::label('password', 'Password: ', ['class' => 'form-label']) }}
+        {{ Form::password('password',['class' => 'form-control'])}}
+    </div>
+    <div class="form-group">
+        {{ Form::label('repassword', 'Confirm Password: ', ['class' => 'form-label']) }}
+        {{ Form::password('repassword',['class' => 'form-control'])}}
+    </div>
+
+    {{ Form::submit('Update Password', ['class' => 'btn btn-primary']) }}
+    {{ Form::close() }}
 </div>
 @endsection

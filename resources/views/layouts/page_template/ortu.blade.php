@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="@if ($activePage == 'editprofil') active @endif">
-                <a href="{{route('guru.profil')}}">
+                <a href="{{route('ortu.profil')}}">
                 <i class="now-ui-icons users_circle-08"></i>
                 <p>{{ __('Edit Profil') }}</p>
                 </a>

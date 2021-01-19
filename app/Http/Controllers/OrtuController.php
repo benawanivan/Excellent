@@ -20,4 +20,15 @@ class OrtuController extends Controller
     {
         return view('ortu.editProfile');
     }
+
+    public function updateProfile(Request $request){
+        $ortu = AUTH::user();
+        $this->validate($request,[
+            'password' => 'required|min:8',
+            'repassword' => 'required_with:password|same:password||min:8'
+        ]);
+        $ortu->password = Hash::make($request->password);
+        $ortu->save();
+        return back()->with('success',"Password berhasil diubah");
+    }
 }

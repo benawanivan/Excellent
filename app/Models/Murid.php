@@ -36,4 +36,9 @@ class Murid extends Authenticatable
     {
         return $this->belongsTo(Cabang::class,'id_cabang','id');
     }
+
+    public function Ortu()
+    {
+        return $this->hasMany(Ortu::class,'id_murid');
+    }
 }

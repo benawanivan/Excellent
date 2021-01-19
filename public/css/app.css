@@ -10925,7 +10925,60 @@ a.text-dark:focus {
 
 #wrap-calendar {
   width: 1100px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   margin: 0 auto;
+}
+
+.row > div[class*=col-] {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.searchbar {
+  margin-bottom: 24px;
+  margin-top: auto;
+  height: 40px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search_input {
+  color: orangered;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 350px;
+  padding: 0 10px;
+  caret-color: transparent;
+  line-height: 20px;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 350px;
+  caret-color: red;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon {
+  background: white;
+  color: #e74c3c;
+}
+
+.search_icon {
+  height: 20px;
+  width: 20px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: orangered;
+  text-decoration: none;
 }
 
 #external-events {

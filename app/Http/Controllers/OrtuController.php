@@ -15,4 +15,9 @@ class OrtuController extends Controller
         return view('ortu.viewJadwal');
        
     }
+
+    public function editProfile()
+    {
+        return view('ortu.editProfile');
+    }
 }

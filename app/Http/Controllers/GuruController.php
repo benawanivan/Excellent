@@ -12,7 +12,11 @@ class GuruController extends Controller
     }
     public function viewJadwal()
     {
-        return view('guru.viewJadwal');
-       
+        return view('guru.viewJadwal'); 
+    }
+
+    public function editProfile()
+    {
+        return view('guru.editProfile');
     }
 }

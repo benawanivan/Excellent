@@ -45,18 +45,19 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                     <!-- Card-->
-                     <div class="card">
+                <!-- Card-->
+                <div class="card">
                         <div class="card-body">
-                            <div class="card-title">SMP</div>
-                            <div class="card-subtitle">7,8,9</div>
+                            <div class="card-title">SD</div>
+                            <div class="card-subtitle">3,4,5,6</div>
                             <div class="price">
-                                <img src="images/smp.png" style="width: 50%">
+                            <img src="images/sd.png" style="width: 50%">
                                 <span class="currency"></span><span class="value"></span>
                                 <div class="frequency"></div>
                             </div>
+  
                             <ul class="list-unstyled li-space-lg">
-                            <li class="media">
+                                <li class="media">
                                     <i class="fas fa-check"></i><div class="media-body">Pembahasan Ulangan, PR</div>
                                 </li>
                                 <li class="media">
@@ -70,19 +71,18 @@
                     </div> <!-- end of card -->
                     <!-- end of card -->
 
-                    <!-- Card-->
-                    <div class="card">
+                     <!-- Card-->
+                     <div class="card">
                         <div class="card-body">
-                            <div class="card-title">SD</div>
-                            <div class="card-subtitle">3,4,5,6</div>
+                            <div class="card-title">SMP</div>
+                            <div class="card-subtitle">7,8,9</div>
                             <div class="price">
-                            <img src="images/sd.png" style="width: 50%">
+                                <img src="images/smp.png" style="width: 50%">
                                 <span class="currency"></span><span class="value"></span>
                                 <div class="frequency"></div>
                             </div>
-  
                             <ul class="list-unstyled li-space-lg">
-                                <li class="media">
+                            <li class="media">
                                     <i class="fas fa-check"></i><div class="media-body">Pembahasan Ulangan, PR</div>
                                 </li>
                                 <li class="media">
@@ -130,7 +130,7 @@
 
    
     <!-- Sistem Belajar Offline -->
-    <div class="basic-2" style="padding-top: 3.75rem;>
+    <div class="basic-2" style="padding-top: 3.75rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">

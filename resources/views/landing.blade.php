@@ -99,32 +99,7 @@
                 <div class="col-lg-12">
 
                      <!-- Card-->
-                     <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">SMP</div>
-                            <div class="card-subtitle">7,8,9</div>
-                            <div class="price">
-                                <img src="images/smp.png" style="width: 50%">
-                                <span class="currency"></span><span class="value"></span>
-                                <div class="frequency"></div>
-                            </div>
-                            <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Matematika</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Fisika</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Kimia</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Biologi</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+                     
 
                     <!-- Card-->
                     <div class="card">
@@ -155,6 +130,34 @@
                         </div>
                     </div> <!-- end of card -->
                     <!-- end of card -->
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">SMP</div>
+                            <div class="card-subtitle">7,8,9</div>
+                            <div class="price">
+                                <img src="images/smp.png" style="width: 50%">
+                                <span class="currency"></span><span class="value"></span>
+                                <div class="frequency"></div>
+                            </div>
+                            <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Matematika</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Fisika</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Kimia</div>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Biologi</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- end of card -->
+                    <!-- end of card -->
+
 
                      <!-- Card-->
                      <div class="card">

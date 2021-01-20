@@ -105,7 +105,23 @@
                     </div>
                 </div> 
             </div><!-- end of tandur -->
-
+            <br>
+            <br>
+             <!-- Taman Surya -->
+             <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container">
+                        <h3>Excellent BSD City</h3>
+                        <p>Jl. Rawa Buntu Utara Blok BJ No. 15<br>BSD Sektor 1-3 <br>Rawa Buntu, Serpong, Tangerang Selatan<br>(+62) 838 2283 7999</p>
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.844535531901!2d106.68035719654566!3d-6.304520947999093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e52b31bd8413%3A0x165211dd582e3a56!2sJl.%20Rawa%20Buntu%20Utara%20Blok%20BJ%20No.15%2C%20RT.1%2FRW.11%2C%20Rw.%20Buntu%2C%20Kec.%20Serpong%2C%20Kota%20Tangerang%20Selatan%2C%20Banten%2015310!5e0!3m2!1sen!2sid!4v1611063113730!5m2!1sen!2sid" frameborder="0" style="/* border: none; */position: absolute;width: 75%;height: 50%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="images/tamansurya.png">
+                </div> <!-- end of col -->
+            </div><!-- end of taman surya -->
 
         </div> <!-- end of container -->
     </div> <!-- end of ex-basic-2 -->

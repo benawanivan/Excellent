@@ -10904,6 +10904,149 @@ a.text-dark:focus {
   }
 }
 
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a p {
+  color: #f96332;
+}
+
+.wrapper-sidebar {
+  width: 100%;
+}
+
+#sidebar2 {
+  min-width: 260px;
+  max-width: 260px;
+  height: 100%;
+  background: #f96332;
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+
+#sidebar2.active {
+  margin-left: -260px;
+}
+
+#sidebar2.active .custom-menu-sidebar {
+  margin-right: -50px;
+}
+
+#sidebar2 h1 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#sidebar2 h1 .logo {
+  color: #fff;
+}
+
+#sidebar2 ul.components {
+  padding: 0;
+}
+
+#sidebar2 ul li {
+  font-size: 16px;
+}
+
+#sidebar2 ul li > ul {
+  margin-left: 10px;
+}
+
+#sidebar2 ul li > ul li {
+  font-size: 14px;
+}
+
+#sidebar2 ul li a {
+  padding: 10px 0;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#sidebar2 ul li a:hover {
+  color: #fff;
+}
+
+#sidebar2 ul li.active > a {
+  color: #f96332;
+}
+
+@media (max-width: 767.98px) {
+  #sidebar2 {
+    margin-left: -260px;
+  }
+
+  #sidebar2.active {
+    margin-left: 0;
+  }
+
+  #sidebar2 .custom-menu-sidebar {
+    margin-right: -50px !important;
+    top: 10px !important;
+  }
+}
+
+.custom-menu-sidebar {
+  transition: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-menu-sidebar {
+    transition: none;
+  }
+}
+
+.custom-menu-sidebar .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.custom-menu-sidebar .btn.btn-primary {
+  background: #f14107;
+  border-color: #f14107;
+}
+
+.custom-menu-sidebar .btn.btn-primary:hover,
+.custom-menu-sidebar .btn.btn-primary:focus {
+  background: #f14107 !important;
+  border-color: #f14107 !important;
+}
+
+a[data-toggle=collapse] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 767.98px) {
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+#content {
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
 .title-dashboard {
   text-align: center !important;
   padding-top: 24px;

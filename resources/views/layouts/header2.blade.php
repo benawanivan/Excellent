@@ -5,7 +5,9 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
-	
+	<link href="css/fontawesome.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    
 	<!-- Favicon  -->
     <link rel="icon" href="images/logo_favicon.png">
 </head>

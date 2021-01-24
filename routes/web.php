@@ -17,7 +17,9 @@ use App\Http\Controllers\OrtuController;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\PagesController@home');
+Route::get('/', function () {
+    return view('landing');
+})->name('landing');
 Route::get('/reguler', 'App\Http\Controllers\PagesController@reguler');
 Route::get('/platinum', 'App\Http\Controllers\PagesController@platinum');
 Route::get('/tanyapr', 'App\Http\Controllers\PagesController@tanyapr');

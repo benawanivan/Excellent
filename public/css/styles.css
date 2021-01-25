@@ -47,7 +47,7 @@ Colors:
 }
 
 .carousel .carousel-item:first-of-type {
-    background-image: url("/images/nilaibagus.png");
+    background-image: url("http://s9.favim.com/orig/130806/flower-flowers-photography-pink-Favim.com-833641.jpg");
 }
 
 .carousel .carousel-item:nth-of-type(2) {
@@ -821,8 +821,8 @@ input[type='checkbox'] {
 }
 
 .header .header-content {
-	padding-top: 8rem;
-	padding-bottom: 4rem;
+	padding-top: 4rem;
+	padding-bottom: 0rem;
 	text-align: center;
 }
 
@@ -1103,8 +1103,8 @@ input[type='checkbox'] {
 }
 
 .cards-2 .card .price {
-	padding-top: 0.875rem;
-	padding-bottom: 1.5rem;
+	/* padding-top: 0.875rem;
+	padding-bottom: 1.5rem; */
 }
 
 .cards-2 .card .value {
@@ -1556,12 +1556,12 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack .fa-stack-1x {
-    color: #fff;
+    color: #f16622;
 	transition: all 0.2s ease;
 }
 
 .footer .fa-stack .fa-stack-2x {
-	color: #f16622;
+	color: #fff;
 	transition: all 0.2s ease;
 }
 
@@ -1702,7 +1702,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header .header-content {
-		padding-top: 10.5rem;
+		/* padding-top: 10.5rem; */
 	}
 
 	.header h1 {
@@ -1928,7 +1928,7 @@ a:hover.back-to-top {
 	}
 
 	.header .header-content {
-		padding-top: 11.5rem;
+		/* padding-top: 11.5rem; */
 		text-align: left;
 	}
 
@@ -2100,7 +2100,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header .header-content {
-		padding-top: 12.5rem;
+		/* padding-top: 12.5rem; */
 	}
 
 	.header .text-container {

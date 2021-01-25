@@ -31,6 +31,9 @@ const app = new Vue({
     el: '#app',
 });
 
+
+
+
     /*!
  * FullCalendar v1.6.4
  * Docs & License: http://arshaw.com/fullcalendar/

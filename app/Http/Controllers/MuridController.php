@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Mapel;
+use App\Models\Soal;
 use Auth;
 use Hash;
 
@@ -24,7 +26,8 @@ class MuridController extends Controller
     }
     public function viewSoal()
     {
-        return view('murid.viewSoal');
+        $soal = Soal::all();
+        return view('murid.viewSoal')->with('soal',$soal);
     }
     public function updateProfile(Request $request){
         $murid = AUTH::user();
@@ -35,5 +38,10 @@ class MuridController extends Controller
         $murid->password = Hash::make($request->password);
         $murid->save();
         return back()->with('success',"Password berhasil diubah");
+    }
+
+    public function addSoal(){
+        $mapel = Mapel::all();
+        return view('murid.addSoal',['mapel'=>$mapel],compact('mapel'));
     }
 }

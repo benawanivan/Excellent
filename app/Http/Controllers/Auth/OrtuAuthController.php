@@ -79,6 +79,6 @@ class OrtuAuthController extends Controller
         auth()->guard('ortu')->logout();
         session()->flush();
 
-        return redirect()->route('ortu.login');
+        return redirect()->route('landing');
     }
 }

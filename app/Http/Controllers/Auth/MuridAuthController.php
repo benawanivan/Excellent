@@ -79,6 +79,6 @@ class MuridAuthController extends Controller
         auth()->guard('murid')->logout();
         session()->flush();
 
-        return redirect()->route('murid.login');
+        return redirect()->route('landing');
     }
 }

@@ -21,6 +21,9 @@ class CreateGuru extends Migration
             $table->unsignedBigInteger('id_cabang');
             $table->rememberToken();
             $table->string('link_meeting');
+            $table->foreign('id_cabang')
+                ->references('id')->on('cabang')
+                ->onDelete('cascade');
         });
     }
 

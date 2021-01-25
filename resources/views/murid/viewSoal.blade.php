@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row">
                 @foreach ($soal as $s)
-                <div class="col-md-3 col-xs-6">
+                <div class="col-xl-3 col-md-6 col-xs-6 ">
                     <div class="card ">
 
                         <div class="card-body">

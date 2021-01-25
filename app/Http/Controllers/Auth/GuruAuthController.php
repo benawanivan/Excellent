@@ -79,6 +79,6 @@ class GuruAuthController extends Controller
         auth()->guard('guru')->logout();
         session()->flush();
 
-        return redirect()->route('guru.login');
+        return redirect()->route('landing');
     }
 }

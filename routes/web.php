@@ -68,6 +68,7 @@ Route::middleware('auth:murid')->group(function(){
 
 Route::middleware('auth:ortu')->group(function(){
 	Route::get('ortu/jadwal','App\Http\Controllers\OrtuController@viewJadwal')->name('ortu.jadwal');
+	Route::get('ortu/laporan','App\Http\Controllers\OrtuController@viewLaporan')->name('ortu.laporan');
 	Route::get('ortu/editprofile','App\Http\Controllers\OrtuController@editProfile')->name('ortu.profil');
 	Route::put('ortu/updateProfile','App\Http\Controllers\OrtuController@updateProfile')->name('ortu.updateProfile');
 	Route::post('ortu/logout','App\Http\Controllers\Auth\OrtuAuthController@postOrtuLogout')->name('ortu.logout');

@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+
 class Ortu extends Authenticatable
 {
     use HasFactory, Notifiable;
     protected $table = "ortu";
+    public $primaryKey = 'id';
+    public $timestamps = false; 
     /**
      * The attributes that are mass assignable.
      *

@@ -13,6 +13,12 @@
           </div>
           <div class="sidebar-wrapper" id="sidebar-wrapper">
               <ul class="nav">
+                <li class="@if ($activePage == 'laporanmingguan') active @endif">
+                    <a href="{{route('ortu.laporan')}}">
+                    <i class="now-ui-icons files_paper"></i>
+                    <p>{{ __('Laporan Mingguan') }}</p>
+                    </a>
+                </li>
                 <li class="@if ($activePage == 'jadwalOrtu') active @endif">
                     <a href="{{route('ortu.jadwal')}}">
                     <i class="now-ui-icons ui-1_calendar-60"></i>
@@ -43,7 +49,7 @@
              {{-- <div class="navbar-wrapper">
                  <a class="navbar-brand" href="#pablo"><p>Selamat Datang {{ \Auth::user()->nama }}</p> </a>
              </div> --}}
-             <a href="{{ route('ortu.logout') }}" onclick="event.preventDefault();
+             <a href="{{ url('/') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
                     <p>Logout</p>
                 </a>

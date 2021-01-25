@@ -1,7 +1,7 @@
 @extends('layouts.app', [
-    'namePage' => 'Login Admin',
+    'namePage' => 'Login Wali Murid',
     'class' => 'sidebar-mini',
-    'activePage' => 'Login Admin',
+    'activePage' => 'Login Ortu',
     ])
 
 @section('content')
@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Login Orang Tua</div>
+                <div class="card-header">Login Wali Murid</div>
 
                 <div class="card-body">
                     

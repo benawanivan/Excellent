@@ -15,8 +15,15 @@ class CreateSoal extends Migration
     {
         Schema::create('soal', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->timestamps();
+            $table->string('judul');
+            
+            $table->string('file');
+            $table->date('tgl_buat');
+            $table->unsignedBigInteger('id_mapel');
+            $table->foreign('id_mapel')
+                ->references('id')->on('mapel')
+                ->onDelete('cascade');
+            
         });
     }
 

@@ -25,6 +25,12 @@
                     <p>{{ __('Database Soal') }}</p>
                     </a>
                 </li>
+                <li class="@if ($activePage == 'dataMurid') active @endif">
+                    <a href="{{route('admin.dataMurid')}}">
+                    <i class="now-ui-icons design_bullet-list-67"></i>
+                    <p>{{ __('Data Siswa') }}</p>
+                    </a>
+                </li>
               
               </ul>
           </div>

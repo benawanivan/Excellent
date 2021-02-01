@@ -181,7 +181,7 @@
     <!-- end of pricing -->
 
     <!-- Testimoni slider -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -200,11 +200,11 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> -->
     <!-- end of testimoni slider -->
 
     <!-- Testimoni -->
-   <div class="slider-2">
+   <div id="testimoni" class="slider-2" style="padding-top:2rem;padding-bottom:2rem">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -216,19 +216,48 @@
                             <div class="swiper-wrapper">
                                 
                                 <!-- Slide -->
-                                <div class="swiper-slide">
+                                <div class="//swiper-slide">
                                     <div class="card">
-                                        <img class="card-image" src="images/jocelyn.png" alt="alternative">
+                                        <div class="row">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/jocelyn.png" alt="alternative">
+                                            </div>
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
+                                                <p class="testimonial-author" style="text-align:left;font-size:150%">JOCELYN LAU</p>
+                                                <p class="testimonial-author" style="text-align:left">VII SMP Citra Kasih</p>
+                                            </div>    
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Sangat membantu dalam mengerjakan ulangan, ujian, tryout do sekolah. Nindy selalu gampang mengingat kalau dapat pembelajaran di Excellent, dan menyenangkan karena bisa request waktu les jika berubah kegiatan di sekolah."</p>
+                                                <p class="testimonial-author" style="text-align:right;font-size:150%">ASHANNA</p>
+                                                <p class="testimonial-author" style="text-align:right">X SMAN 16</p>
+                                            </div>  
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/ashanna.png" alt="alternative">
+                                            </div> 
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/anindya.png" alt="alternative">
+                                            </div>
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Sangat membantu dalam mengerjakan ulangan, ujian, tryout do sekolah. Nindy selalu gampang mengingat kalau dapat pembelajaran di Excellent, dan menyenangkan karena bisa request waktu les jika berubah kegiatan di sekolah."</p>
+                                                <p class="testimonial-author" style="text-align:left;font-size:150%">ANINDYA A</p>
+                                                <p class="testimonial-author" style="text-align:left">VI SD Bhakti</p>
+                                            </div>    
+                                        </div>
+                                        
                                         <div class="card-body">
-                                            <p class="testimonial-text">Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan.</p>
-                                            <p class="testimonial-author">JOCELYN LAU - VII SMP Citra Kasih</p>
+                                            
                                         </div>
                                     </div>
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
         
                                 <!-- Slide -->
-                                <div class="swiper-slide">
+                                <!-- <div class="swiper-slide">
                                     <div class="card">
                                         <img class="card-image" src="images/anindya.png" alt="alternative">
                                         <div class="card-body">
@@ -236,11 +265,11 @@
                                             <p class="testimonial-author">ANINDYA A - VI SD Bhakti</p>
                                         </div>
                                     </div>        
-                                </div> <!-- end of swiper-slide -->
+                                </div> --> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
         
                                 <!-- Slide -->
-                                <div class="swiper-slide">
+                                <!-- <div class="swiper-slide">
                                     <div class="card">
                                         <img class="card-image" src="images/ashanna.png" alt="alternative">
                                         <div class="card-body">
@@ -248,7 +277,8 @@
                                             <p class="testimonial-author">ASHANNA - X SMAN 16</p>
                                         </div>
                                     </div>        
-                                </div> <!-- end of swiper-slide -->
+                                </div>  -->
+                                <!-- end of swiper-slide -->
                                 <!-- end of slide -->
                                
                             </div> <!-- end of swiper-wrapper -->

@@ -58,6 +58,7 @@ Route::middleware('auth:murid')->group(function(){
 	Route::get('murid/jadwal','App\Http\Controllers\MuridController@viewJadwal')->name('murid.jadwal');
 	Route::get('murid/profile','App\Http\Controllers\MuridController@viewProfile')->name('murid.profile');
 	Route::get('murid/database','App\Http\Controllers\MuridController@viewSoal')->name('murid.soal');
+	Route::get('murid/database/search','App\Http\Controllers\MuridController@searchSoal')->name('murid.searchSoal');
 	Route::get('murid/database/tambah','App\Http\Controllers\MuridController@addSoal')->name('murid.addSoal');
 	Route::post('murid/database/tambah','App\Http\Controllers\SoalController@store')->name('murid.storeSoal');
 	Route::post('murid/database/download','App\Http\Controllers\SoalController@download')->name('murid.downloadSoal');

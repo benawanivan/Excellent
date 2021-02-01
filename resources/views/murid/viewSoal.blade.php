@@ -19,11 +19,18 @@
         <div class="container h-100">
             <div class="d-flex justify-content-left h-100">
                 <div class="searchbar">
-                    <input class="search_input" type="text" name="" placeholder="Search...">
-                    <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                    <form action="{{ route('murid.searchSoal') }}" method="get">
+                        {{ csrf_field() }}
+                    <input class="search_input" type="text" name="keyword" placeholder="Search...">
+                    <button type="submit" class="search_icon btn"><i class="fas fa-search"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
+        @if (!is_null($keyword))
+            <h2>Keyword: {{$keyword}}</h2>
+        @endif
+        
         <div class="container">
             <div class="row">
                 @foreach ($soal as $s)
@@ -90,6 +97,7 @@
             </div>
         </div>
     </div>
+    {{ $soal->links() }}
 
     </div>
 @endsection

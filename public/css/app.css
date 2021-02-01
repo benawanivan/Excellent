@@ -11049,7 +11049,6 @@ a[data-toggle=collapse] {
 
 .title-dashboard {
   text-align: center !important;
-  padding-top: 24px;
 }
 
 .subtitle-dashboard {
@@ -11113,6 +11112,7 @@ a[data-toggle=collapse] {
 }
 
 .search_icon {
+  margin-top: 0;
   height: 20px;
   width: 20px;
   float: right;

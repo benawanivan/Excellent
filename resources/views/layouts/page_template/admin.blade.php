@@ -19,6 +19,12 @@
                     <p>{{ __('Dashboard') }}</p>
                     </a>
                 </li>
+                <li class="@if ($activePage == 'soalAdmin') active @endif">
+                    <a href="{{route('admin.soal')}}">
+                    <i class="now-ui-icons education_paper"></i>
+                    <p>{{ __('Database Soal') }}</p>
+                    </a>
+                </li>
               
               </ul>
           </div>

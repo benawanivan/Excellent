@@ -43,6 +43,13 @@ Route::post('ortu/login', 'App\Http\Controllers\Auth\OrtuAuthController@postOrtu
 
 Route::middleware('auth:admin')->group(function(){
 	Route::get('admin/dashboard','App\Http\Controllers\AdminController@viewDashboard')->name('admin.dashboard');
+	Route::get('admin/soal','App\Http\Controllers\AdminController@viewSoal')->name('admin.soal');
+	Route::get('admin/soal/search','App\Http\Controllers\AdminController@searchSoal')->name('admin.searchSoal');
+	Route::get('admin/soal/tambah','App\Http\Controllers\AdminController@addSoal')->name('admin.addSoal');
+	Route::get('admin/soal/backup','App\Http\Controllers\SoalController@backupSoal')->name('admin.backupSoal');
+	Route::post('admin/soal/deleteAll','App\Http\Controllers\SoalController@deleteAllSoal')->name('admin.deleteAllSoal');
+	Route::post('admin/soal/download','App\Http\Controllers\SoalController@download')->name('admin.downloadSoal');
+	Route::post('admin/soal/tambah','App\Http\Controllers\SoalController@store')->name('admin.storeSoal');
 	Route::post('admin/logout','App\Http\Controllers\Auth\AdminAuthController@postAdminLogout')->name('admin.logout');
 });
 

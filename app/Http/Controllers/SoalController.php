@@ -36,4 +36,12 @@ class SoalController extends Controller
         return Storage::download('private/soal/'.$request->filename,$request->judul);
         // return response()->download(public_path('private/soal/'.$filename));
     }
+    public function backup(Request $request){
+        return Storage::download('private/soal/'.$request->filename,$request->judul);
+        // return response()->download(public_path('private/soal/'.$filename));
+    }
+    public function deleteAll(Request $request){
+        return Storage::download('private/soal/'.$request->filename,$request->judul);
+        // return response()->download(public_path('private/soal/'.$filename));
+    }
 }

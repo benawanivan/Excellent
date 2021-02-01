@@ -1,7 +1,7 @@
 @extends('layouts.app', [
 'namePage' => 'Database Soal',
 'class' => 'sidebar-mini',
-'activePage' => 'soalMurid',
+'activePage' => 'soalAdmin',
 ])
 
 @section('content')
@@ -12,14 +12,29 @@
         <h3 class="title title-dashboard">Database Soal</h3>
         <hr>
         <div class="pull-right">
-            {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@addSoal'], 'method' => 'GET']) }}
-            {{ Form::submit('Tambah Soal', ['class' => 'btn btn-primary']) }}
-            {{ Form::close() }}
+            <div class="row">
+                <div class="col">
+                    {{ Form::open(['action' => ['App\\Http\\Controllers\\AdminController@addSoal'], 'method' => 'GET']) }}
+                    {{ Form::submit('Tambah Soal', ['class' => 'btn btn-primary']) }}
+                    {{ Form::close() }}
+                </div>
+                <div class="col">
+                    {{ Form::open(['action' => ['App\\Http\\Controllers\\SoalController@backupSoal'], 'method' => 'GET']) }}
+                    {{ Form::submit('Backup Soal', ['class' => 'btn btn-primary']) }}
+                    {{ Form::close() }}
+                </div>
+                <div class="col">
+                    {{ Form::open(['action' => ['App\\Http\\Controllers\\SoalController@deleteAllSoal'], 'method' => 'POST']) }}
+                    {{ Form::submit('Hapus Data Soal', ['class' => 'btn btn-danger']) }}
+                    {{ Form::close() }}
+                </div>
+            </div>
+            
         </div>
-        <div class="container h-100">
+        <div class="container h-100 pull-left">
             <div class="d-flex justify-content-left h-100">
                 <div class="searchbar">
-                    <form action="{{ route('murid.searchSoal') }}" method="get">
+                    <form action="{{ route('admin.searchSoal') }}" method="get">
                         {{ csrf_field() }}
                     <input class="search_input" type="text" name="keyword" placeholder="Search...">
                     <button type="submit" class="search_icon btn"><i class="fas fa-search"></i></button>
@@ -64,7 +79,7 @@
 
 
                                     <div class="text-right">
-                                        <form action="{{ route('murid.downloadSoal') }}" method="post">
+                                        <form action="{{ route('admin.downloadSoal') }}" method="post">
                                             {{ csrf_field() }}
                                             <div class="form-group">
                                                 <input class="form-control" type="hidden" name="judul"

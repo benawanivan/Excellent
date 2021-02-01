@@ -20,6 +20,7 @@ class CreateAdmin extends Migration
             $table->unsignedBigInteger('id_cabang');
             $table->string('password');
             $table->rememberToken();
+            $table->boolean('master');
             $table->foreign('id_cabang')
                 ->references('id')->on('cabang')
                 ->onDelete('cascade');

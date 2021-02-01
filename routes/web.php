@@ -43,6 +43,13 @@ Route::post('ortu/login', 'App\Http\Controllers\Auth\OrtuAuthController@postOrtu
 
 Route::middleware('auth:admin')->group(function(){
 	Route::get('admin/dashboard','App\Http\Controllers\AdminController@viewDashboard')->name('admin.dashboard');
+	Route::get('admin/soal','App\Http\Controllers\AdminController@viewSoal')->name('admin.soal');
+	Route::get('admin/soal/search','App\Http\Controllers\AdminController@searchSoal')->name('admin.searchSoal');
+	Route::get('admin/soal/tambah','App\Http\Controllers\AdminController@addSoal')->name('admin.addSoal');
+	Route::get('admin/soal/backup','App\Http\Controllers\SoalController@backupSoal')->name('admin.backupSoal');
+	Route::post('admin/soal/deleteAll','App\Http\Controllers\SoalController@deleteAllSoal')->name('admin.deleteAllSoal');
+	Route::post('admin/soal/download','App\Http\Controllers\SoalController@download')->name('admin.downloadSoal');
+	Route::post('admin/soal/tambah','App\Http\Controllers\SoalController@store')->name('admin.storeSoal');
 	Route::post('admin/logout','App\Http\Controllers\Auth\AdminAuthController@postAdminLogout')->name('admin.logout');
 });
 
@@ -61,6 +68,7 @@ Route::middleware('auth:murid')->group(function(){
 	Route::get('murid/jadwal','App\Http\Controllers\MuridController@viewJadwal')->name('murid.jadwal');
 	Route::get('murid/profile','App\Http\Controllers\MuridController@viewProfile')->name('murid.profile');
 	Route::get('murid/database','App\Http\Controllers\MuridController@viewSoal')->name('murid.soal');
+	Route::get('murid/database/search','App\Http\Controllers\MuridController@searchSoal')->name('murid.searchSoal');
 	Route::get('murid/database/tambah','App\Http\Controllers\MuridController@addSoal')->name('murid.addSoal');
 	Route::post('murid/database/tambah','App\Http\Controllers\SoalController@store')->name('murid.storeSoal');
 	Route::post('murid/database/download','App\Http\Controllers\SoalController@download')->name('murid.downloadSoal');

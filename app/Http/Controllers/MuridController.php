@@ -26,8 +26,14 @@ class MuridController extends Controller
     }
     public function viewSoal()
     {
-        $soal = Soal::all();
-        return view('murid.viewSoal')->with('soal',$soal);
+        $keyword = NULL;
+        $soal = Soal::paginate(12);
+        return view('murid.viewSoal',['soal'=>$soal,'keyword'=>$keyword],compact('soal'));
+    }
+
+    public function searchSoal(Request $request){
+        $soal = Soal::where('judul','like',"%".$request->keyword."%")->paginate(12);
+        return view('murid.viewSoal',['soal'=>$soal,'keyword'=>$request->keyword],compact('soal'));
     }
     public function updateProfile(Request $request){
         $murid = AUTH::user();

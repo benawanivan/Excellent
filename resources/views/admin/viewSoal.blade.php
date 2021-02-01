@@ -23,15 +23,17 @@
                     {{ Form::submit('Backup Soal', ['class' => 'btn btn-primary']) }}
                     {{ Form::close() }}
                 </div>
+                @if (Auth::user()->master)
                 <div class="col">
                     {{ Form::open(['action' => ['App\\Http\\Controllers\\SoalController@deleteAllSoal'], 'method' => 'POST']) }}
-                    {{ Form::submit('Hapus Data Soal', ['class' => 'btn btn-danger']) }}
+                    {{ Form::submit('Hapus Data Soal', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus Semua Soal?')"]) }}
                     {{ Form::close() }}
                 </div>
+                @endif
             </div>
             
         </div>
-        <div class="container h-100 pull-left">
+        <div class="container h-100">
             <div class="d-flex justify-content-left h-100">
                 <div class="searchbar">
                     <form action="{{ route('admin.searchSoal') }}" method="get">
@@ -95,14 +97,30 @@
                                                         name='filename'></i></button>
                                             </div>
                                         </form>
+                                    </div>
                                 </td>
-
+                                
+                                <td>
+                                    <div class="text-right">
+                                        <form action="{{ route('admin.deleteSoal') }}" method="post">
+                                            {{ csrf_field() }}
+                                            <div class="form-group">
+                                                <input class="form-control" type="hidden" name="id"
+                                                    value="{{ $s->id }}">
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn  btn-outline-danger waves-effect px-3" onclick="return confirm('Apakah anda yakin akan menghapus soal?')"><i
+                                                        class="fas fa-trash-alt" aria-hidden="true"
+                                                        name='filename'></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                                
                                 {{-- <button type="button"
                                     class="btn  btn-elegant waves-effect px-3"><i class="fas fa-eye"
                                         aria-hidden="true"></i></button> --}}
-                                {{-- <button type="button"
-                                    class="btn  btn-outline-danger waves-effect px-3"><i class="fas fa-trash-alt"
-                                        aria-hidden="true"></i></button> --}}
+                                
                                 </th>
                             </table>
                         </div>

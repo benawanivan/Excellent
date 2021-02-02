@@ -126,7 +126,7 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12" style="text-align:center">
-                    <a class="btn-solid-white" href="https://forms.gle/hDrpffhV9mzAz4eN7" style="width:55%">Daftar Program Tanya PR Online Sekarang</a>
+                    <a class="btn-solid-white" href="https://forms.gle/hDrpffhV9mzAz4eN7" style="width:55%">Daftar Sekarang</a>
                 </div>
             </div>
         </div> <!-- end of container -->

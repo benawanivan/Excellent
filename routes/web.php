@@ -65,6 +65,9 @@ Route::middleware('auth:guru')->group(function(){
 	Route::get('guru/jadwal','App\Http\Controllers\GuruController@viewJadwal')->name('guru.jadwal');
 	Route::get('guru/editprofile','App\Http\Controllers\GuruController@editProfile')->name('guru.profil');
 	Route::get('guru/database','App\Http\Controllers\GuruController@viewSoal')->name('guru.soal');
+	Route::get('guru/database/tambah','App\Http\Controllers\GuruController@addSoal')->name('guru.addSoal');
+	Route::post('guru/database/tambah','App\Http\Controllers\SoalController@store')->name('guru.storeSoal');
+	Route::post('guru/database/download','App\Http\Controllers\SoalController@download')->name('guru.downloadSoal');
 	Route::put('guru/updateProfile','App\Http\Controllers\GuruController@updateProfile')->name('guru.updateProfile');
 	Route::post('guru/logout','App\Http\Controllers\Auth\GuruAuthController@postGuruLogout')->name('guru.logout');
 });

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Mapel;
+use App\Models\Soal;
 use Auth;
 use Hash;
 
@@ -36,5 +38,10 @@ class GuruController extends Controller
         $guru->password = Hash::make($request->password);
         $guru->save();
         return back()->with('success',"Password berhasil diubah");
+    }
+
+    public function addSoal(){
+        $mapel = Mapel::all();
+        return view('guru.addSoal',['mapel'=>$mapel],compact('mapel'));
     }
 }

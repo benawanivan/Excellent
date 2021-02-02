@@ -4,7 +4,11 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="{{ url('/') }}" style="width:380px"><img src="{{ asset('images/logo.png') }}" alt="Logo Excellent"></a>
+        <!-- <a class="navbar-brand logo-image" href="{{ url('/') }}" style="max-width:270px">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent">
+        </a> -->
+        <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent" style="max-width:115px;padding-top:1px;padding-bottom:1px;padding-right:10px;"> 
+        <h3 style="margin-top:0.5rem;color:#393939; font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 550;font-stretch: normal;font-size: 13px;line-height: 1rem;font-family: Raleway, sans-serif;">Bimbingan Belajar<br>SD-SMP-SMA (Mat, Fis, Kim)<br>Online & Offline</h3>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +17,7 @@
         </button>
         <!-- end of mobile menu toggle button -->
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault" style="justify-content: flex-end;">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
@@ -39,7 +43,7 @@
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="{{ url('/prestasi') }}"><span class="item-text">Prestasi Siswa</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="{{ url('/testimoni') }}"><span class="item-text">Testimoni</span></a>
+                        <a class="dropdown-item" href="#testimoni"><span class="item-text">Testimoni</span></a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

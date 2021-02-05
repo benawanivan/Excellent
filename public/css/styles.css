@@ -1808,7 +1808,7 @@ a:hover.back-to-top {
 	
 	/* Navigation */
 	.navbar-custom {
-		padding: 2.125rem 1.5rem 2.125rem 2rem;
+		padding: 0.5rem 1.5rem 0.5rem 2rem;
 		background-color: #fff;
 		font: 600 0.875rem/0.875rem "Raleway", sans-serif;
 	}

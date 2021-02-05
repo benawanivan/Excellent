@@ -45,7 +45,7 @@
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="{{ url('/prestasi') }}"><span class="item-text">Prestasi Siswa</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#testimoni"><span class="item-text">Testimoni</span></a>
+                        <a class="dropdown-item" href="/#testimoni"><span class="item-text">Testimoni</span></a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

@@ -25,6 +25,12 @@
                     <p>{{ __('Database Soal') }}</p>
                     </a>
                 </li>
+                <li class="@if ($activePage == 'tryoutGuru') active @endif">
+                    <a href="{{route('guru.tryout')}}">
+                    <i class="now-ui-icons files_single-copy-04"></i>
+                    <p>{{ __('Database Try Out') }}</p>
+                    </a>
+                </li>
                 <li class="@if ($activePage == 'editprofil') active @endif">
                     <a href="{{route('guru.profil')}}">
                     <i class="now-ui-icons users_circle-08"></i>

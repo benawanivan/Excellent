@@ -7,7 +7,9 @@
         <!-- <a class="navbar-brand logo-image" href="{{ url('/') }}" style="max-width:270px">
             <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent">
         </a> -->
-        <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent" style="max-width:115px;padding-top:1px;padding-bottom:1px;padding-right:10px;"> 
+        <a href="{{ url('/') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent" style="max-width:115px;padding-top:1px;padding-bottom:1px;padding-right:10px;"> 
+        </a>
         <h3 style="margin-top:0.5rem;color:#393939; font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 550;font-stretch: normal;font-size: 13px;line-height: 1rem;font-family: Raleway, sans-serif;">Bimbingan Belajar<br>SD-SMP-SMA (Mat, Fis, Kim)<br>Online & Offline</h3>
         
         <!-- Mobile Menu Toggle Button -->

@@ -14,7 +14,7 @@ class SoalController extends Controller
     {
         $mapel = Mapel::find($request->id_mapel);
         $this->validate($request,[
-            'soal' =>'required|mimes:pdf,docx,pptx',
+            'soal' =>'required|mimes:pdf,doc,docx,pptx',
             'judul' =>'required'
         ]);
 

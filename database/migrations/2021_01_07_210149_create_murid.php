@@ -21,6 +21,7 @@ class CreateMurid extends Migration
             $table->unsignedBigInteger('kelas');
             $table->unsignedBigInteger('id_cabang');
             $table->string('password');
+            $table->boolean('status');
             $table->rememberToken();
             $table->foreign('id_cabang')
                 ->references('id')->on('cabang')

@@ -11,38 +11,42 @@
         {{-- {{ $soal }} --}}
         <h3 class="title title-dashboard">Database Soal</h3>
         <hr>
-        <div class="pull-right">
-            <div class="row">
-                <div class="col">
-                    {{ Form::open(['action' => ['App\\Http\\Controllers\\AdminController@addSoal'], 'method' => 'GET']) }}
-                    {{ Form::submit('Tambah Soal', ['class' => 'btn btn-primary']) }}
-                    {{ Form::close() }}
-                </div>
-                <div class="col">
-                    {{ Form::open(['action' => ['App\\Http\\Controllers\\SoalController@backupSoal'], 'method' => 'GET']) }}
-                    {{ Form::submit('Backup Soal', ['class' => 'btn btn-primary']) }}
-                    {{ Form::close() }}
-                </div>
-                @if (Auth::user()->master)
-                <div class="col">
-                    {{ Form::open(['action' => ['App\\Http\\Controllers\\SoalController@deleteAllSoal'], 'method' => 'POST']) }}
-                    {{ Form::submit('Hapus Data Soal', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus Semua Soal?')"]) }}
-                    {{ Form::close() }}
-                </div>
-                @endif
-            </div>
-            
-        </div>
-        <div class="container h-100">
-            <div class="d-flex justify-content-left h-100">
-                <div class="searchbar">
-                    <form action="{{ route('admin.searchSoal') }}" method="get">
-                        {{ csrf_field() }}
-                    <input class="search_input" type="text" name="keyword" placeholder="Search...">
-                    <button type="submit" class="search_icon btn"><i class="fas fa-search"></i></button>
-                    </form>
+        <div class="row" style="padding-bottom: 10px;">
+            <div class="col-lg-6">
+                <div class="container h-100">
+                    <div class="d-flex justify-content-left h-100">
+                        <div class="searchbar" style="width: -webkit-fill-available;margin-bottom:auto;"> 
+                            <form action="{{ route('admin.searchSoal') }}" method="get">
+                                {{ csrf_field() }}
+                            <input class="search_input" type="text" name="keyword" placeholder="Search..." style="width:85%;">
+                            <button type="submit" class="search_icon btn button" style="width:10%;"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-6" style="justify-content: flex-end;">
+                <div class="pull-right" style="padding-right: 15px;">
+                    <div class="btn-toolbar justify-content-center">
+                        <div class="col">
+                            {{ Form::open(['action' => ['App\\Http\\Controllers\\AdminController@addSoal'], 'method' => 'GET']) }}
+                            {{ Form::submit('Tambah', ['class' => 'btn btn-primary']) }}
+                            {{ Form::close() }}
+                        </div>
+                        <div class="col">
+                            {{ Form::open(['action' => ['App\\Http\\Controllers\\SoalController@backupSoal'], 'method' => 'GET']) }}
+                            {{ Form::submit('Backup', ['class' => 'btn btn-primary']) }}
+                            {{ Form::close() }}
+                        </div>
+                        @if (Auth::user()->master)
+                        <div class="col">
+                            {{ Form::open(['action' => ['App\\Http\\Controllers\\SoalController@deleteAllSoal'], 'method' => 'POST']) }}
+                            {{ Form::submit('Hapus Data', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus Semua Soal?')"]) }}
+                            {{ Form::close() }}
+                        </div>
+                        @endif
+                </div>
+            </div>      
         </div>
         @if (!is_null($keyword))
             <h2>Keyword: {{$keyword}}</h2>

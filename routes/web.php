@@ -52,6 +52,7 @@ Route::middleware('auth:admin')->group(function(){
 	Route::post('admin/soal/tambah','App\Http\Controllers\SoalController@store')->name('admin.storeSoal');
 	
 	Route::get('admin/datamurid','App\Http\Controllers\AdminController@viewDataMurid')->name('admin.dataMurid');
+	Route::get('admin/datamurid/search','App\Http\Controllers\AdminController@searchMurid')->name('admin.searchMurid');
 	Route::get('admin/datamurid/tambah','App\Http\Controllers\AdminController@addMurid')->name('admin.addMurid');
 	Route::post('admin/datamurid/tambah','App\Http\Controllers\MuridController@store')->name('admin.storeMurid');
 	Route::get('admin/datamurid/edit/','App\Http\Controllers\AdminController@editMurid')->name('admin.editMurid');

@@ -10,6 +10,11 @@
 $font-primary: 'Poppins',Arial, sans-serif;
 $primary: #f96332;
 
+.body{
+  @include media-breakpoint-down(sm){
+    display:inline-block !important
+  }
+}
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -224,7 +229,7 @@ a[data-toggle="collapse"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    // border-radius: 50%;
     color:orangered;
     text-decoration:none;
     }

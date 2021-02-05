@@ -60,14 +60,16 @@ class MuridController extends Controller
             'kelas' => 'required',
             'username' => 'required|unique:murid',
             'id_cabang' => 'required',
-            
+            'status' =>'required', 
         ]);
+        
         $murid = new Murid();
         $murid->nama = $request->nama;
         $murid->username = $request->username;
         $murid->id_cabang = $request->id_cabang;
         $murid->kelas = $request->kelas;
         $murid->asal_sekolah = $request->asal_sekolah;
+        $murid->status = $request->status;
         $murid->password = Hash::make($request->password);
         $murid->save();
         return back()->with('success',"Data siswa berhasil disimpan");

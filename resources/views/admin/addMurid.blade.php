@@ -27,7 +27,20 @@
         </div>
         <div class="form-group">
             {{ Form::label('kelas', 'Kelas: ', ['class' => 'form-label']) }}
-            {{ Form::number('kelas', null, ['class' => 'form-control']) }}
+            <select class="browser-default custom-select"  name = 'kelas'>
+                <option value="1">1 SD</option>
+                <option value="2">2 SD</option>
+                <option value="3">3 SD</option>
+                <option value="4">4 SD</option>
+                <option value="5">5 SD</option>
+                <option value="6">6 SD</option>
+                <option value="7">7 SMP</option>
+                <option value="8">8 SMP</option>
+                <option value="9">9 SMP</option>
+                <option value="10">10 SMA</option>
+                <option value="11">11 SMA</option>
+                <option value="12">12 SMA</option>
+            </select>
         </div>
         <div class="form-group">
             {{ Form::label('nama_mapel', 'Cabang: ', ['class' => 'form-label']) }}
@@ -36,6 +49,22 @@
             <option value="{{$c->id}}">{{$c->nama}}</option>
                 @endforeach
               </select>
+        </div>
+        
+        <div class="form-group">
+            {{ Form::label('status', 'Status: ', ['class' => 'form-label']) }}
+            <div class="form-check">
+                {{Form::radio('status', 1, false,['class' => 'form-check-input'])}}
+                <label class="form-check-label" for="flexRadioDefault1" style="padding:0">
+                  Aktif
+                </label>
+              </div>
+              <div class="form-check">
+                {{Form::radio('status', 0, false,['class' => 'form-check-input'])}}
+                <label class="form-check-label" for="flexRadioDefault2" style="padding:0">
+                  Non Aktif
+                </label>
+              </div>
         </div>
         <div class="form-group">
             {{ Form::label('password', 'Password: ', ['class' => 'form-label']) }}

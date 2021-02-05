@@ -44,6 +44,18 @@ class AdminController extends Controller
         $murid = Murid::all();
         return view('admin.viewDataMurid',['murid'=>$murid,'keyword'=>$keyword],compact('murid'));
     }
+    public function SearchMurid(Request $request)
+    {
+        $cabang = Cabang::where('nama','like',"%".$request->keyword."%")->get()->first();
+        $murid = Murid::where('nama','like',"%".$request->keyword."%")
+        ->orwhere('username','like',"%".$request->keyword."%")
+        ->orwhere('asal_sekolah','like',"%".$request->keyword."%")
+        ->orwhere('id_cabang','=',is_null($cabang)?"-999":$cabang->id)
+        ->orwhere('kelas','=',$request->keyword)
+        ->orwhere('status','=',$request->keyword=='aktif'?1:($request->keyword=='non aktif'?0:-1))
+        ->paginate(12);
+        return view('admin.viewDataMurid',['murid'=>$murid,'keyword'=>$request->keyword],compact('murid'));
+    }
     public function addMurid(){
         $cabang = Cabang::all();
         return view('admin.addMurid',['cabang'=>$cabang],compact('cabang'));
@@ -53,5 +65,6 @@ class AdminController extends Controller
         $murid = Murid::find($request->id);
         return view('admin.editMurid',['cabang'=>$cabang,'murid'=>$murid],compact('murid'));
     }
+
 }
 

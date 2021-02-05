@@ -7,17 +7,15 @@
 
 @include('layouts.navbar')
 
-    <!-- Header -->
-    <header id="header" class="ex-header">
+    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:7rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 style="color: #fff">Program Tanya PR Online</h1>
+                    <h1 style="color: #fff">Tanya PR Online</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
+    </div>
 
 
     <!-- Breadcrumbs -->
@@ -34,7 +32,19 @@
     </div> <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 
-
+    <div id="pricing" class="cards-2">
+        <div class="container">
+        <div class="row">
+                <div class="col-lg-12">
+                    <h2><span class="orange">Tanya PR</span> Online</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                        
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of pricing -->
     <!-- Sistem Belajar Offline -->
     <div class="basic-2" style="padding-top: 3.75rem;"> 
         <div class="container">

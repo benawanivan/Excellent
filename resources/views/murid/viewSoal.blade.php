@@ -11,22 +11,29 @@
         {{-- {{ $soal }} --}}
         <h3 class="title title-dashboard">Database Soal</h3>
         <hr>
-        <div class="pull-right">
-            {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@addSoal'], 'method' => 'GET']) }}
-            {{ Form::submit('Tambah Soal', ['class' => 'btn btn-primary']) }}
-            {{ Form::close() }}
-        </div>
-        <div class="container h-100">
-            <div class="d-flex justify-content-left h-100">
-                <div class="searchbar">
-                    <form action="{{ route('murid.searchSoal') }}" method="get">
-                        {{ csrf_field() }}
-                    <input class="search_input" type="text" name="keyword" placeholder="Search...">
-                    <button type="submit" class="search_icon btn"><i class="fas fa-search"></i></button>
-                    </form>
+        <div class="row" style="padding-bottom: 10px;">
+            <div class="col-lg-6">
+                <div class="container h-100">
+                    <div class="d-flex justify-content-left h-100">
+                        <div class="searchbar" style="width: -webkit-fill-available;margin-bottom:auto;"> 
+                            <form action="{{ route('murid.searchSoal') }}" method="get">
+                                {{ csrf_field() }}
+                            <input class="search_input" type="text" name="keyword" placeholder="Search..." style="width:85%;">
+                            <button type="submit" class="search_icon btn" style="width:10%;"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-6" style="justify-content: flex-end;">
+                <div class="pull-right" style="padding-right: 15px;">
+                    {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@addSoal'], 'method' => 'GET']) }}
+                    {{ Form::submit('Tambah Soal', ['class' => 'btn btn-primary']) }}
+                    {{ Form::close() }}
+                </div>
+            </div>      
         </div>
+        
         @if (!is_null($keyword))
             <h2>Keyword: {{$keyword}}</h2>
         @endif
@@ -40,7 +47,7 @@
                             <div class="card-body">
                                 @if ($s->getType($s->file) == 'pdf')
                                     <h2 class="text-center"><i class="fas fa-file-pdf text-danger fa-4x "></i></h2>
-                                @elseif($s->getType($s->file) == "docx")
+                                @elseif($s->getType($s->file) == "docx" || $s->getType($s->file) == "doc")
                                     <h2 class="text-center"><i class="fas fa-file-word text-primary fa-4x "></i></h2>
                                 @elseif($s->getType($s->file) == "pptx")
                                     <h2 class="text-center"><i class="fas fa-file-powerpoint text-danger fa-4x "></i></h2>

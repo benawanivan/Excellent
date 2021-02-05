@@ -38,6 +38,11 @@
     <div id="contact" class="form-2" style="padding-top:2rem;">
         <div class="container">
             <div class="row">
+                <div class="col-lg-6" style="text-align: -webkit-center;align-self:center;">
+                    <div class="image-container" style="width:85%">
+                        <img class="img-fluid" src="images/poris.png">
+                    </div> 
+                </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <h2>Excellent Poris Indah</h2>
                     <ul class="list-unstyled li-space-lg" style="margin-bottom:1rem">
@@ -47,11 +52,6 @@
                     <div class="map-responsive">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.644524087276!2d106.68600831390597!3d-6.1783156622582585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f84d7fb974d5%3A0x1f47f47948b4bc0f!2sEXCELLENT%20STUDY%20CENTRE!5e0!3m2!1sen!2sid!4v1610881633944!5m2!1sen!2sid" allowfullscreen></iframe>
                     </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6" style="text-align: -webkit-center;align-self:center;">
-                    <div class="image-container" style="width:85%">
-                        <img class="img-fluid" src="images/poris.png">
-                    </div> 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -86,6 +86,11 @@
     <div id="contact" class="form-2">
         <div class="container">
             <div class="row">
+                <div class="col-lg-6" style="text-align: -webkit-center;align-self:center;">
+                    <div class="image-container" style="width:95%">
+                        <img class="img-fluid" src="images/tamansurya.png">
+                    </div> 
+                </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <h2>Excellent Taman Surya</h2>
                     <ul class="list-unstyled li-space-lg" style="margin-bottom:1rem">
@@ -95,11 +100,6 @@
                     <div class="map-responsive" style="max-height:70%">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9948726517637!2d106.711669!3d-6.13139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a02a57e2aa10f%3A0x7b609d63b3c28c08!2sEXCELLENT%20STUDY%20CENTRE!5e0!3m2!1sen!2sid!4v1610435072733!5m2!1sen!2sid" allowfullscreen></iframe>
                     </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6" style="text-align: -webkit-center;align-self:center;">
-                    <div class="image-container" style="width:95%">
-                        <img class="img-fluid" src="images/tamansurya.png">
-                    </div> 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -134,6 +134,11 @@
     <div id="contact" class="form-2">
         <div class="container">
             <div class="row">
+                <div class="col-lg-6" style="text-align: -webkit-center;align-self:center;">
+                    <div class="image-container" style="width:85%">
+                        <img class="img-fluid" src="images/bsd.png">
+                    </div> 
+                </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <h2>Excellent BSD City</h2>
                     <ul class="list-unstyled li-space-lg" style="margin-bottom:1rem">
@@ -143,11 +148,6 @@
                     <div class="map-responsive">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21481.956956761023!2d106.66806832965175!3d-6.311037178997107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9209c825090bcffe!2sEXCELLENT%20STUDY%20CENTRE!5e0!3m2!1sen!2sid!4v1611680733222!5m2!1sen!2sid" allowfullscreen></iframe>
                     </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6" style="text-align: -webkit-center;align-self:center;">
-                    <div class="image-container" style="width:85%">
-                        <img class="img-fluid" src="images/bsd.png">
-                    </div> 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->

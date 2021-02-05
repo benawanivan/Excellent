@@ -7,17 +7,15 @@
 
 @include('layouts.navbar')
 
-    <!-- Header -->
-    <header id="header" class="ex-header">
+    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:7rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 style="color: #fff">Prestasi Siswa</h1>
+                    <h1 style="color: #fff">Prestasi</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
+    </div>
 
 
     <!-- Breadcrumbs -->

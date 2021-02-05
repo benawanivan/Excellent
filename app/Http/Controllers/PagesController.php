@@ -41,11 +41,6 @@ class PagesController extends Controller
         return view('homepage.keunggulan');
     }
 
-    public function testimoni()
-    {
-        return view('homepage.testimoni');
-    }
-
     public function prestasi()
     {
         return view('homepage.prestasi');

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Mapel;
 use App\Models\Soal;
+use App\Models\Tryout;
 use Auth;
 use Hash;
 
@@ -26,7 +27,25 @@ class GuruController extends Controller
 
     public function viewSoal()
     {
-        return view('guru.viewSoal');
+        $keyword = NULL;
+        $soal = Soal::paginate(12);
+        return view('guru.viewSoal',['soal'=>$soal,'keyword'=>$keyword],compact('soal'));
+    }
+
+    public function viewTryout()
+    {
+        $keyword = NULL;
+        $tryout = Tryout::paginate(12);
+        return view('guru.viewTryout',['tryout'=>$tryout,'keyword'=>$keyword],compact('tryout'));
+    }
+
+    public function searchSoal(Request $request){
+        $soal = Soal::where('judul','like',"%".$request->keyword."%")->paginate(12);
+        return view('guru.viewSoal',['soal'=>$soal,'keyword'=>$request->keyword],compact('soal'));
+    }
+    public function searchTryout(Request $request){
+        $tryout = Tryout::where('judul','like',"%".$request->keyword."%")->paginate(12);
+        return view('guru.viewTryout',['tryout'=>$tryout,'keyword'=>$request->keyword],compact('tryout'));
     }
 
     public function updateProfile(Request $request){
@@ -43,5 +62,9 @@ class GuruController extends Controller
     public function addSoal(){
         $mapel = Mapel::all();
         return view('guru.addSoal',['mapel'=>$mapel],compact('mapel'));
+    }
+
+    public function addTryout(){
+        return view('guru.addTryout');
     }
 }

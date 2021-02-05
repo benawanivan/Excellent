@@ -7,8 +7,7 @@
 
 @include('layouts.navbar')
 
-    <!-- Header -->
-    <header id="header" class="ex-header">
+    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:7rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -16,9 +15,7 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
-
+    </div>
 
     <!-- Breadcrumbs -->
     <div class="ex-basic-1">
@@ -36,78 +33,34 @@
 
 
     <!-- Pricing -->
-    <div id="pricing" class="cards-2">
+    <div id="pricing" class="cards-2" style="padding-bottom:0rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Paket <span class="orange">REGULER</span></h2>
-                    <p class="p-heading p-large"><b>3 (tiga) kali pertemuan per minggu<br>1,5 jam per pertemuan</b></p>
+                    <h2>Program Les <span class="orange">REGULER</span></h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
-                <div class="col-lg-12">
-
-                <!-- Card-->
-                <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">SD</div>
-                            <div class="card-subtitle">3,4,5,6</div>
-                            <div class="price">
-                            <img src="images/sd.png" style="width: 50%">
-                                <span class="currency"></span><span class="value"></span>
-                                <div class="frequency"></div>
-                            </div>
-  
+                <div class="col-lg-4 offset-lg-2">
+                    <div class="card" style="border:none;margin-bottom:0rem;">
+                        <div class="card-body" style="padding-bottom:0rem;padding-top:0rem">
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Pembahasan Ulangan, PR</div>
+                                    <i class="fas fa-check"></i><div class="media-body">3 (tiga) kali pertemuan per minggu</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Cambridge Checkpoint</div>
+                                    <i class="fas fa-check"></i><div class="media-body">1.5 jam per pertemuan</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Persiapan Tes Masuk SMA Favorit</div>
+                                    <i class="fas fa-check"></i><div class="media-body">Garansi <b>NAIK KELAS</b>* & Garansi <b>LULUS UN</b>*</div>
                                 </li>
                             </ul>
                         </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
-                     <!-- Card-->
-                     <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">SMP</div>
-                            <div class="card-subtitle">7,8,9</div>
-                            <div class="price">
-                                <img src="images/smp.png" style="width: 50%">
-                                <span class="currency"></span><span class="value"></span>
-                                <div class="frequency"></div>
-                            </div>
-                            <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Pembahasan Ulangan, PR</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Cambridge Checkpoint</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Persiapan Tes Masuk SMA Favorit</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
-                     <!-- Card-->
-                     <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">SMA</div>
-                            <div class="card-subtitle">10,11,12</div>
-                            <div class="price">
-                                <img src="images/sma.png" style="width: 50%">
-                                <span class="currency"></span><span class="value"></span>
-                                <div class="frequency"></div>
-                            </div>
+                    </div>  
+                </div>
+                <div class="col-lg-4" >
+                    <div class="card" style="border:none;margin-bottom:0rem;">
+                        <div class="card-body" style="padding-bottom:0rem;padding-top:0rem">
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-check"></i><div class="media-body">Pembahasan Ulangan, PR</div>
@@ -116,15 +69,21 @@
                                     <i class="fas fa-check"></i><div class="media-body">Cambridge Checkpoint (IGCSE O, A/AS Level)</div>
                                 </li>
                                 <li class="media">
+                                    <i class="fas fa-check"></i><div class="media-body">Persiapan Tes Masuk SMP/SMA Favorit</div>
+                                </li>
+                                <li class="media">
                                     <i class="fas fa-check"></i><div class="media-body">UTBK/UM</div>
-                                </li> 
+                                </li>
                             </ul>
                         </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
+                    </div> 
+                </div>        
             </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>*S&K berlaku</p>
+                </div>
+            </div>
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
     <!-- end of pricing -->

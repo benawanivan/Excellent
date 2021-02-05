@@ -26,7 +26,6 @@ Route::get('/tanyapr', 'App\Http\Controllers\PagesController@tanyapr');
 Route::get('/profil', 'App\Http\Controllers\PagesController@profil');
 Route::get('/lokasi', 'App\Http\Controllers\PagesController@lokasi');
 Route::get('/keunggulan', 'App\Http\Controllers\PagesController@keunggulan');
-Route::get('/testimoni', 'App\Http\Controllers\PagesController@testimoni');
 Route::get('/prestasi', 'App\Http\Controllers\PagesController@prestasi');
 
 Route::get('admin/login', 'App\Http\Controllers\Auth\AdminAuthController@getAdminLogin')->name('admin.login');
@@ -65,9 +64,14 @@ Route::middleware('auth:guru')->group(function(){
 	Route::get('guru/jadwal','App\Http\Controllers\GuruController@viewJadwal')->name('guru.jadwal');
 	Route::get('guru/editprofile','App\Http\Controllers\GuruController@editProfile')->name('guru.profil');
 	Route::get('guru/database','App\Http\Controllers\GuruController@viewSoal')->name('guru.soal');
+	Route::get('guru/database/search','App\Http\Controllers\GuruController@searchSoal')->name('guru.searchSoal');
 	Route::get('guru/database/tambah','App\Http\Controllers\GuruController@addSoal')->name('guru.addSoal');
 	Route::post('guru/database/tambah','App\Http\Controllers\SoalController@store')->name('guru.storeSoal');
 	Route::post('guru/database/download','App\Http\Controllers\SoalController@download')->name('guru.downloadSoal');
+	Route::get('guru/tryout','App\Http\Controllers\GuruController@viewTryout')->name('guru.tryout');
+	Route::get('guru/tryout/search','App\Http\Controllers\GuruController@searchTryout')->name('guru.searchTryout');
+	Route::get('guru/tryout/tambah','App\Http\Controllers\GuruController@addTryout')->name('guru.addTryout');
+	Route::post('guru/tryout/tambah','App\Http\Controllers\TryoutController@store')->name('guru.storeTryout');
 	Route::put('guru/updateProfile','App\Http\Controllers\GuruController@updateProfile')->name('guru.updateProfile');
 	Route::post('guru/logout','App\Http\Controllers\Auth\GuruAuthController@postGuruLogout')->name('guru.logout');
 });

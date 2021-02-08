@@ -31,6 +31,24 @@
                     <p>{{ __('Data Siswa') }}</p>
                     </a>
                 </li>
+                <li class="@if ($activePage == 'dataGuru') active @endif">
+                    <a href="{{route('admin.dataGuru')}}">
+                    <i class="now-ui-icons design_bullet-list-67"></i>
+                    <p>{{ __('Data Guru') }}</p>
+                    </a>
+                </li>
+                <li class="@if ($activePage == 'dataCabang') active @endif">
+                    <a href="{{route('admin.dataCabang')}}">
+                    <i class="now-ui-icons design_bullet-list-67"></i>
+                    <p>{{ __('Data Cabang') }}</p>
+                    </a>
+                </li>
+                <li class="@if ($activePage == 'dataMapel') active @endif">
+                    <a href="{{route('admin.dataMapel')}}">
+                    <i class="now-ui-icons design_bullet-list-67"></i>
+                    <p>{{ __('Data Mapel') }}</p>
+                    </a>
+                </li>
               
               </ul>
           </div>

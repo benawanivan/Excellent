@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Mapel;
 use App\Models\Soal;
 use App\Models\Tryout;
+use App\Models\Guru;
 use Auth;
 use Hash;
 
@@ -67,4 +68,49 @@ class GuruController extends Controller
     public function addTryout(){
         return view('guru.addTryout');
     }
+
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            'password' => 'required|min:8',
+            'nama' => 'required',
+            'link_meeting' => 'required',
+            'username' => 'required|unique:guru',
+            'id_cabang' => 'required',
+        ]);
+        $guru = new Guru();
+        $guru->nama = $request->nama;
+        $guru->username = $request->username;
+        $guru->link_meeting = $request->link_meeting;
+        $guru->id_cabang = $request->id_cabang;
+        $guru->password = Hash::make($request->password);
+        $guru->save();
+        return back()->with('success',"Data guru berhasil disimpan");
+    }
+    public function edit(Request $request)
+    {
+        $this->validate($request,[
+            'password' => 'required|min:8',
+            'nama' => 'required',
+            'link_meeting' => 'required',
+            'username' => 'required|unique:guru'.($request->id ? ",id,$request->id" : ''),
+            'id_cabang' => 'required',
+        ]);
+        $guru = Guru::find($request->id);
+        $guru->nama = $request->nama;
+        $guru->username = $request->username;
+        $guru->link_meeting = $request->link_meeting;
+        $guru->id_cabang = $request->id_cabang;
+        $guru->password = Hash::make($request->password);
+        $guru->save();
+        return back()->with('success',"Data guru berhasil diubah");
+    }
+    public function delete($id)
+    {
+        $guru = Guru::find($id);
+        $guru->delete();
+        
+        return back()->with('success','Guru berhasil dihapus');
+    }
+
 }

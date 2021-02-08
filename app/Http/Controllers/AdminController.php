@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Mapel;
 use App\Models\Soal;
 use App\Models\Murid;
+use App\Models\Guru;
 use App\Models\Cabang;
 use Auth;
 use Hash;
@@ -53,7 +54,7 @@ class AdminController extends Controller
         ->orwhere('id_cabang','=',is_null($cabang)?"-999":$cabang->id)
         ->orwhere('kelas','=',$request->keyword)
         ->orwhere('status','=',$request->keyword=='aktif'?1:($request->keyword=='non aktif'?0:-1))
-        ->paginate(12);
+        ->paginate(20);
         return view('admin.viewDataMurid',['murid'=>$murid,'keyword'=>$request->keyword],compact('murid'));
     }
     public function addMurid(){
@@ -64,6 +65,76 @@ class AdminController extends Controller
         $cabang = Cabang::all();
         $murid = Murid::find($request->id);
         return view('admin.editMurid',['cabang'=>$cabang,'murid'=>$murid],compact('murid'));
+    }
+
+
+
+    public function viewDataGuru()
+    {
+        $keyword = NULL;
+        $guru = Guru::all();
+        return view('admin.viewDataGuru',['cabang'=>$guru,'keyword'=>$keyword],compact('guru'));
+    }
+    public function SearchGuru(Request $request)
+    {
+        $cabang = Cabang::where('nama','like',"%".$request->keyword."%")->get()->first();
+        $guru = Guru::where('nama','like',"%".$request->keyword."%")
+        ->orwhere('username','like',"%".$request->keyword."%")
+        ->orwhere('link_meeting','like',"%".$request->keyword."%")
+        ->orwhere('id_cabang','=',is_null($cabang)?"-999":$cabang->id)
+        ->paginate(20);
+        return view('admin.viewDataGuru',['guru'=>$guru,'keyword'=>$request->keyword],compact('guru'));
+    }
+    public function addGuru(){
+        $cabang = Cabang::all();
+        return view('admin.addGuru',['cabang'=>$cabang],compact('cabang'));
+    }
+    public function editGuru(Request $request){
+        $cabang = Cabang::all();
+        $guru = Guru::find($request->id);
+        return view('admin.editGuru',['cabang'=>$cabang,'guru'=>$guru],compact('guru'));
+    }
+
+
+    public function viewDataCabang()
+    {
+        $keyword = NULL;
+        $cabang = Cabang::all();
+        return view('admin.viewDataCabang',['cabang'=>$cabang,'keyword'=>$keyword],compact('cabang'));
+    }
+    public function SearchCabang(Request $request)
+    {
+        $cabang = Cabang::where('nama','like',"%".$request->keyword."%")
+        ->paginate(20);
+        return view('admin.viewDataCabang',['cabang'=>$cabang,'keyword'=>$request->keyword],compact('cabang'));
+    }
+    public function addCabang(){
+        return view('admin.addCabang');
+    }
+    public function editCabang(Request $request){
+        $cabang = Cabang::find($request->id);
+        return view('admin.editCabang',['cabang'=>$cabang],compact('cabang'));
+    }
+
+    public function viewDataMapel()
+    {
+        $keyword = NULL;
+        $mapel = Mapel::all();
+        return view('admin.viewDataMapel',['mapel'=>$mapel,'keyword'=>$keyword],compact('mapel'));
+    }
+    public function SearchMapel(Request $request)
+    {
+        $mapel = Mapel::where('nama','like',"%".$request->keyword."%")
+        ->orwhere('tingkat','=',$request->keyword)
+        ->paginate(20);
+        return view('admin.viewDataMapel',['mapel'=>$mapel,'keyword'=>$request->keyword],compact('mapel'));
+    }
+    public function addMapel(){
+        return view('admin.addMapel');
+    }
+    public function editMapel(Request $request){
+        $mapel = Mapel::find($request->id);
+        return view('admin.editMapel',['mapel'=>$mapel],compact('mapel'));
     }
 
 }

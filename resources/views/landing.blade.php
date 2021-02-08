@@ -8,19 +8,19 @@
 @include('layouts.navbar')
 
     <!-- Header -->
-    <header id="header" class="header">
+    <header id="header" class="header" style="background-color: #fde2cd;padding-bottom: 2rem;">
         <div class="header-content">
-            <div class="container">
+            <div class="container" style="margin-top:2rem;">
                 <div class="row">
                     <div class="col-lg-5">
-                        <div class="text-container">
+                        <div class="text-container" style="margin-top:0rem;">
                             <h1>apa rasanya mendapat<br><b style="color: #c52727;font-size: 150%">NILAI BAGUS</b><br>saat ujian?</h1>
                             <p class="p-large">Bangga? Pastinya! Ayo bergabung di EXCELLENT dan dapatkan nilai yang memuaskan serta peringkat yang tinggi di sekolahmu.</p>
                             <a class="btn-solid-lg page-scroll" href="https://campsite.bio/daftar.excellent">Daftar Sekarang</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
-                    <div class="col-lg-7">
-                        <img class="img-fluid" src="images/rank.png">
+                    <div class="col-lg-7" style="align-self: center;">
+                        <img class="img-fluid" src="images/siswaberprestasi.png">
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
@@ -39,7 +39,7 @@
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    <div class="text-container" style="text-align: right; font-size: 112%">
+                    <div class="text-container" style="font-size: 112%">
                         <h2><span style="color: #fff">sistem belajar</span></h2>
                         <h2><span style="color: #8e0000; font-size: 180%">SEMI<br>PRIVATE</span></h2>
                         <ul class="list-unstyled li-space-lg">
@@ -77,7 +77,7 @@
 
                     <!-- Card-->
                     <div class="card">
-                        <div class="card-body" style="height: 328px;background-image: url('images/sd-side.png');">
+                        <div class="card-body" style="height: 400px;background-image: url('images/sd-side.png');">
                             <div class="card-title">SD</div>
                             <div class="card-subtitle">3,  4,  5,  6</div>
                             <!-- <div class="price">
@@ -86,7 +86,7 @@
 
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <ul class="list-unstyled li-space-lg">
+                                    <ul class="list-unstyled li-space-lg" >
                                         <li class="media">
                                             <i class="fas fa-check"></i><div class="media-body">Matematika</div>
                                         </li>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-                        <div class="card-body" style="height: 328px;background-image: url('images/smp-side.png');">
+                        <div class="card-body" style="height: 400px;background-image: url('images/smp-side.png');">
                             <div class="card-title">SMP</div>
                             <div class="card-subtitle">7,  8,  9</div>
                             <!-- <div class="price">
@@ -130,15 +130,15 @@
                 <div class="col-lg-4">
                      <!-- Card-->
                      <div class="card">
-                        <div class="card-body" style="height: 328px;background-image: url('images/sma-side.png');">
+                        <div class="card-body" style="height: 400px;background-image: url('images/sma-side.png');">
                             <div class="card-title">SMA</div>
-                            <div class="card-subtitle">10,  11,  12</div>
+                            <div class="card-subtitle" style="margin-bottom: 0rem;">10,  11,  12</div>
                             <!-- <div class="price">
                                 <img src="images/sma.png" style="width: 50%; object-fit: cover;">
                             </div> -->
                             <div class="row">
                                 <div class="col-lg-6" style="max-width: 128px;max-height: 168px;">
-                                    <ul class="list-unstyled li-space-lg">
+                                    <ul class="list-unstyled li-space-lg" style="margin-top: 1rem;margin-bottom: 0rem;">
                                         <li class="media">
                                             <div class="media-body"><b>Jurusan IPA</b></div>
                                         </li>
@@ -152,9 +152,7 @@
                                             <i class="fas fa-check"></i><div class="media-body">Kimia</div>
                                         </li>  
                                     </ul>
-                                </div>
-                                <div class="col-lg-6" style="max-width: 128px;max-height: 168px;">
-                                    <ul class="list-unstyled li-space-lg" style="color:#000000">
+                                    <ul class="list-unstyled li-space-lg" style="margin-top: 1rem;margin-bottom: 0rem;">
                                         <li class="media">
                                             <div class="media-body"><b>Jurusan IPS</b></div>
                                         </li>
@@ -168,6 +166,9 @@
                                             <i class="fas fa-check"></i><div class="media-body">Ekonomi</div>
                                         </li>  
                                     </ul>
+                                </div>
+                                <div class="col-lg-6" style="max-width: 128px;max-height: 168px;">
+                                    
                                 </div>
                             </div>
                         </div>

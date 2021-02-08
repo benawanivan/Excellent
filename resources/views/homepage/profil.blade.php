@@ -18,20 +18,6 @@
     </div>
 
 
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Profil</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
 
     <!-- Privacy Content -->
     <div class="ex-basic-2">
@@ -90,39 +76,36 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="text-container">
                         <ul class="list-unstyled li-space-lg indent">
-                            <li class="media">
+                            <li class="media" style="align-items: center;">
                                 <img src="images/2007.png">
                                 <div class="media-body">Excellent study centre pertama kali didirikan pada tahun 2007 di Perumahan Poris Indah, Tangerang. Berawal dari keprihatinan terhadap banyaknya anak-anak yang kesulitan memahami pelajaran sekolah yang semakin berat, kami bertekad untuk membantu anak-anak dalam mencapai prestasi belajar yang membanggakan.</div>
                             </li>
-                            <li class="media">
+                            <li class="media" style="align-items: center;">
                                 <img src="images/2011.png">
                                 <div class="media-body">Excellent Poris Indah pindah ke tempat yang lebih luas untuk memfasilitasi seluruh siswa/i yang telah percaya dengan kualitas pelayanan kami. Selain itu, kami juga merekrut guru-guru baru yang berkualitas dan berpengalaman untuk menjamin peningkatan prestasi siswa/i di sekolahnya masing-masing.</div>
                             </li>
-                            <li class="media">
+                            <li class="media" style="align-items: center;">
                                 <img src="images/2014.png">
                                 <div class="media-body">Excellent Kosambi Baru (cabang ke-2) dibuka agar kami dapat memberikan kontribusi yang lebih besar terhadap kemajuan pendidikan di Indonesia. Dengan terus meningkatkan kualitas pelayanan, Excellent Kosambi Baru berhasil dipercaya oleh ratusan siswa dari berbagai sekolah sebagai wahana untuk memperdalam pemahaman mereka terhadap materi pelajaran di sekolah.</div>
                             </li>
-                            <li class="media">
+                            <li class="media" style="align-items: center;">
                                 <img src="images/2017.png">
                                 <div class="media-body">Excellent Taman Surya (cabang ke-3) dibuka sebagai bentuk komitmen kami dalam mendidik putra-putri generasi penerus bangsa. Kami bertekad untuk terus menjaga dan mengembangkan kualitas pembelajaran di Excellent agar dapat berkontribusi secara nyata terhadap kemajuan prestasi siswa/i.</div>
                             </li>
-                            <li class="media">
+                            <li class="media" style="align-items: center;">
                                 <img src="images/2018.png">
                                 <div class="media-body">Excellent Tanjung Duren (cabang ke-4) dibuka dengan harapan kami dapat membantu lebih banyak siswa yang kesulitan mengikuti pelajaran di berbagai sekolah favorit. Kami ingin mereka membuktikan kepada orang tua dan teman-temannya bahwa menjadi juara sekolah merupakan suatu hal yang menyenangkan yang dapat diraih dengan usaha dan bimbingan yang tepat.</div>
                             </li>
-                            <li class="media">
-                                <img src="images/2018.png">
+                            <li class="media" style="align-items: center;">
+                                <img src="images/2019.png">
                                 <div class="media-body">Excellent Tanjung Duren pindah ke tempat yang lebih luas seiring meningkatnya permintaan layanan bimbingan belajar dari siswa/i. Meningkatnya permintaan layanan bimbel ini menunjukan tingkat kepuasan siswa/i EXCELLENT yang tinggi karena merasa terbantu untuk meningkatkan prestasinya disekolah.</div>
                             </li>
-                            <li class="media">
-                                <img src="images/2018.png">
+                            <li class="media" style="align-items: center;">
+                                <img src="images/2020.png">
                                 <div class="media-body">EXCELLENT meluncurkan program Les ONLINE dengan metode Video Call Interaktif dan PAPAN TULIS DIGITAL. Program ini melengkapi program Les OFFLINE yang sebelumnya sudah berjalan dan terbukti mampu meningkatkan prestasi belajar siswa/i di sekolah. Berbeda dengan bimbel lain, Les ONLINE di EXCELLENT memiliki kualitas yang setara dengan Les OFFLINE karena dilaksanakan dengan sistem semi-privat (tatap muka online) dan materi sesuai kebutuhan siswa.</div>
                             </li>
-                            <li class="media">
-                                <span class="fa-stack">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i>2021</i>
-                                </span>
+                            <li class="media" style="align-items: center;">
+                                <img src="images/2021.png">
                                 <div class="media-body">Excellent BSD City (cabang ke-5) dibuka untuk memperluas pelayanan kami dalam meningkatkan prestasi siswa/i di sekolah. Pengembangan ini merupakan bentuk dukungan kami terhadap kemajuan pendidikan di Indonesia, agar Indonesia dapat terus berkembang dan menjadi semakin membanggakan.</div>
                             </li>
                         </ul>
@@ -133,21 +116,6 @@
         </div> <!-- end of container -->
     </div> <!-- end of ex-basic-2 -->
     <!-- end of privacy content -->
-
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Profil</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
 
     
     @include('layouts.footer')

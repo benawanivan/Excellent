@@ -18,33 +18,7 @@
     </div>
 
 
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Program Tanya PR Online</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-    <div id="pricing" class="cards-2">
-        <div class="container">
-        <div class="row">
-                <div class="col-lg-12">
-                    <h2><span class="orange">Tanya PR</span> Online</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                        
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
-    <!-- end of pricing -->
+ 
     <!-- Sistem Belajar Offline -->
     <div class="basic-2" style="padding-top: 3.75rem;"> 
         <div class="container">
@@ -57,7 +31,7 @@
             </div> -->
 
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-8">
                     <div class="text-container">
                         <p class="white" style="font-size:120%">Punya tugas dan PR sulit?</p>
                         <p class="white" style="font-size:120%">Yuk tanya aja di <b>Tanya PR Online</b>! Mulai dari Rp 2rb/soal</p>
@@ -67,7 +41,7 @@
                         </div> <!-- end of image-container -->
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
-                <div class="col-lg-5" style="align-self:center;">
+                <div class="col-lg-4" style="align-self:center;">
                     <div class="image-container">
                         <img class="img-fluid" src="images/tanya2.png" alt="alternative">
                     </div> <!-- end of image-container -->
@@ -92,7 +66,7 @@
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4" style="align-self:center;">
-                    <div class="image-container" style="width:300px;">
+                    <div class="image-container">
                         <img class="img-fluid" src="images/gold.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
@@ -136,20 +110,6 @@
         </div> <!-- end of container -->
     </div> <!-- end of basic-2 -->
     <!-- end laporan belajar -->
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Program Tanya PR Online</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
 
     
     @include('layouts.footer')

@@ -18,23 +18,8 @@
     </div>
 
 
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Prestasi Siswa</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
-
-
   <!-- Header -->
-  <header id="header" class="header">
+  <header id="header" class="header" style="background-color: #fde2cd" >
         <div class="header-content">
             <div class="container">
                 <div class="row" style="text-align:center">
@@ -47,7 +32,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <img class="img-fluid" src="images/rank.png">
+                        <img class="img-fluid" src="images/siswaberprestasi.png">
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
                 <div class="row">
@@ -59,21 +44,6 @@
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
     <!-- end of header -->
-
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Prestasi Siswa</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
 
     
     @include('layouts.footer')

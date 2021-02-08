@@ -17,28 +17,10 @@
         </div> <!-- end of container -->
     </div>
 
-        <!-- Breadcrumbs -->
-        <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Program Platinum</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
 
     <!-- Pricing -->
     <div id="pricing" class="cards-2">
         <div class="container">
-        <div class="row">
-                <div class="col-lg-12">
-                    <h2>Program Les <span class="orange">PLATINUM</span></h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-4 offset-lg-2">
                     <div class="card" style="border:none;margin-bottom:0rem;">
@@ -93,10 +75,10 @@
 
    
     <!-- Sistem Belajar Offline -->
-    <div class="basic-2" style="padding-top: 3.75rem;">
+    <div class="basic-2-left" style="padding-top: 3.75rem;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="text-container">
                         <h2 style="color: #fff">Sistem Belajar<br><span class="darkred">OFFLINE</span></h2>
                         <p class="white">Untuk mengakomodasi setiap siswa kami yang tetap ingin menghadiri kelas tatap muka, kami membuka kelas Offline, dimana tetap dengan mengikuti Protokol Kesehatan yang ketat.</p>
@@ -104,7 +86,7 @@
                         <p class="white">Semua siswa yang hadir juga wajib mengikuti Protokol Kesehatan yang diwajibkan, dan apabila berhalangan dapat diganti di hari lain atau diganti dengan kelas online (dengan perjanjian).</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="image-container">
                         <img class="img-fluid" src="images/offline.png" alt="alternative">
                     </div> <!-- end of image-container -->
@@ -115,21 +97,21 @@
     <!-- end of details 2 -->
 
       <!-- Sistem Belajar Online -->
-      <div class="basic-2">
+      <div class="basic-2-left">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/online.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="text-container">
                         <h2 style="color: #fff">Sistem Belajar<br><span class="darkred">ONLINE</span></h2>
                         <p class="white">Selama pandemi COVID-19, tentunya semua aspek kehidupan mengalami proses adaptasi, tidak terkecuali di bidang pendidikan. Kami membuka kelas online untuk setiap siswa yang masih takut untuk hadir tatap muka.</p>
                         <p class="white">Proses pengajaran didesain agar efektif dan interaktif seperti pada kelas tatap muka pada umumnya, setiap siswa dapat memilih materi yang hendak dipelajari dan tanya jawab langsung dengan para Kakak pengajar ketika kelas berlangsung.</p>
                         <p class="white">Belajar menggunakan sistem video conference dengan menggunakan aplikasi yang tentunya sudah familiar digunakan oleh setiap siswa.</p>
                     </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/online.png" alt="alternative">
+                    </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -138,7 +120,7 @@
 
 
     <!-- INteractive Conference-->
-    <div class="basic-2">
+    <div class="basic-2-left">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -159,20 +141,20 @@
     <!-- end of details 2 -->
 
       <!-- Laporan belajar -->
-      <div class="basic-2" style="padding-bottom: 4rem;">
+      <div class="basic-2-left" style="padding-bottom: 4rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/laporan2.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="text-container">
+                    <div class="text-container" style="margin-top:2rem;">
                         <h2 style="color: #fff">Laporan belajar<br><span class="darkred">MINGGUAN</span></h2>
                         <p class="white">Laporan belajar bukan lagi per semester, per 3 bulan, atau perbulan. Kami memberikan laporan PERMINGGU untuk memastikan riwayat belajar anak dapat dipantau dan apabila ada hal yang mau disampaikan kepada orangtua, informasi tersebut merupakan informasi terkini.</p>
                         <p class="white">Laporan belajar akan dikirimkan secara digitas kepada orangtua melalui media pesan Whatsapp. Orangtua juga dapat berdiskusi langsung dengan para pengajar terkait dengan perkembangan belajar anak.</p>
                     </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/laporan2.png" alt="alternative">
+                    </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -183,20 +165,6 @@
         </div> <!-- end of container -->
     </div> <!-- end of basic-2 -->
     <!-- end laporan belajar -->
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Program Platinum</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
 
     
     @include('layouts.footer')

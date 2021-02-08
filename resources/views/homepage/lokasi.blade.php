@@ -7,8 +7,7 @@
 
 @include('layouts.navbar')
 
-    <!-- Header -->
-    <header id="header" class="ex-header">
+    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:7rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -16,23 +15,8 @@
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </header> <!-- end of ex-header -->
-    <!-- end of header -->
+    </div>
 
-
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Lokasi</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
 
     <!-- Poris -->
     <div id="contact" class="form-2" style="padding-top:2rem;">
@@ -154,19 +138,6 @@
     </div> <!-- end of form-2 -->
     <!-- end of BSD City -->
 
-    <!-- Breadcrumbs -->
-    <div class="ex-basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumbs">
-                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Lokasi</span>
-                    </div> <!-- end of breadcrumbs -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of breadcrumbs -->
 
     <script>
         function myMap() {

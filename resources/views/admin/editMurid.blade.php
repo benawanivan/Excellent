@@ -26,6 +26,14 @@
             {{ Form::text('username', $murid->username, ['class' => 'form-control']) }}
         </div>
         <div class="form-group">
+            {{ Form::label('nama', 'Nama Wali: ', ['class' => 'form-label']) }}
+            {{ Form::text('nama_ortu', $murid->ortu->nama, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('username', 'Username Wali: ', ['class' => 'form-label']) }}
+            {{ Form::text('username_ortu', $murid->ortu->username, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
             {{ Form::label('asal_sekolah', 'Asal Sekolah: ', ['class' => 'form-label']) }}
             {{ Form::text('asal_sekolah', $murid->asal_sekolah, ['class' => 'form-control']) }}
         </div>
@@ -71,8 +79,20 @@
               </div>
         </div>
         <div class="form-group">
-            {{ Form::label('password', 'Password: ', ['class' => 'form-label']) }}
+            {{ Form::label('no_telp', 'No Telp Siswa: ', ['class' => 'form-label']) }}
+            {{ Form::number('no_telp', $murid->no_telp, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('no_telp_ortu', 'No Telp Wali: ', ['class' => 'form-label']) }}
+            {{ Form::number('no_telp_ortu', $murid->ortu->no_telp, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('password', 'Password Siswa: ', ['class' => 'form-label']) }}
             {{ Form::password('password', ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('password_ortu', 'Password Wali: ', ['class' => 'form-label']) }}
+            {{ Form::password('password_ortu', ['class' => 'form-control']) }}
         </div>
         
         

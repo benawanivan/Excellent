@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Mapel;
 use App\Models\Soal;
+use App\Models\Ortu;
 use App\Models\Murid;
 use Auth;
 use Hash;
@@ -61,6 +62,11 @@ class MuridController extends Controller
             'username' => 'required|unique:murid',
             'id_cabang' => 'required',
             'status' =>'required', 
+            'no_telp' => 'required',
+            'password_ortu' => 'required|min:8',
+            'nama_ortu' => 'required',
+            'username_ortu' => 'required|unique:ortu,username',
+            'no_telp_ortu' => 'required',
         ]);
         
         $murid = new Murid();
@@ -70,8 +76,17 @@ class MuridController extends Controller
         $murid->kelas = $request->kelas;
         $murid->asal_sekolah = $request->asal_sekolah;
         $murid->status = $request->status;
+        $murid->no_telp = $request->no_telp;
         $murid->password = Hash::make($request->password);
         $murid->save();
+        $ortu = new Ortu();
+        $ortu->nama = $request->nama_ortu;
+        $ortu->username = $request->username_ortu;
+        $ortu->no_telp = $request->no_telp_ortu;
+        $ortu->password = Hash::make($request->password_ortu);
+        $ortu->id_murid = $murid->id;
+        $ortu->save();
+        
         return back()->with('success',"Data siswa berhasil disimpan");
     }
     public function edit(Request $request)
@@ -83,6 +98,12 @@ class MuridController extends Controller
             'kelas' => 'required',
             'username' => 'required|unique:murid'.($request->id ? ",id,$request->id" : ''),
             'id_cabang' => 'required',
+            'status' =>'required',
+            'no_telp' => 'required',
+            'password_ortu' => 'required|min:8',
+            'nama_ortu' => 'required',
+            'username_ortu' => 'required|unique:ortu'.($request->id ? ",id,$request->id" : ''),
+            'no_telp_ortu' => 'required',
             
         ]);
         $murid = Murid::find($request->id);
@@ -91,8 +112,17 @@ class MuridController extends Controller
         $murid->id_cabang = $request->id_cabang;
         $murid->kelas = $request->kelas;
         $murid->asal_sekolah = $request->asal_sekolah;
+        $murid->status = $request->status;
+        $murid->no_telp = $request->no_telp;
         $murid->password = Hash::make($request->password);
         $murid->save();
+        $ortu = $murid->ortu;
+        $ortu->nama = $request->nama_ortu;
+        $ortu->username = $request->username_ortu;
+        $ortu->no_telp = $request->no_telp_ortu;
+        $ortu->password = Hash::make($request->password_ortu);
+        $ortu->id_murid;
+        $ortu->save();
         return back()->with('success',"Data siswa berhasil diubah");
     }
     public function delete($id)

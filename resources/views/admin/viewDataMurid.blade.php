@@ -38,17 +38,22 @@
         @if (!is_null($keyword))
             <h2>Keyword: {{$keyword}}</h2>
         @endif
-        <table class="table table-hover">
+        <div class="scrollmenu">
+        <table class="table table-hover" width = "100%">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col" class="text-center">No</th>
                     <th scope="col" class="text-center">Nama</th>
                     <th scope="col" class="text-center">Username</th>
+                    <th scope="col" class="text-center">Nama Wali</th>
+                    <th scope="col" class="text-center">Username Wali</th>
                     <th scope="col" class="text-center">Asal Sekolah</th>
                     <th scope="col" class="text-center">Kelas</th>
                     <th scope="col" class="text-center">Cabang</th>
                     <th scope="col" class="text-center">Status</th>
                     <th scope="col" class="text-center" rowspan="2">Action</th>
+                    <th scope="col" class="text-center">No Telp Siswa</th>
+                    <th scope="col" class="text-center">No Telp Ortu</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,8 +62,10 @@
                     <tr class="{{$m->status?"":"table-danger"}}">
                         <?php $i = $i + 1; ?>
                         <th class="text-center"><?php echo $i; ?></th>
-                        <td>{{ $m->nama }}</td>
+                        <td class="text-center">{{ $m->nama }}</td>
                         <td class="text-center">{{$m->username}}</td>
+                        <td class="text-center">{{ $m->ortu->nama }}</td>
+                        <td class="text-center">{{ $m->ortu->username }}</td>
                         <td class="text-center">{{$m->asal_sekolah}}</td>
                         <td class="text-center">{{$m->kelas}}</td>
                         <td class="text-center">{{$m->cabang->nama}}</td>
@@ -95,10 +102,11 @@
                                 
                             </div>
                         </td>
-
+                        <td>{{$m->no_telp}}</td>
+                        <td>{{$m->ortu->no_telp}}</td>
                     </tr>
                 @endforeach
             </tbody>
-        </table>
+        </table></div>
     </div>
 @endsection

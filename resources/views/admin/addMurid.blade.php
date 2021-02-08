@@ -18,8 +18,16 @@
             {{ Form::text('nama', null, ['class' => 'form-control']) }}
         </div>
         <div class="form-group">
-            {{ Form::label('username', 'Username: ', ['class' => 'form-label']) }}
+            {{ Form::label('username', 'Username Siswa: ', ['class' => 'form-label']) }}
             {{ Form::text('username', null, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('nama', 'Nama Wali: ', ['class' => 'form-label']) }}
+            {{ Form::text('nama_ortu', null, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('username', 'Username Wali: ', ['class' => 'form-label']) }}
+            {{ Form::text('username_ortu', null, ['class' => 'form-control']) }}
         </div>
         <div class="form-group">
             {{ Form::label('asal_sekolah', 'Asal Sekolah: ', ['class' => 'form-label']) }}
@@ -43,7 +51,7 @@
             </select>
         </div>
         <div class="form-group">
-            {{ Form::label('nama_mapel', 'Cabang: ', ['class' => 'form-label']) }}
+            {{ Form::label('cabang', 'Cabang: ', ['class' => 'form-label']) }}
             <select class="browser-default custom-select"  name = 'id_cabang'>
                 @foreach ($cabang as $c)
             <option value="{{$c->id}}">{{$c->nama}}</option>
@@ -67,8 +75,20 @@
               </div>
         </div>
         <div class="form-group">
-            {{ Form::label('password', 'Password: ', ['class' => 'form-label']) }}
+            {{ Form::label('no_telp', 'No Telp Siswa: ', ['class' => 'form-label']) }}
+            {{ Form::number('no_telp', null, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('no_telp_ortu', 'No Telp Wali: ', ['class' => 'form-label']) }}
+            {{ Form::number('no_telp_ortu', null, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('password', 'Password Siswa: ', ['class' => 'form-label']) }}
             {{ Form::password('password', ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
+            {{ Form::label('password_ortu', 'Password Wali: ', ['class' => 'form-label']) }}
+            {{ Form::password('password_ortu', ['class' => 'form-control']) }}
         </div>
         
         

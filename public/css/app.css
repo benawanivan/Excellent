@@ -10904,6 +10904,25 @@ a.text-dark:focus {
   }
 }
 
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  .body {
+    display: inline-block !important;
+  }
+}
+
 .navbar {
   padding: 15px 10px;
   background: #fff;
@@ -11119,7 +11138,6 @@ a[data-toggle=collapse] {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   color: orangered;
   text-decoration: none;
 }

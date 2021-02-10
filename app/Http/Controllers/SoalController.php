@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Mapel;
 use App\Models\Soal;
 use Validator;
+use File;
 use Illuminate\Support\Facades\Storage;
 
 class SoalController extends Controller
@@ -36,12 +37,42 @@ class SoalController extends Controller
         return Storage::download('private/soal/'.$request->filename,$request->judul);
         // return response()->download(public_path('private/soal/'.$filename));
     }
-    public function backup(Request $request){
-        return Storage::download('private/soal/'.$request->filename,$request->judul);
-        // return response()->download(public_path('private/soal/'.$filename));
+    public function backupSoal(){
+        $zip_file = 'databaseSoal_'.date("d-m-Y").'.zip';
+        $zip = new \ZipArchive();
+        $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
+
+        $path = storage_path('app/private/soal');
+        $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
+        foreach ($files as $name => $file)
+        {
+            // We're skipping all subfolders
+            if (!$file->isDir()) {
+                $filePath     = $file->getRealPath();
+
+                // extracting filename with substr/strlen
+                $relativePath = 'soal/' . substr($filePath, strlen($path) + 1);
+
+                $zip->addFile($filePath, $relativePath);
+            }
+        }
+        $zip->close();
+        return response()->download($zip_file);
     }
-    public function deleteAll(Request $request){
-        return Storage::download('private/soal/'.$request->filename,$request->judul);
-        // return response()->download(public_path('private/soal/'.$filename));
+    public function deleteSoal(Request $request){
+        $soal = Soal::find($request->id);
+                
+        Storage::delete('private/soal/'.$soal->file);
+        $soal->delete();
+        
+        return back()->with('success','Soal berhasil dihapus');
+    }
+    public function deleteAllSoal(Request $request){
+        $soal = Soal::all();
+        foreach ($soal as $s) {
+            $s->delete();
+        }
+        Storage::deleteDirectory('private/soal');
+        return back()->with('success','Semua soal berhasil dihapus');
     }
 }

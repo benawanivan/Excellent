@@ -47,8 +47,42 @@ Route::middleware('auth:admin')->group(function(){
 	Route::get('admin/soal/tambah','App\Http\Controllers\AdminController@addSoal')->name('admin.addSoal');
 	Route::get('admin/soal/backup','App\Http\Controllers\SoalController@backupSoal')->name('admin.backupSoal');
 	Route::post('admin/soal/deleteAll','App\Http\Controllers\SoalController@deleteAllSoal')->name('admin.deleteAllSoal');
+	Route::post('admin/soal/delete','App\Http\Controllers\SoalController@deleteSoal')->name('admin.deleteSoal');
 	Route::post('admin/soal/download','App\Http\Controllers\SoalController@download')->name('admin.downloadSoal');
 	Route::post('admin/soal/tambah','App\Http\Controllers\SoalController@store')->name('admin.storeSoal');
+	
+	Route::get('admin/datamurid','App\Http\Controllers\AdminController@viewDataMurid')->name('admin.dataMurid');
+	Route::get('admin/datamurid/search','App\Http\Controllers\AdminController@searchMurid')->name('admin.searchMurid');
+	Route::get('admin/datamurid/tambah','App\Http\Controllers\AdminController@addMurid')->name('admin.addMurid');
+	Route::post('admin/datamurid/tambah','App\Http\Controllers\MuridController@store')->name('admin.storeMurid');
+	Route::get('admin/datamurid/edit/','App\Http\Controllers\AdminController@editMurid')->name('admin.editMurid');
+	Route::post('admin/datamurid/edit/','App\Http\Controllers\MuridController@edit');
+	Route::delete('admin/datamurid/{datamurid}','App\Http\Controllers\MuridController@delete')->name('admin.deleteMurid');
+
+	Route::get('admin/dataguru','App\Http\Controllers\AdminController@viewDataGuru')->name('admin.dataGuru');
+	Route::get('admin/dataguru/search','App\Http\Controllers\AdminController@searchGuru')->name('admin.searchGuru');
+	Route::get('admin/dataguru/tambah','App\Http\Controllers\AdminController@addGuru')->name('admin.addGuru');
+	Route::post('admin/dataguru/tambah','App\Http\Controllers\GuruController@store')->name('admin.storeGuru');
+	Route::get('admin/dataguru/edit/','App\Http\Controllers\AdminController@editGuru')->name('admin.editGuru');
+	Route::post('admin/dataguru/edit/','App\Http\Controllers\GuruController@edit');
+	Route::delete('admin/dataguru/{dataguru}','App\Http\Controllers\GuruController@delete')->name('admin.deleteGuru');
+
+	Route::get('admin/datacabang','App\Http\Controllers\AdminController@viewDataCabang')->name('admin.dataCabang');
+	Route::get('admin/datacabang/search','App\Http\Controllers\AdminController@searchCabang')->name('admin.searchCabang');
+	Route::get('admin/datacabang/tambah','App\Http\Controllers\AdminController@addCabang')->name('admin.addCabang');
+	Route::post('admin/datacabang/tambah','App\Http\Controllers\CabangController@store')->name('admin.storeCabang');
+	Route::get('admin/datacabang/edit/','App\Http\Controllers\AdminController@editCabang')->name('admin.editCabang');
+	Route::post('admin/datacabang/edit/','App\Http\Controllers\CabangController@edit');
+	Route::delete('admin/datacabang/{datacabang}','App\Http\Controllers\CabangController@delete')->name('admin.deleteCabang');
+	
+	Route::get('admin/datamapel','App\Http\Controllers\AdminController@viewDataMapel')->name('admin.dataMapel');
+	Route::get('admin/datamapel/search','App\Http\Controllers\AdminController@searchMapel')->name('admin.searchMapel');
+	Route::get('admin/datamapel/tambah','App\Http\Controllers\AdminController@addMapel')->name('admin.addMapel');
+	Route::post('admin/datamapel/tambah','App\Http\Controllers\MapelController@store')->name('admin.storeMapel');
+	Route::get('admin/datamapel/edit/','App\Http\Controllers\AdminController@editMapel')->name('admin.editMapel');
+	Route::post('admin/datamapel/edit/','App\Http\Controllers\MapelController@edit');
+	Route::delete('admin/datamapel/{datamapel}','App\Http\Controllers\MapelController@delete')->name('admin.deleteMapel');
+	
 	Route::post('admin/logout','App\Http\Controllers\Auth\AdminAuthController@postAdminLogout')->name('admin.logout');
 });
 

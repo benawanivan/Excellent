@@ -39,6 +39,6 @@ class Murid extends Authenticatable
 
     public function Ortu()
     {
-        return $this->hasMany(Ortu::class,'id_murid');
+        return $this->hasOne(Ortu::class,'id_murid','id');
     }
 }

@@ -44,18 +44,15 @@
                     <div class="card ">
                         <div class="card-body">
                             <h2 class="text-center"><i class="fas fa-file-alt text-primary fa-4x "></i></h2>
-                            <h4 class="card-title text-capitalize text-center ">{{ $row->judul}}</h4>
+                            <h4 class="card-title text-capitalize text-center" style="margin-bottom: 0rem;">{{ $row->judul}}</h4>
+                            <p class="card-text" style="text-align: center" ><small class="text-muted">Uploaded {{ $row->tgl_buat}}</small></hp>
                         </div>
-                        <table class="card-footer d-flex align-items-end">
+                        <table class="card-footer d-flex align-self-center">
                             <th>
                             <td>
-                                <p class="card-text"><small class="text-muted text-left">Uploaded
-                                {{ $row->tgl_buat}}</small></p>
-                            </td>
-                            <td>
-                                <div class="text-right">
+                                <div class="text-left">
                                     <a class="btn btn-primary" href="{{ $row->link }}" role="button">Link</a>
-
+                                    <a class="btn btn-danger" href="{{route('guru.deleteTryout')}}/{{$row->id}}" role="button">Delete</a>
                                 </div>
                             </td>
 

@@ -7,11 +7,11 @@
 
 @include('layouts.navbar')
 
-    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:7rem;">
+    <div id="header" class="cards-2" style="background-color: #fffff; padding-top:7rem;padding-bottom:0rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 style="color: #fff">Program Platinum</h1>
+                    <h1 style="color: #393939">Program Les <span class="orange">Platinum</span></h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -19,7 +19,7 @@
 
 
     <!-- Pricing -->
-    <div id="pricing" class="cards-2">
+    <div id="pricing" class="cards-2" style="padding-bottom:0rem;padding-top:1rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 offset-lg-2">
@@ -72,32 +72,8 @@
     </div> <!-- end of cards-2 -->
     <!-- end of pricing -->
 
-
-   
-    <!-- Sistem Belajar Offline -->
-    <div class="basic-2-left" style="padding-top: 3.75rem;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="text-container">
-                        <h2 style="color: #fff">Sistem Belajar<br><span class="darkred">OFFLINE</span></h2>
-                        <p class="white">Untuk mengakomodasi setiap siswa kami yang tetap ingin menghadiri kelas tatap muka, kami membuka kelas Offline, dimana tetap dengan mengikuti Protokol Kesehatan yang ketat.</p>
-                        <p class="white">Setiap Pengajar dan Staff kami pastikan dalam keadaan sehat dan tidak sedang mengidap penyakit, untuk memastikan semua yang hadir tatap muka akan tetap sehat saat belajar.</p>
-                        <p class="white">Semua siswa yang hadir juga wajib mengikuti Protokol Kesehatan yang diwajibkan, dan apabila berhalangan dapat diganti di hari lain atau diganti dengan kelas online (dengan perjanjian).</p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-4">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/offline.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of details 2 -->
-
       <!-- Sistem Belajar Online -->
-      <div class="basic-2-left">
+      <div class="basic-2-left" style="padding-top: 1rem;background-color: #fea26f">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
@@ -119,8 +95,30 @@
     <!-- end of details 2 -->
 
 
-    <!-- INteractive Conference-->
+    <!-- Sistem Belajar Offline -->
     <div class="basic-2-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="text-container">
+                        <h2 style="color: #fff">Sistem Belajar<br><span class="darkred">OFFLINE</span></h2>
+                        <p class="white">Untuk mengakomodasi setiap siswa kami yang tetap ingin menghadiri kelas tatap muka, kami membuka kelas Offline, dimana tetap dengan mengikuti Protokol Kesehatan yang ketat.</p>
+                        <p class="white">Setiap Pengajar dan Staff kami pastikan dalam keadaan sehat dan tidak sedang mengidap penyakit, untuk memastikan semua yang hadir tatap muka akan tetap sehat saat belajar.</p>
+                        <p class="white">Semua siswa yang hadir juga wajib mengikuti Protokol Kesehatan yang diwajibkan, dan apabila berhalangan dapat diganti di hari lain atau diganti dengan kelas online (dengan perjanjian).</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/offline.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of details 2 -->
+
+    <!-- Interactive Conference-->
+    <div class="basic-2-left" style="background-color: #fea26f">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -141,14 +139,14 @@
     <!-- end of details 2 -->
 
       <!-- Laporan belajar -->
-      <div class="basic-2-left" style="padding-bottom: 4rem;">
+      <div class="basic-2-left" style="padding-bottom: 4rem;background-color:#ffffff">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container" style="margin-top:2rem;">
-                        <h2 style="color: #fff">Laporan belajar<br><span class="darkred">MINGGUAN</span></h2>
-                        <p class="white">Laporan belajar bukan lagi per semester, per 3 bulan, atau perbulan. Kami memberikan laporan PERMINGGU untuk memastikan riwayat belajar anak dapat dipantau dan apabila ada hal yang mau disampaikan kepada orangtua, informasi tersebut merupakan informasi terkini.</p>
-                        <p class="white">Laporan belajar akan dikirimkan secara digitas kepada orangtua melalui media pesan Whatsapp. Orangtua juga dapat berdiskusi langsung dengan para pengajar terkait dengan perkembangan belajar anak.</p>
+                        <h2 style="color: #393939">Laporan belajar<br><span class="darkred">MINGGUAN</span></h2>
+                        <p style="color: #393939">Laporan belajar bukan lagi per semester, per 3 bulan, atau perbulan. Kami memberikan laporan PERMINGGU untuk memastikan riwayat belajar anak dapat dipantau dan apabila ada hal yang mau disampaikan kepada orangtua, informasi tersebut merupakan informasi terkini.</p>
+                        <p style="color: #393939">Laporan belajar akan dikirimkan secara digitas kepada orangtua melalui media pesan Whatsapp. Orangtua juga dapat berdiskusi langsung dengan para pengajar terkait dengan perkembangan belajar anak.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -159,7 +157,7 @@
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12" style="text-align:center">
-                    <a class="btn-solid-white" href="https://docs.google.com/forms/d/e/1FAIpQLSf_Ffp3yWkq0a9wjgAqQiCIdXTkcKBdJ_WL5xp280HIAyBvew/viewform" style="width:55%">Daftar Sekarang</a>
+                    <a class="btn-solid-reg" href="https://docs.google.com/forms/d/e/1FAIpQLSf_Ffp3yWkq0a9wjgAqQiCIdXTkcKBdJ_WL5xp280HIAyBvew/viewform" style="width:55%">Daftar Sekarang</a>
                 </div>
             </div>
         </div> <!-- end of container -->

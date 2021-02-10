@@ -19,6 +19,7 @@ class CreateOrtu extends Migration
             $table->string('username')->unique();
             $table->unsignedBigInteger('id_murid');
             $table->string('password');
+            $table->string('link_meeting');
             $table->rememberToken();
             $table->foreign('id_murid')
                 ->references('id')->on('murid')

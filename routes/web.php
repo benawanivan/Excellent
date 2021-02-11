@@ -115,6 +115,11 @@ Route::middleware('auth:murid')->group(function(){
 	Route::put('murid/updateProfile','App\Http\Controllers\MuridController@updateProfile')->name('murid.updateProfile');
 	Route::post('murid/logout','App\Http\Controllers\Auth\MuridAuthController@postMuridLogout')->name('murid.logout');
 	
+	Route::get('murid/tryout','App\Http\Controllers\MuridController@viewTryout')->name('murid.tryout');
+	Route::get('murid/tryout/search','App\Http\Controllers\MuridController@searchTryout')->name('murid.searchTryout');
+
+	Route::get('murid/nonaktif','App\Http\Controllers\MuridController@viewNonaktif')->name('murid.nonaktif');
+	
 });
 
 Route::middleware('auth:ortu')->group(function(){

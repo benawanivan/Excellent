@@ -39,7 +39,11 @@
         @include('layouts.page_template.admin')
     @endauth
     @auth('murid')
-        @include('layouts.page_template.murid')
+        @if (Auth::user()->status)
+            @include('layouts.page_template.murid')
+        @else
+            @include('murid.ViewNonaktif')
+        @endif
     @endauth
     @auth('guru')
         @include('layouts.page_template.guru')

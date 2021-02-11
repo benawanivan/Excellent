@@ -50,9 +50,15 @@
                         <table class="card-footer d-flex align-self-center">
                             <th>
                             <td>
-                                <div class="text-left">
-                                    <a class="btn btn-primary" href="{{ $row->link }}" role="button">Link</a>
-                                    <a class="btn btn-danger" href="{{route('guru.deleteTryout')}}/{{$row->id}}" role="button">Delete</a>
+                                <div class="row">
+                                    <a class="btn btn-primary" href="{{ $row->link }}" role="button" style="height:36.67px">Link</a>
+                                    {{ Form::open(['action' => ['App\\Http\\Controllers\\TryoutController@delete', $row->id], 'method' => 'DELETE']) }}
+                                    {{-- {{ Form::submit('Delete', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus data Tryout ini?')"]) }} --}}
+                                    <div class="form-group">
+                                        <button type="submit" class="btn  btn-outline-danger waves-effect px-3" onclick="return confirm('Apakah anda yakin akan menghapus data Tryout ini?')">
+                                        Delete</button>
+                                    </div>
+                                    {{ Form::close() }}
                                 </div>
                             </td>
 

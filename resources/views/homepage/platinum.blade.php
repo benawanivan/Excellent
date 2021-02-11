@@ -7,7 +7,22 @@
 
 @include('layouts.navbar')
 
-    <div id="header" class="cards-2" style="background-color: #fffff; padding-top:7rem;padding-bottom:0rem;">
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs">
+                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Platinum</span>
+                    </div> <!-- end of breadcrumbs -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of breadcrumbs -->
+
+    <div id="header" class="cards-2" style="background-color: #fffff; padding-top:0.5rem;padding-bottom:0rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

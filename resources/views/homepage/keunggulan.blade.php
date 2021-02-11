@@ -18,7 +18,7 @@
     </div> -->
 
     <!-- Breadcrumbs -->
-    <div class="ex-basic-1" style="padding-top:6.5rem">
+    <div class="ex-basic-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -30,6 +30,16 @@
         </div> <!-- end of container -->
     </div> <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
+
+    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:2.5rem;padding-bottom:0rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="color: #fff">Keunggulan</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div>
 
      <!-- Sistem Belajar Offline -->
      <div class="basic-2-left">

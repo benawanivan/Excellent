@@ -16,6 +16,7 @@ class CreateLaporan extends Migration
         Schema::create('laporan', function (Blueprint $table) {
             $table->id();            
             $table->string('judul'); 
+            $table->string('file'); 
             $table->integer('minggu_ke'); 
             $table->integer('bulan'); 
             $table->unsignedBigInteger('id_murid'); 

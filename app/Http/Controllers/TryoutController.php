@@ -20,4 +20,12 @@ class TryoutController extends Controller
         return redirect()->route('guru.tryout')->with('success','Upload Tryout Berhasil');
         // return $request;
     }
+
+    public function delete($id)
+    {
+        $tryout = Tryout::find($id);
+        $tryout->delete();
+        
+        return back()->with('success','Tryout berhasil dihapus');
+    }
 }

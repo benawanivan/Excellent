@@ -30,92 +30,35 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-xs-6">
+            @foreach ($laporan as $row)
+                <div class="col-xl-3 col-md-6 col-xs-6 ">
                     <div class="card ">
                         <div class="card-body">
-                        <p class="card-text" style="margin-bottom:0rem;text-align:center;margin-bottom:6px"><small class="text-muted text-left" >Januari 2020</small></p>
+                            <p class="card-text" style="margin-bottom:0rem;text-align:center;margin-bottom:6px"><small class="text-muted text-left" >Januari 2020</small></p>
                             <h2 class="text-center"><i class="fas fa-file-pdf text-danger fa-4x "></i></h2>
-                            <h5 class="card-title text-center">Ivan Benawan - Minggu 1</h5>
-                            
-                            <div class="text-center">
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-download"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-eye"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-outline-danger waves-effect px-3"><i
-                                        class="fas fa-trash-alt" aria-hidden="true"></i></button>
-                            </div>
-
-                            <p class="card-text"><small class="text-muted text-left">Last updated 14 days ago</small></p>
+                            <h4 class="card-title text-capitalize text-center" style="margin-bottom: 0rem;">{{ $row->judul}}</h4>
+                            <p class="card-text" style="text-align: center" ><small class="text-muted">Uploaded {{ $row->tgl_upload}}</small></hp>
                         </div>
+                        <table class="card-footer d-flex align-self-center">
+                            <th>
+                            <td>
+                                <div class="row">
+                                    <a class="btn btn-primary" href="{{ $row->link }}" role="button" style="height:36.67px"><i class="fas fa-download"></i></a>
+                                </div>
+                            </td>
 
+                            {{-- <button type="button"
+                                class="btn  btn-elegant waves-effect px-3"><i class="fas fa-eye"
+                                    aria-hidden="true"></i></button> --}}
+                            {{-- <button type="button"
+                                class="btn  btn-outline-danger waves-effect px-3"><i class="fas fa-trash-alt"
+                                    aria-hidden="true"></i></button> --}}
+                            </th>
+                        </table>
                     </div>
                 </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="card ">
-                        <div class="card-body">
-                        <p class="card-text" style="margin-bottom:0rem;text-align:center;margin-bottom:6px"><small class="text-muted text-left" >Januari 2020</small></p>
-                            <h2 class="text-center"><i class="fas fa-file-pdf text-danger fa-4x "></i></h2>
-                            <h5 class="card-title text-center">Ivan Benawan - Minggu 2</h5>
-                            
-                            <div class="text-center">
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-download"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-eye"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-outline-danger waves-effect px-3"><i
-                                        class="fas fa-trash-alt" aria-hidden="true"></i></button>
-                            </div>
-
-                            <p class="card-text"><small class="text-muted text-left">Last updated 14 days ago</small></p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="card ">
-                        <div class="card-body">
-                        <p class="card-text" style="margin-bottom:0rem;text-align:center;margin-bottom:6px"><small class="text-muted text-left" >Januari 2020</small></p>
-                            <h2 class="text-center"><i class="fas fa-file-pdf text-danger fa-4x "></i></h2>
-                            <h5 class="card-title text-center">Ivan Benawan - Minggu 3</h5>
-                            
-                            <div class="text-center">
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-download"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-eye"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-outline-danger waves-effect px-3"><i
-                                        class="fas fa-trash-alt" aria-hidden="true"></i></button>
-                            </div>
-
-                            <p class="card-text"><small class="text-muted text-left">Last updated 14 days ago</small></p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="card ">
-                        <div class="card-body">
-                        <p class="card-text" style="margin-bottom:0rem;text-align:center;margin-bottom:6px"><small class="text-muted text-left" >Januari 2020</small></p>
-                            <h2 class="text-center"><i class="fas fa-file-pdf text-danger fa-4x "></i></h2>
-                            <h5 class="card-title text-center">Ivan Benawan - Minggu 4</h5>
-                            
-                            <div class="text-center">
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-download"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-elegant waves-effect px-3"><i class="fas fa-eye"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" class="btn  btn-outline-danger waves-effect px-3"><i
-                                        class="fas fa-trash-alt" aria-hidden="true"></i></button>
-                            </div>
-
-                            <p class="card-text"><small class="text-muted text-left">Last updated 14 days ago</small></p>
-                        </div>
-
-                    </div>
-                </div>
+                @endforeach
             </div>
-
         </div>
 </div>
 @endsection

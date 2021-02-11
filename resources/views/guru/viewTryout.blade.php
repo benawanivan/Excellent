@@ -44,18 +44,21 @@
                     <div class="card ">
                         <div class="card-body">
                             <h2 class="text-center"><i class="fas fa-file-alt text-primary fa-4x "></i></h2>
-                            <h4 class="card-title text-capitalize text-center ">{{ $row->judul}}</h4>
+                            <h4 class="card-title text-capitalize text-center" style="margin-bottom: 0rem;">{{ $row->judul}}</h4>
+                            <p class="card-text" style="text-align: center" ><small class="text-muted">Uploaded {{ $row->tgl_buat}}</small></hp>
                         </div>
-                        <table class="card-footer d-flex align-items-end">
+                        <table class="card-footer d-flex align-self-center">
                             <th>
                             <td>
-                                <p class="card-text"><small class="text-muted text-left">Uploaded
-                                {{ $row->tgl_buat}}</small></p>
-                            </td>
-                            <td>
-                                <div class="text-right">
-                                    <a class="btn btn-primary" href="{{ $row->link }}" role="button">Link</a>
-
+                                <div class="row">
+                                    <a class="btn btn-primary" href="{{ $row->link }}" role="button" style="height:36.67px">Link</a>
+                                    {{ Form::open(['action' => ['App\\Http\\Controllers\\TryoutController@delete', $row->id], 'method' => 'DELETE']) }}
+                                    {{-- {{ Form::submit('Delete', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus data Tryout ini?')"]) }} --}}
+                                    <div class="form-group">
+                                        <button type="submit" class="btn  btn-outline-danger waves-effect px-3" onclick="return confirm('Apakah anda yakin akan menghapus data Tryout ini?')">
+                                        Delete</button>
+                                    </div>
+                                    {{ Form::close() }}
                                 </div>
                             </td>
 

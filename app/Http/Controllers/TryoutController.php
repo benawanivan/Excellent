@@ -17,7 +17,15 @@ class TryoutController extends Controller
         $tryout->tgl_buat = date("Ymd");
         $tryout->save();
         
-        return back()->with('success','Upload Tryout Berhasil');
+        return redirect()->route('guru.tryout')->with('success','Upload Tryout Berhasil');
         // return $request;
+    }
+
+    public function delete($id)
+    {
+        $tryout = Tryout::find($id);
+        $tryout->delete();
+        
+        return back()->with('success','Tryout berhasil dihapus');
     }
 }

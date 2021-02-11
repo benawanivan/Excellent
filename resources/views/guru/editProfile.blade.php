@@ -51,18 +51,39 @@
         </div>
     </div>
 
+    {{ Form::open(['action' => ['App\\Http\\Controllers\\GuruController@updateLink'], 'method' => 'PUT']) }}
+    <div class="form-group">
+        <div class="col col-md-3">
+            <label for="text-input" class=" form-control-label">Link Meeting</label>
+        </div>
+        <div class="col-12 col-md-9">
+            <input type="text" id="text-input" value="{{ \Auth::user()->link_meeting}}" name="link_meeting" class="form-control">
+        </div>
+    </div>
+    <div class="col col-md-3">
+    {{ Form::submit('Update Link Meeting', ['class' => 'btn btn-success']) }}
+    </div>
+    {{ Form::close() }}
     {{ Form::open(['action' => ['App\\Http\\Controllers\\GuruController@updateProfile'], 'method' => 'PUT']) }}
-
     <div class="form-group">
+        <div class="col col-md-3">
         {{ Form::label('password', 'Password: ', ['class' => 'form-label']) }}
+        </div>
+        <div class="col-12 col-md-9">
         {{ Form::password('password',['class' => 'form-control'])}}
+        </div>
     </div>
     <div class="form-group">
+        <div class="col col-md-3">
         {{ Form::label('repassword', 'Confirm Password: ', ['class' => 'form-label']) }}
+        </div>
+        <div class="col-12 col-md-9">
         {{ Form::password('repassword',['class' => 'form-control'])}}
+        </div>
     </div>
-
+    <div class="col col-md-3">
     {{ Form::submit('Update Password', ['class' => 'btn btn-primary']) }}
+    </div>
     {{ Form::close() }}
 </div>
 @endsection

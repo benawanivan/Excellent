@@ -7,7 +7,20 @@
 
 @include('layouts.navbar')
 
-    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:7rem;">
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumbs">
+                        <a href="{{ url('/') }}">Home</a><i class="fa fa-angle-double-right"></i><span>Tanya PR Online</span>
+                    </div> <!-- end of breadcrumbs -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of breadcrumbs -->
+    <div id="header" class="cards-2" style="background-color: #f16622; padding-top:1rem;padding-bottom:1rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -20,7 +33,7 @@
 
  
     <!-- Sistem Belajar Offline -->
-    <div class="basic-2" style="padding-top: 3.75rem;"> 
+    <div class="basic-2-left" style="padding-top: 0rem;"> 
         <div class="container">
             <!-- <div class="row">
                 <div class="col-lg-12">
@@ -53,10 +66,10 @@
 
 
     <!-- Interactive Conference-->
-    <div class="basic-2" style="padding-top:2rem">
+    <div class="basic-2-left" style=>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-8" style="align-self:center;">
                     <div class="text-container">
                         <p class="white" style="font-size:120%">Sebelum memulai <b>Tanya PR Online</b>, kamu harus mengisi GOLD untuk bisa ditukarkan dengan pertanyaanmu yaa. Soal-soal yang ditanyakan bisa berupa Pilihan Ganda, Isian Singkat, maupun Essay, tapi bukan untuk mengerjakan Project atau Tugas Besar yaa.</p>
                         <br>
@@ -66,17 +79,17 @@
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-4" style="align-self:center;">
-                    <div class="image-container">
+                    <div class="image-container"     style="margin-top: 3.5rem;">
                         <img class="img-fluid" src="images/gold.png" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row" style="padding-top:2rem">
                 <div class="col-lg-12" >
-                    <h4 class="white" style="margin-left: 4rem;">Tanya PR Online</h4>
+                    <h4 class="white" style="text-align:left;margin-left: 4rem;">Tanya PR Online</h4>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="text-align:left;">
                 <div class="col-lg-12">
                     <div class="text-container" style="margin-top:0rem">
                         <p class="white" style="font-size:120%">Tanya soal kapanpun dan dimanapun, dapatkan jawaban soalmu maksimal 1x24 jam (Senin - Jumat).</p>
@@ -84,7 +97,7 @@
                 </div> <!-- end of col -->
             </div>
             
-            <div class="row">
+            <div class="row" style="text-align:left;">
                 <div class="col-lg-5">
                     <p class="white" style="margin-left: 4rem;font-size:120%">Ala Carte (1 Soal): Rp 10rb/soal</p>
                 </div>
@@ -99,7 +112,7 @@
     <!-- end of details 2 -->
 
     <!-- Laporan belajar -->
-    <div class="basic-2" style="padding-top: 2rem;padding-bottom: 4rem;">
+    <div class="basic-2-left" style="padding-top: 2rem;padding-bottom: 4rem;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12" style="text-align:center">

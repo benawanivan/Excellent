@@ -99,6 +99,8 @@ Route::middleware('auth:guru')->group(function(){
 	Route::get('guru/tryout/tambah','App\Http\Controllers\GuruController@addTryout')->name('guru.addTryout');
 	Route::post('guru/tryout/tambah','App\Http\Controllers\TryoutController@store')->name('guru.storeTryout');
 	Route::put('guru/updateProfile','App\Http\Controllers\GuruController@updateProfile')->name('guru.updateProfile');
+	Route::put('guru/updateLink','App\Http\Controllers\GuruController@updateLink')->name('guru.updateLink');
+	Route::delete('guru/tryout/{tryout}','App\Http\Controllers\TryoutController@delete')->name('guru.deleteTryout');
 	Route::post('guru/logout','App\Http\Controllers\Auth\GuruAuthController@postGuruLogout')->name('guru.logout');
 });
 

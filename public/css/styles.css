@@ -1656,9 +1656,9 @@ a:hover.back-to-top {
 }
 
 .ex-basic-1 {
-	padding-top: 2rem;
-	padding-bottom: 0.875rem;
-	background-color: #f7fcfd;
+	padding-top: 6.25rem;
+	padding-bottom: 0rem;
+	background-color: transparent;
 }
 
 .ex-basic-1 .breadcrumbs {

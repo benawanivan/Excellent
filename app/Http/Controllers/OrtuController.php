@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Laporan;
 use Auth;
 use Hash;
 
@@ -14,7 +15,9 @@ class OrtuController extends Controller
     }
     public function viewLaporan()
     {
-        return view('ortu.viewLaporan');
+        $keyword = NULL;
+        $laporan = Laporan::paginate(12);
+        return view('ortu.viewLaporan',['laporan'=>$laporan,'keyword'=>$keyword],compact('laporan'));
        
     }
     public function viewJadwal()

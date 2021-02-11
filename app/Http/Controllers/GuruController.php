@@ -40,6 +40,11 @@ class GuruController extends Controller
         return view('guru.viewTryout',['tryout'=>$tryout,'keyword'=>$keyword],compact('tryout'));
     }
 
+    public function deleteTryout($id)
+    {
+        Tryout::find($id)->delete();
+        return back()->with('success',"Tryout berhasil dihapus");
+    }
     public function searchSoal(Request $request){
         $soal = Soal::where('judul','like',"%".$request->keyword."%")->paginate(12);
         return view('guru.viewSoal',['soal'=>$soal,'keyword'=>$request->keyword],compact('soal'));
@@ -58,6 +63,14 @@ class GuruController extends Controller
         $guru->password = Hash::make($request->password);
         $guru->save();
         return back()->with('success',"Password berhasil diubah");
+    }
+
+
+    public function updateLink(Request $request){
+        $guru = AUTH::user();
+        $guru->link_meeting = $request->link_meeting;
+        $guru->save();
+        return back()->with('success',"Link Meeting berhasil diubah");
     }
 
     public function addSoal(){

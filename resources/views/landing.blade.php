@@ -44,10 +44,10 @@
                         <h2><span style="color: #8e0000; font-size: 180%">SEMI<br>PRIVATE</span></h2>
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
-                                <div class="media-body" style="color:#fff">Siswa akan mendapatkan pendampingan secara personal<br>sesuai dengan kebutuhannya dan kurikulum sekolah</div>
+                                <div class="media-body" style="color:#fff">Siswa akan mendapatkan pendampingan secara personal sesuai dengan kebutuhannya dan kurikulum sekolah</div>
                             </li>
                             <li class="media">
-                                <div class="media-body" style="color:#fff"> Perkembangan siswa dengan pemahaman materi sekolahnya<br>akan dipantau menyeluruh</div>
+                                <div class="media-body" style="color:#fff"> Perkembangan siswa dengan pemahaman materi sekolahnya akan dipantau menyeluruh</div>
                             </li>
                         </ul>
                         <a class="btn-solid-white" href="{{ url('/keunggulan') }}">Lebih lengkap</a>
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>program belajar<br><span class="orange">SESUAI KURIKULUM SEKOLAH (Nas, Nas+, Inter)</span></h2>
+                    <h2>program belajar<br><span style="color: #c52727">SESUAI KURIKULUM SEKOLAH (Nas, Nas+, Inter)</span></h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
@@ -181,107 +181,86 @@
     </div> <!-- end of cards-2 -->
     <!-- end of pricing -->
 
-    <!-- Testimoni slider -->
-    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active"></div>
-            <div id="target" class="carousel-item"></div>
-            <div class="carousel-item"></div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div> -->
-    <!-- end of testimoni slider -->
 
     <!-- Testimoni -->
    <div id="testimoni" class="slider-2" style="padding-top:2rem;padding-bottom:2rem">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>apa kata <span class="orange">MURID KAMI</span></h2>
+                    <h2>apa kata <span style="color: #c52727">MURID KAMI</span></h2>
 
                     <!-- Card Slider -->
                     <div class="slider-container">
                         <div class="swiper-container card-slider">
                             <div class="swiper-wrapper">
-                                
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <div class="row" style="align-items:center">
-                                            <div class="col-lg-2">
-                                                <img class="card-image" src="images/ashanna.png" alt="alternative">
-                                            </div> 
-                                            <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">ASHANNA</span>  X MIPA SMAN 16 </p>
-                                            </div>  
-                                        </div>
-                                        <div class="row" style="align-items:center">
-                                            <div class="col-lg-2">
-                                                <img class="card-image" src="images/jocelyn.png" alt="alternative">
-                                            </div>
-                                            <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">JOCELYN LAU</span>  VII SMP Citra Kasih </p>
-                                            </div>    
-                                        </div>
-                                        <div class="row" style="align-items:center">
-                                            <div class="col-lg-2">
-                                                <img class="card-image" src="images/anindya.png" alt="alternative">
-                                            </div>
-                                            <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Sangat membantu dalam mengerjakan ulangan, ujian, tryout, di sekolah. Nindy selalu gampang mengingat kalau dapat pembelajaran di Excellent, dan menyenangkan karena bisa request waktu les jika berubah kegiatan di sekolah"</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">ANINDYA A</span>   VI SD Bhakti </p>
-                                            </div>    
-                                        </div>
-                                        
-                                        <div class="card-body">
-                                            
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
         
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <div class="row" style="align-items:center">
                                             <div class="col-lg-2">
-                                                <img class="card-image" src="images/ashanna.png" alt="alternative">
+                                                <img class="card-image" src="images/restu.png" alt="alternative">
                                             </div> 
                                             <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">ASHANNA</span>  X MIPA SMAN 16 </p>
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Pas belajar suasananya seru sih ga ngebosenin, terus juga kalau kitanya males belajar, diajak gitu sama gurunya. Gurunya juga seru kok buat penjelasannya. Top deh 100 hehe"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">RESTU</span>  XII SMAN 65 </p>
                                             </div>  
+                                        </div>
+                                        <div class="row" style="align-items:center">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/kento.png" alt="alternative">
+                                            </div>
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Les di Excellent itu seru, gurunya ramah-ramah. Cara ngajarnya juga oke. Pokoknya kalau les di Excellent ga bakal bosan"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">KENT O.</span>   VI SD Narada </p>
+                                            </div>    
                                         </div>
                                         <div class="row" style="align-items:center">
                                             <div class="col-lg-2">
                                                 <img class="card-image" src="images/jocelyn.png" alt="alternative">
                                             </div>
                                             <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya belajar di Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
                                                 <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">JOCELYN LAU</span>  VII SMP Citra Kasih </p>
+                                            </div>    
+                                        </div>
+                                       
+                                        
+                                        <div class="card-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="row" style="align-items:center">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/kathrina.png" alt="alternative">
+                                            </div> 
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Lumayan les di Excellent, gurunya baik, pengajarannya jelas. Saya kangen datang ke les, seru tempatnya"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">KATHRINA JOELLE</span>  4 SD Citra Kasih </p>
+                                            </div>  
+                                        </div>
+                                        <div class="row" style="align-items:center">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/dave.png" alt="alternative">
+                                            </div>
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Excellent itu bagus, guru-gurunya niat untuk mengajar dan gampang dimengerti"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">DAVE DANAKUSUMA</span>  X SMA Citra Kasih </p>
                                             </div>    
                                         </div>
                                         <div class="row" style="align-items:center">
                                             <div class="col-lg-2">
-                                                <img class="card-image" src="images/anindya.png" alt="alternative">
+                                                <img class="card-image" src="images/darren.png" alt="alternative">
                                             </div>
                                             <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Sangat membantu dalam mengerjakan ulangan, ujian, tryout, di sekolah. Nindy selalu gampang mengingat kalau dapat pembelajaran di Excellent, dan menyenangkan karena bisa request waktu les jika berubah kegiatan di sekolah"</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">ANINDYA A</span>   VI SD Bhakti </p>
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Les di Excellent bisa bikin murid lebih paham dan bisa ada cara baru untuk mengerjakan tugas dan juga membuat mengerjakan tugas lebih mudah"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">DARREN FARRELINO</span>   VIII SMP Pelita Bangsa </p>
                                             </div>    
                                         </div>
                                         
@@ -297,29 +276,67 @@
                                     <div class="card">
                                         <div class="row" style="align-items:center">
                                             <div class="col-lg-2">
-                                                <img class="card-image" src="images/ashanna.png" alt="alternative">
+                                                <img class="card-image" src="images/maria.png" alt="alternative">
                                             </div> 
                                             <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">ASHANNA</span>  X MIPA SMAN 16 </p>
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Senang belajar di Excellent, karena mengerti pelajaran yang diajarkan oleh guru disini"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">MARIA YUNITA S</span>  VI SD St. Kristoforus </p>
                                             </div>  
                                         </div>
                                         <div class="row" style="align-items:center">
                                             <div class="col-lg-2">
-                                                <img class="card-image" src="images/jocelyn.png" alt="alternative">
+                                                <img class="card-image" src="images/kendrick.png" alt="alternative">
                                             </div>
                                             <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les Excellent, hasil ulangan matematika saya meningkat yang dari awalnya selalu remed jadi tidak remed melulu. Gurunya juga ramah dan sabar dalam mengajar dan soal-soalnya juga berhubungan dengan soal-soal di sekolah jadi tidak membingungkan."</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">JOCELYN LAU</span>  VII SMP Citra Kasih </p>
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Pas social distancing sekarang, sekolah tutup dan ada online class. Di online class, guru sering kasih tugas, mantapnya excellent ngadain online course juga jadi membantu saya tetap bisa belajar. Keren lah"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">KENDRICK RIVALDO</span>  X SMA Citra Kasih </p>
                                             </div>    
                                         </div>
                                         <div class="row" style="align-items:center">
                                             <div class="col-lg-2">
-                                                <img class="card-image" src="images/anindya.png" alt="alternative">
+                                                <img class="card-image" src="images/abigail.png" alt="alternative">
                                             </div>
                                             <div class="col-lg-10">
-                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Sangat membantu dalam mengerjakan ulangan, ujian, tryout, di sekolah. Nindy selalu gampang mengingat kalau dapat pembelajaran di Excellent, dan menyenangkan karena bisa request waktu les jika berubah kegiatan di sekolah"</p>
-                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">ANINDYA A</span>   VI SD Bhakti </p>
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama belajar di Excellent, aku jadi lebih ngerti pelajaran di sekolah karena gurunya nyantai jadi kalo mau tanya-tanya enak. Cara belajarnya juga asik bikin kita nyaman"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">ABIGAIL NATHANIA</span>   VIII SMP Citra Kasih </p>
+                                            </div>    
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="row" style="align-items:center">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/jessica.png" alt="alternative">
+                                            </div> 
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya les di Excellent hasilnya bagus. Gurunya sangat baik dan berpengalaman. Saya senang datang ke les karena situasinya sangat gembira dan ada banyak teman juga. Pokoknya 10/10 deh the best pokoknya"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">JESSICA NATHANIA</span>  VII SMP Mentari Grand Surya </p>
+                                            </div>  
+                                        </div>
+                                        <div class="row" style="align-items:center">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/farren.png" alt="alternative">
+                                            </div>
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Belajar di Excellent oke banget. Belajar jadi enjoy dan menyenangkan. Belajar onlinenya juga oke banget, koko dan cici yang ngajar cepat dan tanggap. The best deh"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">FARREN CHRISTIE</span>  XI SMA Kasih Kemuliaan </p>
+                                            </div>    
+                                        </div>
+                                        <div class="row" style="align-items:center">
+                                            <div class="col-lg-2">
+                                                <img class="card-image" src="images/vanessa.png" alt="alternative">
+                                            </div>
+                                            <div class="col-lg-10">
+                                                <p class="testimonial-text" style="text-align:justify;line-height:1.2;margin-bottom:0">"Selama saya belajar di Excellent, nilai saya meningkat. Mulai dari ulangan harian sampai try out dan US. Selain itu, gurunya dapat mengajar dengan jelas dan ramah kepada murid sehingga setiap pelajaran yang dijelaskan dapat saya mengerti. Tempat lesnya nyaman jadi bisa belajar dengan baik"</p>
+                                                <p class="testimonial-author" style="text-align:left;"><span style="font-size:150%">VANESSA MONALIE</span>   IX SMP Dian Harapan </p>
                                             </div>    
                                         </div>
                                         

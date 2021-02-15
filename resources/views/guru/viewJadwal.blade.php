@@ -25,10 +25,105 @@
         <div class="container">
            
             <h2>Senin - 15 Feb 2020</h2>
-            <p>13:00 - 15:00 Matematika - Ko Ari</p>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card bg-primary">
+                    <!-- <div class="card"> -->
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-white mb-1 font-weight-medium">5 Siswa</h2>
+                                    </div>
+                                    <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate">13:00-15:00</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="btn" href="#">
+                                    <span class="text-white font-weight-normal mb-0 w-100 text-truncate">Detail</span>
+                                    <i data-feather="chevron-right" class="feather-icon text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-primary">
+                    <!-- <div class="card"> -->
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-white mb-1 font-weight-medium">8 Siswa</h2>
+                                    </div>
+                                    <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate">15:00-17:00</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="btn" href="#">
+                                    <span class="text-white font-weight-normal mb-0 w-100 text-truncate">Detail</span>
+                                    <i data-feather="chevron-right" class="feather-icon text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-primary">
+                    <!-- <div class="card"> -->
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-white mb-1 font-weight-medium">3 Siswa</h2>
+                                    </div>
+                                    <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate">19:00-21:00</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="btn" href="#">
+                                    <span class="text-white font-weight-normal mb-0 w-100 text-truncate">Detail</span>
+                                    <i data-feather="chevron-right" class="feather-icon text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <hr>
             <h2>Selasa - 16 Feb 2020</h2>
-            <p>Tidak ada jadwal</p>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card bg-primary">
+                    <!-- <div class="card"> -->
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-white mb-1 font-weight-medium">5 Siswa</h2>
+                                    </div>
+                                    <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate">13:00-15:00</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="btn" href="#">
+                                    <span class="text-white font-weight-normal mb-0 w-100 text-truncate">Detail</span>
+                                    <i data-feather="chevron-right" class="feather-icon text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <hr>
             <h2>Rabu - 17 Feb 2020</h2>
             <p>13:00 - 15:00 Matematika - Ko Ari</p>

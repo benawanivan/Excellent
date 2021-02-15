@@ -43,6 +43,7 @@
                 <div class="col-xl-3 col-md-6 col-xs-6 ">
                     <div class="card ">
                         <div class="card-body">
+                            <p class="card-text" style="text-align: center" ><small class="text-muted">{{ $row->kelas}}</small></hp>
                             <h2 class="text-center"><i class="fas fa-file-alt text-primary fa-4x "></i></h2>
                             <h4 class="card-title text-capitalize text-center" style="margin-bottom: 0rem;">{{ $row->judul}}</h4>
                             <p class="card-text" style="text-align: center" ><small class="text-muted">Uploaded {{ $row->tgl_buat}}</small></hp>

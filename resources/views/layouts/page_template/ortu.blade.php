@@ -6,11 +6,13 @@
     <div class="" style="">
      <nav id="sidebar2" class="sidebar2" data-color="orange">
 
-        <div class="logo">
-            <a href="/" class="simple-text logo-normal">
-                {{ __('EXCELLENT STUDY CENTRE') }}
+        <div class="logo" style="text-align:left;padding-left:1.5rem;padding-right:1.5rem">
+            <a class="simple-text logo-normal">
+                <i class="now-ui-icons users_single-02" style="margin-right:12px"></i>
+                <b>{{ \Auth::user()->nama }}</b>
+                <small>Wali Murid</small>
             </a>
-          </div>
+        </div>
           <div class="sidebar-wrapper" id="sidebar-wrapper">
               <ul class="nav">
                 <li class="@if ($activePage == 'laporanmingguan') active @endif">

@@ -7,6 +7,7 @@ use App\Models\Mapel;
 use App\Models\Soal;
 use App\Models\Ortu;
 use App\Models\Murid;
+use App\Models\Tryout;
 use Auth;
 use Hash;
 
@@ -52,6 +53,24 @@ class MuridController extends Controller
         $mapel = Mapel::all();
         return view('murid.addSoal',['mapel'=>$mapel],compact('mapel'));
     }
+
+    public function viewTryout()
+    {
+        $keyword = NULL;
+        $tryout = Tryout::paginate(12);
+        return view('murid.viewTryout',['tryout'=>$tryout,'keyword'=>$keyword],compact('tryout'));
+    }
+
+    public function searchTryout(Request $request){
+        $tryout = Tryout::where('judul','like',"%".$request->keyword."%")->paginate(12);
+        return view('murid.viewTryout',['tryout'=>$tryout,'keyword'=>$request->keyword],compact('tryout'));
+    }
+
+    public function viewNonaktif()
+    {
+        return view('murid.viewNonaktif');
+    }
+
     public function store(Request $request)
     {
         $this->validate($request,[

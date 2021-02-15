@@ -4,7 +4,9 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="footer-col">
-                        <img src="images/logo.png" style="width:20%;padding-bottom:12px">
+                        <a href="{{route('admin.login')}}">
+                            <img src="images/logo.png" style="width:20%;padding-bottom:12px">
+                        </a>
                         <br>
                         <h4  style="color: #fff">EXCELLENT STUDY CENTRE</h4>
                         <div class="row">

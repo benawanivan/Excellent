@@ -21,6 +21,15 @@
             {{ Form::label('link', 'Link Tryout: ', ['class' => 'form-label']) }}
             {{ Form::text('link', null, ['class' => 'form-control']) }}
         </div>
+        <div class="form-group">
+            <label for="text-input" class=" form-label">Tingkat</label>
+            <select name="kelas" class="form-control">
+                <option value="" disabled selected>Pilih Tingkatan</option>
+                <option value="SMA">SMA</option>
+                <option value="SMP">SMP</option>
+                <option value="SD">SD</option>
+            </select>
+        </div>
 
         {{ Form::submit('Tambah', ['class' => 'btn btn-primary']) }}
         <a href="{{route('guru.tryout')}}" class="btn btn-danger">Kembali</a>

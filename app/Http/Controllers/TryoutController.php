@@ -14,6 +14,7 @@ class TryoutController extends Controller
         $tryout = new Tryout;
         $tryout->judul = $request->judul;
         $tryout->link = $request->link;
+        $tryout->kelas = $request->kelas;
         $tryout->tgl_buat = date("Ymd");
         $tryout->save();
         

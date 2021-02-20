@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Mapel;
+use App\Models\Jadwal;
 use App\Models\Soal;
 use App\Models\Ortu;
 use App\Models\Murid;
 use App\Models\Tryout;
+use Carbon\Carbon;
 use Auth;
 use Hash;
 
@@ -17,9 +19,17 @@ class MuridController extends Controller
     {
         $this->middleware('auth');
     }
-    public function viewJadwal()
+    public function viewJadwal(Request $request)
     {
-        return view('murid.viewJadwal');
+        if(is_null($request->tanggal)){
+            $tanggal = Carbon::now();
+        }else{
+            $tanggal = Carbon::parse($request->tanggal);
+        }
+        
+        $jadwal = Jadwal::whereBetween('tanggal',[$tanggal->startOfWeek()->format('Y-m-d'),$tanggal->endOfWeek()->format('Y-m-d')])->get();
+        // $jadwal = Jadwal::all();
+        return view('murid.viewJadwal',['jadwal'=>$jadwal,'tanggal'=>$tanggal],compact('jadwal'));
        
     }
     public function viewProfile()

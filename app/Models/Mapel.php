@@ -15,4 +15,8 @@ class Mapel extends Model
     {
         return $this->hasMany(Soal::class,'id_mapel');
     }
+    public function Jadwal()
+    {
+        return $this->hasMany(Jadwal::class,'id_jadwal');
+    }
 }

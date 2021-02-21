@@ -26,14 +26,14 @@
            
             <h2>Senin - 15 Feb 2020</h2>
             <div class="row">
-                <div class="col-3">
+                <div class="col-sm-3 col-12">
                     <div class="card bg-primary">
                     <!-- <div class="card"> -->
                         <div class="card-body">
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-white mb-1 font-weight-medium">Joe Gunawan</h2>
+                                        <h2 class="text-white mb-1 font-weight-medium">Putra</h2>
                                     </div>
                                     <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate">13:00-15:00</h6>
                                 </div>
@@ -53,17 +53,17 @@
             <hr>
             <h2>Selasa - 16 Feb 2020</h2>
             <div class="row">
-                <div class="col-3">
+                    <div class="col-sm-3 col-12">
                     <div class="card bg-primary">
                     <!-- <div class="card"> -->
                         <div class="card-body">
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-white mb-1 font-weight-medium">Melati Kartini</h2>
+                                        <h2 class="text-white mb-1 font-weight-medium">Matematika</h2>
                                     </div>
                                     <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate">17:00-19:00</h6>
-                                    <h5 class="text-white font-weight-normal mb-0 w-100 text-truncate">Matematika</h5>
+                                    <h5 class="text-white font-weight-normal mb-0 w-100 text-truncate">Joe Gunawan</h5>
                                 </div>
                             </div>
                         </div>

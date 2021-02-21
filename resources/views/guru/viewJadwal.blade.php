@@ -26,7 +26,7 @@
            
             <h2>Senin - 15 Feb 2020</h2>
             <div class="row">
-                <div class="col-3">
+                <div class="col-sm-3 col-12">
                     <div class="card bg-primary">
                     <!-- <div class="card"> -->
                         <div class="card-body">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-3 col-12">
                     <div class="card bg-primary">
                     <!-- <div class="card"> -->
                         <div class="card-body">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-3 col-12">
                     <div class="card bg-primary">
                     <!-- <div class="card"> -->
                         <div class="card-body">
@@ -99,7 +99,7 @@
             <hr>
             <h2>Selasa - 16 Feb 2020</h2>
             <div class="row">
-                <div class="col-3">
+                <div class="col-sm-3 col-12">
                     <div class="card bg-primary">
                     <!-- <div class="card"> -->
                         <div class="card-body">

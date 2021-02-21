@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Login Murid</div>
+                <div class="card-header">Login Siswa</div>
 
                 <div class="card-body">
                     

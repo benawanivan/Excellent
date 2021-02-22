@@ -22,7 +22,7 @@ class CreateJadwal extends Migration
             $table->date('tanggal');
             $table->string('sesi');
             $table->string('materi');
-            $table->boolean('konfirmasi');
+            $table->integer('status');
             $table->foreign('id_murid')
             ->references('id')->on('murid');
 

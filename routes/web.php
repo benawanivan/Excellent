@@ -106,8 +106,11 @@ Route::middleware('auth:guru')->group(function(){
 
 Route::middleware('auth:murid')->group(function(){
 	Route::get('murid/jadwal','App\Http\Controllers\MuridController@viewJadwal')->name('murid.jadwal');
+	Route::post('murid/jadwal/detail','App\Http\Controllers\MuridController@viewJadwalDetail')->name('murid.jadwalDetail');
 	Route::get('murid/jadwal/tambah','App\Http\Controllers\MuridController@addJadwal')->name('murid.addJadwal');
 	Route::post('murid/jadwal/tambah','App\Http\Controllers\JadwalController@store')->name('murid.storeJadwal');
+	Route::get('murid/jadwal/edit','App\Http\Controllers\MuridController@editJadwal')->name('murid.editJadwal');
+	Route::post('murid/jadwal/edit','App\Http\Controllers\JadwalController@edit');
 	Route::get('murid/profile','App\Http\Controllers\MuridController@viewProfile')->name('murid.profile');
 	Route::get('murid/database','App\Http\Controllers\MuridController@viewSoal')->name('murid.soal');
 	Route::get('murid/database/search','App\Http\Controllers\MuridController@searchSoal')->name('murid.searchSoal');

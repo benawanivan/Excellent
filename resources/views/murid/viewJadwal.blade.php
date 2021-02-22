@@ -5,7 +5,7 @@
 ])
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid ">
         @include('alerts.errors')
         @include('alerts.success')
         <h3 class="title title-dashboard">Jadwal Bimbingan Belajar</h3>
@@ -45,10 +45,11 @@
             ->startOfWeek()
             ->addDays($i)
             ->format('Y-m-d'))
+
                             <div class="col-xl-3 col-sm-6">
-                                <div type='submit'
-                                    class="card {{ $j->status == 1 ? 'bg-primary' : ($j->status == 0 ? 'bg-danger' : 'bg-secondary')}}">
-                                    <!-- <div class="card"> -->
+
+                                <div
+                                    class="card {{ $j->status == 1 ? 'bg-primary' : ($j->status == 0 ? 'bg-danger' : 'bg-secondary') }}">
                                     @if ($j->status != -1)
                                         <div class="card-body">
                                             <div class="d-flex d-lg-flex d-md-block align-items-center">
@@ -81,11 +82,16 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="d-inline-flex align-items-center">
-                                                <a class="btn" href="#">
-                                                    <span
-                                                        class="text-white font-weight-normal mb-0 w-100 text-truncate">Detail</span>
-                                                    <i data-feather="chevron-right" class="feather-icon text-white"></i>
-                                                </a>
+                                                {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@viewJadwalDetail'], 'method' => 'POST']) }}
+                                                    <input class="form-control" type="hidden" name="id" value="{{ $j->id}}">
+                                                    <button
+                                                        class="btn {{ $j->status == 1 ? 'btn-primary' : 'bg-danger' }} stretched-link"
+                                                        type="submit">
+                                                        <span
+                                                            class="text-white font-weight-normal mb-0 w-100 text-truncate">Detail</span>
+                                                        <i data-feather="chevron-right" class="feather-icon text-white"></i>
+                                                    </button>
+                                                    {{ Form::close() }}
                                             </div>
                                         </div>
                                     @else
@@ -98,13 +104,22 @@
                                                             Jadwal Belum Diisi
                                                         </h2>
                                                     </div>
-                                                        <p class="text-white mb-0 w-100 text-truncate text-center">
-                                                            (Klik untuk mengisi jadwal)</p>
-                                                    
+                                                    {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@editJadwal'], 'method' => 'get']) }}
+                                                    <input class="form-control" type="hidden" name="id" value="{{ $j->id}}">
+                                                    <button
+                                                        class="btn btn-secondary stretched-link"
+                                                        type="submit">
+                                                        <span
+                                                            class="text-white font-weight-normal mb-0 w-100 text-truncate">(Klik untuk mengisi jadwal)</span>
+                                                        <i data-feather="chevron-right" class="feather-icon text-white"></i>
+                                                    </button>
+                                                    {{ Form::close() }}
+
                                                 </div>
                                             </div>
                                         </div>
                                     @endif
+
                                 </div>
                             </div>
                         @endif

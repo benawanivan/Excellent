@@ -15,10 +15,11 @@
         'enctype' =>'multipart/form-data', 'files' => true,'class'=>'form-upload']) }}
         @csrf
         <div class="form-group">
-            {{ Form::label('judul', 'Nama Soal: ', ['class' => 'form-label']) }}
-            {{Form::date('name', $tanggal,['class'=>'form-control'])}}
+            {{ Form::label('tanggal', 'Tanggal: ', ['class' => 'form-label']) }}
+            {{Form::date('tanggal', $tanggal,['class'=>'form-control'])}}
         </div>
-        
+        {{ Form::submit('Tambah', ['class' => 'btn btn-primary']) }}
+        <a href="{{route('murid.jadwal')}}" class="btn btn-danger">Kembali</a>
         {{ Form::close() }}
     </div></div>
 @endsection

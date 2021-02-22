@@ -16,12 +16,12 @@ class CreateJadwal extends Migration
         Schema::create('jadwal', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_murid');
-            $table->unsignedBigInteger('id_guru');
-            $table->unsignedBigInteger('id_mapel');
-            $table->unsignedBigInteger('id_soal');
+            $table->unsignedBigInteger('id_guru')->nullable();
+            $table->unsignedBigInteger('id_mapel')->nullable();
+            $table->unsignedBigInteger('id_soal')->nullable();
             $table->date('tanggal');
             $table->string('sesi');
-            $table->string('materi');
+            $table->string('materi')->nullable();
             $table->integer('status');
             $table->foreign('id_murid')
             ->references('id')->on('murid');

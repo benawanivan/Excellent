@@ -27,6 +27,7 @@
         </div>
         
         <div class="form-group">
+            {{ Form::label('soal', 'Upload Soal: ', ['class' => 'form-label']) }}
             <div class="custom-file">
                 {{ Form::file('soal', ['class' => 'custom-file-input', 'aria-describedby' => 'inputGroupFileAddon01','id'=>'inputGroupFile01' ]) }}
                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>

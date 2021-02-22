@@ -8,6 +8,7 @@ use App\Models\Jadwal;
 use App\Models\Soal;
 use App\Models\Ortu;
 use App\Models\Murid;
+use App\Models\Guru;
 use App\Models\Tryout;
 use Carbon\Carbon;
 use Auth;
@@ -27,10 +28,18 @@ class MuridController extends Controller
             $tanggal = Carbon::parse($request->tanggal);
         }
         
-        $jadwal = Jadwal::whereBetween('tanggal',[$tanggal->startOfWeek()->format('Y-m-d'),$tanggal->endOfWeek()->format('Y-m-d')])->get();
+        $jadwal = Jadwal::whereBetween('tanggal',[$tanggal->startOfWeek()->format('Y-m-d'),$tanggal->endOfWeek()->format('Y-m-d')])
+        ->where('id_murid',Auth::user()->id)->get();
         // $jadwal = Jadwal::all();
         return view('murid.viewJadwal',['jadwal'=>$jadwal,'tanggal'=>$tanggal],compact('jadwal'));
        
+    }
+
+    public function addJadwal(Request $request){
+        $mapel = Mapel::all();
+        $guru = Guru::all();
+        return view('murid.addJadwal',['mapel'=>$mapel,'guru'=>$guru,'tanggal'=>$request->tanggal],compact('mapel'));
+
     }
     public function viewProfile()
     {

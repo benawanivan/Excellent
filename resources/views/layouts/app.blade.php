@@ -33,7 +33,7 @@
 
 </head>
 
-<body class="body" >
+<body class="body w-100" >
 
     @auth('admin')
         @include('layouts.page_template.admin')

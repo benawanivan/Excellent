@@ -18,4 +18,8 @@ class Soal extends Model
     public function getType($filename){
         return pathinfo(storage_path("/bukti/" . $filename), PATHINFO_EXTENSION);
     }
+    public function Jadwal()
+    {
+        return $this->hasMany(Jadwal::class,'id_jadwal');
+    }
 }

@@ -1,5 +1,5 @@
 @extends('layouts.app', [
-'namePage' => 'Tambah Jadwal',
+'namePage' => 'Pengisian Jadwal',
 'class' => 'sidebar-mini',
 'activePage' => 'jadwalMurid',
 ])
@@ -8,15 +8,15 @@
 <div class="container-fluid">
 @include('alerts.errors')
 @include('alerts.success')
-    <h3 class="title-dashboard title">Tambah Jadwal Bimbel</h3>
+    <h3 class="title-dashboard title">Pengisian Jadwal Bimbel</h3>
     <hr>
     <div class="container">
-        {{ Form::open(['action' => ['App\\Http\\Controllers\\JadwalController@store'], 'method' => 'POST',
+        {{ Form::open(['action' => ['App\\Http\\Controllers\\JadwalController@edit'], 'method' => 'POST',
         'enctype' =>'multipart/form-data', 'files' => true,'class'=>'form-upload']) }}
         @csrf
         <div class="form-group">
             {{ Form::label('tanggal', 'Tanggal: ', ['class' => 'form-label']) }}
-            {{Form::date('tanggal', $tanggal,['class'=>'form-control'])}}
+            {{Form::date('tanggal', $jadwal->tanggal,['class'=>'form-control','disabled'])}}
         </div>
         <div class="form-group">
             {{ Form::label('sesi', 'Sesi: ', ['class' => 'form-label']) }}
@@ -57,7 +57,8 @@
                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
             </div>
         </div>
-        {{ Form::submit('Tambah', ['class' => 'btn btn-primary']) }}
+        <input class="form-control" type="hidden" name="id" value="{{ $jadwal->id}}">
+        {{ Form::submit('Isi Jadwal', ['class' => 'btn btn-primary']) }}
         <a href="{{route('murid.jadwal')}}" class="btn btn-danger">Kembali</a>
         {{ Form::close() }}
     </div></div>

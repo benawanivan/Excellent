@@ -15,4 +15,12 @@ class jadwal extends Model
     {
         return $this->belongsTo(Mapel::class,'id_mapel','id');
     }
+    public function Guru()
+    {
+        return $this->belongsTo(Guru::class,'id_guru','id');
+    }
+    public function Soal()
+    {
+        return $this->belongsTo(Soal::class,'id_soal','id');
+    }
 }

@@ -35,6 +35,19 @@ class MuridController extends Controller
        
     }
 
+    public function viewJadwalDetail(Request $request){
+        // return 1;
+        $jadwal = Jadwal::find($request->id);
+        return view('murid.viewJadwalDetail',['jadwal'=> $jadwal]);
+        
+    }
+    public function editJadwal(Request $request){
+        $jadwal = Jadwal::find($request->id);
+        $mapel = Mapel::all();
+        $guru = Guru::all();
+        return view('murid.editJadwal',['mapel'=>$mapel,'guru'=>$guru,'jadwal'=>$jadwal],compact('jadwal'));
+
+    }
     public function addJadwal(Request $request){
         $mapel = Mapel::all();
         $guru = Guru::all();

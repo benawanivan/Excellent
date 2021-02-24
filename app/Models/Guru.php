@@ -37,4 +37,8 @@ class Guru extends Authenticatable
     {
         return $this->belongsTo(Cabang::class,'id_cabang','id');
     }
+    public function Jadwal()
+    {
+        return $this->hasMany(Jadwal::class,'id_jadwal');
+    }
 }

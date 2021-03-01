@@ -64,8 +64,6 @@
                         <th class="text-center"><?php echo $i; ?></th>
                         <td class="text-center">{{ $m->nama }}</td>
                         <td class="text-center">{{$m->username}}</td>
-                        <td class="text-center">{{ $m->ortu->nama }}</td>
-                        <td class="text-center">{{ $m->ortu->username }}</td>
                         <td class="text-center">{{$m->asal_sekolah}}</td>
                         <td class="text-center">{{$m->kelas}}</td>
                         <td class="text-center">{{$m->cabang->nama}}</td>
@@ -85,25 +83,10 @@
                                         class="fas fa-edit" aria-hidden="true"
                                         ></i></button>
                                 </form>
-                                @if (Auth::user()->master)
-                                {{-- <form url="admin/datamurid/{{$m->id}}" method="DELETE">
-                                    {{ csrf_field() }}
-                                    
-                                </form> --}}
-                                {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@delete', $m->id], 'method' => 'DELETE']) }}
-                                {{-- {{ Form::submit('Delete', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus siswa?')"]) }} --}}
-                                <div class="form-group">
-                                    <button type="submit" class="btn  btn-outline-danger waves-effect px-3" onclick="return confirm('Apakah anda yakin akan menghapus siswa?')"><i
-                                            class="fas fa-trash-alt" aria-hidden="true"
-                                            ></i></button>
-                                </div>
-                                {{ Form::close() }}
-                                @endif
+                                
                                 
                             </div>
                         </td>
-                        <td>{{$m->no_telp}}</td>
-                        <td>{{$m->ortu->no_telp}}</td>
                     </tr>
                 @endforeach
             </tbody>

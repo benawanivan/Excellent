@@ -92,7 +92,7 @@ class JadwalController extends Controller
         $jadwal->id_guru = $request->id_guru;
         $jadwal->id_mapel = $request->id_mapel;
         $jadwal->id_murid = Auth::user()->id;
-        $jadwal->status = 0;
+        $jadwal->status = 1;
         $jadwal->save();
         return redirect()->route('murid.jadwal')->withSuccess('Penambahan Jadwal Berhasil');
     }

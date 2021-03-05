@@ -14,4 +14,8 @@ class Laporan extends Model
     public function getType($filename){
         return pathinfo(storage_path("/bukti/" . $filename), PATHINFO_EXTENSION);
     }
+    public function Murid()
+    {
+        return $this->belongsTo(Murid::class,'id_murid','id');
+    }
 }

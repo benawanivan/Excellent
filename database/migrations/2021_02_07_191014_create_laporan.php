@@ -14,13 +14,10 @@ class CreateLaporan extends Migration
     public function up()
     {
         Schema::create('laporan', function (Blueprint $table) {
-            $table->id();            
-            $table->string('judul'); 
+            $table->id();             
             $table->string('file'); 
-            $table->integer('minggu_ke'); 
-            $table->integer('bulan'); 
             $table->unsignedBigInteger('id_murid'); 
-            $table->date('tgl_upload');
+            $table->date('tanggal');
             $table->foreign('id_murid')
             ->references('id')->on('murid');
         });

@@ -83,6 +83,10 @@ Route::middleware('auth:admin')->group(function(){
 	Route::post('admin/datamapel/edit/','App\Http\Controllers\MapelController@edit');
 	Route::delete('admin/datamapel/{datamapel}','App\Http\Controllers\MapelController@delete')->name('admin.deleteMapel');
 	
+	Route::get('admin/laporan','App\Http\Controllers\AdminController@viewLaporan')->name('admin.laporan');
+	Route::post('admin/laporan/download','App\Http\Controllers\LaporanController@download')->name('admin.downloadLaporan');
+	Route::post('admin/laporan/upload','App\Http\Controllers\LaporanController@store')->name('admin.uploadLaporan');
+
 	Route::post('admin/logout','App\Http\Controllers\Auth\AdminAuthController@postAdminLogout')->name('admin.logout');
 });
 

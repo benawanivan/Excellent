@@ -29,7 +29,7 @@ class MuridController extends Controller
         }
         
         $jadwal = Jadwal::whereBetween('tanggal',[$tanggal->startOfWeek()->format('Y-m-d'),$tanggal->endOfWeek()->format('Y-m-d')])
-        ->where('id_murid',Auth::user()->id)->get();
+        ->where('id_murid',Auth::user()->id)->orderBy('sesi')->get();
         // $jadwal = Jadwal::all();
         return view('murid.viewJadwal',['jadwal'=>$jadwal,'tanggal'=>$tanggal],compact('jadwal'));
        

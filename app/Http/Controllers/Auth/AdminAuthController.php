@@ -63,7 +63,7 @@ class AdminAuthController extends Controller
         if (auth()->guard('admin')->attempt($request->only('username', 'password'))) {
             // $request->session()->regenerate();
             // $this->clearLoginAttempts($request);
-            return redirect()->route("admin.dashboard");
+            return redirect()->route("admin.soal");
         } else {
             $this->incrementLoginAttempts($request);
 

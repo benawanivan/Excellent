@@ -8,9 +8,12 @@ use App\Models\Mapel;
 use App\Models\Soal;
 use App\Models\Murid;
 use App\Models\Guru;
+use App\Models\Laporan;
 use App\Models\Cabang;
 use Auth;
 use Hash;
+use Carbon\Carbon;
+use DB;
 
 class AdminController extends Controller
 {
@@ -135,6 +138,27 @@ class AdminController extends Controller
     public function editMapel(Request $request){
         $mapel = Mapel::find($request->id);
         return view('admin.editMapel',['mapel'=>$mapel],compact('mapel'));
+    }
+
+    public function viewLaporan(Request $request)
+    {
+        if(is_null($request->tanggal)){
+            $tanggal = Carbon::now();
+        }else{
+            $tanggal = Carbon::parse($request->tanggal);
+        }
+        $keyword = NULL;
+        $murid = Murid::all();
+        $laporan = Laporan::where('tanggal','=',$tanggal->format('Y-m-d'));
+        $murid = DB::table('murid')
+        ->select('cabang.nama as nama_cabang','laporan.*','murid.nama',
+        'murid.asal_sekolah','murid.username','murid.kelas','murid.status','murid.id as id_murid')
+        ->join('cabang','cabang.id','=','murid.id_cabang')
+        ->leftjoinSub($laporan, 'laporan', function ($join) {
+            $join->on('murid.id', '=', 'laporan.id_murid');
+        })
+        ->get();
+        return view('admin.viewLaporan',['murid'=>$murid,'keyword'=>$keyword,'tanggal'=>$tanggal],compact('murid'));
     }
 
 }

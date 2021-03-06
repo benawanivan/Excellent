@@ -4,7 +4,8 @@
  <!-- End Navbar -->
  <div class="wrapper-sidebar d-flex align-items-stretch">
     <div class="" style="">
-    <nav id="sidebar2" class="sidebar2" data-color="orange">
+     <nav id="sidebar2" class="sidebar2" data-color="orange">
+
         <div class="logo" style="text-align:left;padding-left:1.5rem;padding-right:1.5rem">
             <a class="simple-text logo-normal">
                 <i class="now-ui-icons users_single-02" style="margin-right:12px"></i>
@@ -14,12 +15,6 @@
         </div>
         <div class="sidebar-wrapper" id="sidebar-wrapper">
             <ul class="nav">
-                <li class="@if ($activePage == 'dashboard') active @endif">
-                    <a href="{{route('admin.dashboard')}}">
-                    <i class="now-ui-icons business_chart-pie-36"></i>
-                    <p>{{ __('Dashboard') }}</p>
-                    </a>
-                </li>
                 <li class="@if ($activePage == 'soalAdmin') active @endif">
                     <a href="{{route('admin.soal')}}">
                     <i class="now-ui-icons education_paper"></i>
@@ -50,14 +45,19 @@
                     <p>{{ __('Data Mapel') }}</p>
                     </a>
                 </li>
+                <li class="@if ($activePage == 'laporan') active @endif">
+                    <a href="{{route('admin.laporan')}}">
+                    <i class="now-ui-icons education_paper"></i>
+                    <p>{{ __('Laporan') }}</p>
+                    </a>
+                </li>
               
-            </ul>
-        </div>
-    </nav>
+              </ul>
+          </div>
+     </nav>
     </div>
-</div>
-    <!-- Page Content  -->
-    <div id="content" class="">
+     <!-- Page Content  -->
+     <div id="content" class="">
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="custom-menu-sidebar">
@@ -77,4 +77,4 @@
         </nav>
          @yield('content')
     </div>
- 
+    

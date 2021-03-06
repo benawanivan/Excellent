@@ -5,8 +5,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Mapel;
 use App\Models\Soal;
+use App\Models\Jadwal;
+use App\Models\Murid;
 use App\Models\Tryout;
 use App\Models\Guru;
+use Carbon\Carbon;
 use Auth;
 use Hash;
 
@@ -16,9 +19,29 @@ class GuruController extends Controller
     {
         $this->middleware('auth');
     }
-    public function viewJadwal()
+    public function viewJadwal(Request $request)
     {
-        return view('guru.viewJadwal'); 
+        if(is_null($request->tanggal)){
+            $tanggal = Carbon::now();
+        }else{
+            $tanggal = Carbon::parse($request->tanggal);
+        }
+        
+        $jadwal = Jadwal::whereBetween('tanggal',[$tanggal->startOfWeek()->format('Y-m-d'),$tanggal->endOfWeek()->format('Y-m-d')])
+        ->where('id_guru',Auth::user()->id)->distinct()->get(['tanggal','sesi']);
+
+        $jadwal2 = Jadwal::whereBetween('tanggal',[$tanggal->startOfWeek()->format('Y-m-d'),$tanggal->endOfWeek()->format('Y-m-d')])
+        ->where('id_guru',Auth::user()->id)->get();
+        // $jadwal = Jadwal::all();
+        return view('guru.viewJadwal',['jadwal'=>$jadwal,'tanggal'=>$tanggal, 'jadwal2'=>$jadwal2],compact('jadwal'));
+       
+    }
+
+    public function viewJadwalDetail(Request $request){
+        // return 1;
+        $jadwal = Jadwal::where('tanggal', $request->tanggal)->where('sesi', $request->sesi)->where('id_guru',Auth::user()->id)->get();
+        return view('guru.viewJadwalDetail',['jadwal'=> $jadwal],compact('jadwal'));
+        
     }
 
     public function editProfile()
@@ -117,6 +140,20 @@ class GuruController extends Controller
         $guru->password = Hash::make($request->password);
         $guru->save();
         return back()->with('success',"Data guru berhasil diubah");
+    }
+    public function konfirmasi(Request $request)
+    {
+        $jadwal = Jadwal::find($request->id);
+        $jadwal->status = "1";
+        $jadwal->save();
+        return back()->with('success',"Data jadwal berhasil dikonfirmasi");
+    }
+    public function unconfirm(Request $id)
+    {
+        $jadwal = Jadwal::find($id->id);
+        $jadwal->delete();
+        
+        return back()->with('success','Jadwal berhasil ditolak');
     }
     public function delete($id)
     {

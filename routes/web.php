@@ -88,6 +88,9 @@ Route::middleware('auth:admin')->group(function(){
 
 Route::middleware('auth:guru')->group(function(){
 	Route::get('guru/jadwal','App\Http\Controllers\GuruController@viewJadwal')->name('guru.jadwal');
+	Route::get('guru/jadwal/detail','App\Http\Controllers\GuruController@viewJadwalDetail')->name('guru.jadwalDetail');
+	Route::get('guru/jadwal/konfirmasi','App\Http\Controllers\GuruController@konfirmasi')->name('guru.konfirmasi');
+	Route::get('guru/jadwal/unconfirm','App\Http\Controllers\GuruController@unconfirm')->name('guru.unconfirm');
 	Route::get('guru/editprofile','App\Http\Controllers\GuruController@editProfile')->name('guru.profil');
 	Route::get('guru/database','App\Http\Controllers\GuruController@viewSoal')->name('guru.soal');
 	Route::get('guru/database/search','App\Http\Controllers\GuruController@searchSoal')->name('guru.searchSoal');

@@ -61,6 +61,14 @@
                         <img class="img-fluid" src="images/rank2.png">
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h4 style="text-align:center;">Angelina Lim (XI Science Binus School) - Medali Perak dalam ajang internasional World Math Invitational July 2018, Seoul, Korea Selatan</h4>
+                        </div>
+                        <img class="img-fluid" src="images/angelinalim.jpg">
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
             </div> <!-- end of container -->
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->

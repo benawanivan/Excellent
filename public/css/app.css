@@ -10904,9 +10904,19 @@ a.text-dark:focus {
   }
 }
 
+th {
+  font-size: 1rem !important;
+}
+
 div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+  div.scrollmenu {
+    width: 65rem;
+  }
 }
 
 div.scrollmenu a {

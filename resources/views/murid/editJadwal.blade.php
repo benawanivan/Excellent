@@ -20,12 +20,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('sesi', 'Sesi: ', ['class' => 'form-label']) }}
-            <select class="browser-default custom-select"  name = 'sesi'>
+            <select class="browser-default custom-select"  disabled name = 'sesi'>
                 <option value="0">--- Pilih Sesi ---</option>
-                <option value="1">13.45-15.15</option>
-                <option value="2">15.30-17.00</option>
-                <option value="3">17.15-18.45</option>
-                <option value="4">19.15-20.45</option>
+                <option {{$jadwal->sesi==1?'selected':''}} value="1">13.45-15.15</option>
+                <option {{$jadwal->sesi==2?'selected':''}} value="2">15.30-17.00</option>
+                <option {{$jadwal->sesi==3?'selected':''}} value="3">17.15-18.45</option>
+                <option {{$jadwal->sesi==4?'selected':''}} value="4">19.15-20.45</option>
             </select>
         </div>
         <div class="form-group">

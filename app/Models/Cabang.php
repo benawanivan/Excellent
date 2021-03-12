@@ -20,4 +20,8 @@ class Cabang extends Model
     {
         return $this->hasMany(Guru::class,'id_cabang');
     }
+    public function Admin()
+    {
+        return $this->hasMany(Admin::class,'id_cabang');
+    }
 }

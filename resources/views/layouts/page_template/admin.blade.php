@@ -51,6 +51,14 @@
                     <p>{{ __('Laporan') }}</p>
                     </a>
                 </li>
+                @if (AUTH::user()->master)
+                <li class="@if ($activePage == 'dataadmin') active @endif">
+                    <a href="{{route('admin.dataAdmin')}}">
+                    <i class="now-ui-icons education_paper"></i>
+                    <p>{{ __('Data Admin') }}</p>
+                    </a>
+                </li>
+                @endif
               
               </ul>
           </div>

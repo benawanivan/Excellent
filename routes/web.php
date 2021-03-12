@@ -59,6 +59,10 @@ Route::middleware('auth:admin')->group(function(){
 	Route::post('admin/datamurid/edit/','App\Http\Controllers\MuridController@edit');
 	Route::delete('admin/datamurid/{datamurid}','App\Http\Controllers\MuridController@delete')->name('admin.deleteMurid');
 
+	Route::get('admin/datamurid/aturjadwal','App\Http\Controllers\AdminController@viewAturJadwal')->name('admin.aturJadwal');
+	Route::post('admin/datamurid/aturjadwal/tambah','App\Http\Controllers\JadwalDefaultController@store')->name('admin.tambahJadwalDefault');
+	Route::delete('admin/datamurid/aturjadwal/{jadwal}','App\Http\Controllers\JadwalDefaultController@delete')->name('admin.deletejadwalDefault');
+
 	Route::get('admin/dataguru','App\Http\Controllers\AdminController@viewDataGuru')->name('admin.dataGuru');
 	Route::get('admin/dataguru/search','App\Http\Controllers\AdminController@searchGuru')->name('admin.searchGuru');
 	Route::get('admin/dataguru/tambah','App\Http\Controllers\AdminController@addGuru')->name('admin.addGuru');
@@ -84,9 +88,17 @@ Route::middleware('auth:admin')->group(function(){
 	Route::delete('admin/datamapel/{datamapel}','App\Http\Controllers\MapelController@delete')->name('admin.deleteMapel');
 	
 	Route::get('admin/laporan','App\Http\Controllers\AdminController@viewLaporan')->name('admin.laporan');
+	Route::post('admin/laporan','App\Http\Controllers\AdminController@viewLaporan')->name('admin.laporan');
 	Route::post('admin/laporan/download','App\Http\Controllers\LaporanController@download')->name('admin.downloadLaporan');
 	Route::post('admin/laporan/upload','App\Http\Controllers\LaporanController@store')->name('admin.uploadLaporan');
 
+	Route::get('admin/dataadmin','App\Http\Controllers\AdminController@viewDataAdmin')->name('admin.dataAdmin');
+	Route::get('admin/dataadmin/tambah','App\Http\Controllers\AdminController@addAdmin')->name('admin.addAdmin');
+	Route::post('admin/dataadmin/tambah','App\Http\Controllers\AdminController@store');
+	Route::get('admin/dataadmin/edit','App\Http\Controllers\AdminController@editAdmin')->name('admin.editAdmin');
+	Route::post('admin/dataadmin/edit','App\Http\Controllers\AdminController@edit');
+	Route::delete('admin/dataadmin/{dataadmin}','App\Http\Controllers\AdminController@delete')->name('admin.deleteAdmin');
+	Route::get('admin/dataadmin/search','App\Http\Controllers\AdminController@searchAdmin')->name('admin.searchAdmin');
 	Route::post('admin/logout','App\Http\Controllers\Auth\AdminAuthController@postAdminLogout')->name('admin.logout');
 });
 

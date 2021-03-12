@@ -107,7 +107,7 @@
                                             value="{{ $j->id }}">
                                     </div>
                                     <button type="submit" class="btn  btn-warning waves-effect px-3">
-                                    <i class="fas fa-times" aria-hidden="true"></i></button>
+                                    <i class="fas fa-edit" aria-hidden="true"></i></button>
                             </form>
                             <form action="{{ url(route('guru.unconfirm')) }}" method="GET" style="padding-right:2px;padding-left:2px">
                                     <div class="">
@@ -115,7 +115,7 @@
                                             value="{{ $j->id }}">
                                     </div>
                                     <button type="submit" class="btn  btn-danger waves-effect px-3" onclick="return confirm('Apakah anda yakin akan menghapus data jadwal ini?')">
-                                    <i class="fas fa-times" aria-hidden="true"></i></button>
+                                    <i class="fas fa-trash" aria-hidden="true"></i></button>
                             </form>
                         </td>
                     </tr>

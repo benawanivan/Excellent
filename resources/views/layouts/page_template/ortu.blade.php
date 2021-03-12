@@ -10,7 +10,7 @@
             <a class="simple-text logo-normal">
                 <i class="now-ui-icons users_single-02" style="margin-right:12px"></i>
                 <b>{{ \Auth::user()->nama }}</b>
-                <small>Wali Siswa</small>
+                <small>Orangtua/Walisiswa</small>
             </a>
         </div>
           <div class="sidebar-wrapper" id="sidebar-wrapper">

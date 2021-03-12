@@ -44,6 +44,20 @@ class GuruController extends Controller
         
     }
 
+    public function editJadwal(Request $request){
+        $jadwal = Jadwal::find($request->id);
+        $mapel = Mapel::all();
+        $murid = Murid::all();
+        return view('guru.editJadwal',['mapel'=>$mapel,'murid'=>$murid,'jadwal'=>$jadwal],compact('jadwal'));
+
+    }
+    public function addJadwal(Request $request){
+        $mapel = Mapel::all();
+        $murid = Murid::all();
+        return view('guru.addJadwal',['mapel'=>$mapel,'murid'=>$murid,'tanggal'=>$request->tanggal],compact('mapel'));
+
+    }
+
     public function editProfile()
     {
         return view('guru.editProfile');
@@ -153,7 +167,7 @@ class GuruController extends Controller
         $jadwal = Jadwal::find($id->id);
         $jadwal->delete();
         
-        return back()->with('success','Jadwal berhasil ditolak');
+        return back()->with('success','Jadwal berhasil dihapus');
     }
     public function delete($id)
     {

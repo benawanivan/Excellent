@@ -45,10 +45,10 @@
         $tanggal
             ->startOfWeek()
             ->addDays($i)
-            ->format('Y-m-d') and ($j->konfirmasi))
+            ->format('Y-m-d') and ($j->status==1))
             <?php $cek++ ?>
                             <div class="col-xl-3 col-sm-6">
-                                <div class="card {{ $j->konfirmasi ? 'bg-primary' : 'bg-danger' }}">
+                                <div class="card {{ $j->status==1 ? 'bg-primary' : 'bg-danger' }}">
                                     <!-- <div class="card"> -->
                                     <div class="card-body">
                                         <div class="d-flex d-lg-flex d-md-block align-items-center">
@@ -69,9 +69,7 @@
 
                                                     @endif
                                                 </h6>
-                                                @if ($j->konfirmasi==0)
-                                                <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate">Belum dikonfirmasi</h6>
-                                                @endif
+                                                
                                             </div>
                                         </div>
                                     </div>

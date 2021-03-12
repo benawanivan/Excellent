@@ -98,6 +98,12 @@ body, p {
 	padding-left: 1.25rem;
 }
 
+floatingicon{
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0.5rem;
+}
+
 h1 {
 	color: #393939;
 	font: 700 3rem/3.5rem "Raleway", sans-serif;

@@ -107,9 +107,13 @@
                     @endforeach
                     <div class="col-3">
                         <div class="container align-self-center">
-                            <button class="btn btn-success" style="margin-top: 0">
-                                <i class="fas fa-plus-square fa-3x" aria-hidden="true"></i>
-                            </button>
+                            <form action="{{ route('guru.addJadwal') }}" method="get">
+                                <input class="" type="hidden" name="tanggal"
+                                    value="{{ $tanggal->startOfWeek()->addDays($i)->format('Y-m-d') }}">
+                                <button class="btn btn-success" type='submit' style="margin-top: 0">
+                                    <i class="fas fa-plus-square fa-3x" aria-hidden="true"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

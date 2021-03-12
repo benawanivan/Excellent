@@ -41,6 +41,12 @@ class Murid extends Authenticatable
     {
         return $this->hasOne(Ortu::class,'id_murid','id');
     }
+
+    public function Jadwal()
+    {
+        return $this->hasMany(Jadwal::class,'id_jadwal');
+    }
+    
     public function Laporan()
     {
         return $this->hasMany(Laporan::class,'id_murid');

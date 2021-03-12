@@ -19,6 +19,10 @@ class jadwal extends Model
     {
         return $this->belongsTo(Guru::class,'id_guru','id');
     }
+    public function Murid()
+    {
+        return $this->belongsTo(Murid::class,'id_murid','id');
+    }
     public function Soal()
     {
         return $this->belongsTo(Soal::class,'id_soal','id');

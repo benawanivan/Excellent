@@ -104,6 +104,13 @@ Route::middleware('auth:admin')->group(function(){
 
 Route::middleware('auth:guru')->group(function(){
 	Route::get('guru/jadwal','App\Http\Controllers\GuruController@viewJadwal')->name('guru.jadwal');
+	Route::get('guru/jadwal/detail','App\Http\Controllers\GuruController@viewJadwalDetail')->name('guru.jadwalDetail');
+	Route::get('guru/jadwal/konfirmasi','App\Http\Controllers\GuruController@konfirmasi')->name('guru.konfirmasi');
+	Route::get('guru/jadwal/unconfirm','App\Http\Controllers\GuruController@unconfirm')->name('guru.unconfirm');
+	Route::get('guru/jadwal/tambah','App\Http\Controllers\GuruController@addJadwal')->name('guru.addJadwal');
+	Route::post('guru/jadwal/tambah','App\Http\Controllers\JadwalController@storeGuru')->name('guru.storeJadwal');
+	Route::get('guru/jadwal/edit','App\Http\Controllers\GuruController@editJadwal')->name('guru.editjadwal');
+	Route::post('guru/jadwal/edit','App\Http\Controllers\JadwalController@edit_guru');
 	Route::get('guru/editprofile','App\Http\Controllers\GuruController@editProfile')->name('guru.profil');
 	Route::get('guru/database','App\Http\Controllers\GuruController@viewSoal')->name('guru.soal');
 	Route::get('guru/database/search','App\Http\Controllers\GuruController@searchSoal')->name('guru.searchSoal');
@@ -149,6 +156,8 @@ Route::middleware('auth:ortu')->group(function(){
 	Route::get('ortu/editprofile','App\Http\Controllers\OrtuController@editProfile')->name('ortu.profil');
 	Route::put('ortu/updateProfile','App\Http\Controllers\OrtuController@updateProfile')->name('ortu.updateProfile');
 	Route::post('ortu/logout','App\Http\Controllers\Auth\OrtuAuthController@postOrtuLogout')->name('ortu.logout');
+	Route::post('ortu/laporan/download','App\Http\Controllers\LaporanController@download')->name('ortu.downloadLaporan');
+	Route::get('ortu/laporan/{id}','App\Http\Controllers\OrtuController@embedLaporan')->name('ortu.embedlaporan');
 });
 
 

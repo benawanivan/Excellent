@@ -53,9 +53,9 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{route('murid.login')}}"><span class="item-text">Siswa</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="{{route('ortu.login')}}"><span class="item-text">Orang Tua</span></a>
+                        <a class="dropdown-item" href="{{route('ortu.login')}}"><span class="item-text">Wali Siswa</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="{{route('guru.login')}}"><span class="item-text">Guru</span></a>
+                        <a class="dropdown-item" href="{{route('guru.login')}}"><span class="item-text">Pengajar</span></a>
                     </div>
                 </li>
                 <li class="nav-item">

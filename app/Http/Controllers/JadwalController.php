@@ -56,6 +56,49 @@ class JadwalController extends Controller
         return redirect()->route('murid.jadwal')->withSuccess('Penambahan Jadwal Berhasil');
     }
 
+    public function storeGuru(Request $request)
+    {
+        $mapel = Mapel::find($request->id_mapel);
+        $this->validate($request, [
+            'soal' => 'mimes:pdf,doc,docx,pptx',
+            'materi' =>'required',
+            'tanggal' =>'required',
+            'sesi' =>'required',
+        ]);
+        if($request->id_murid==0){
+            return back()->withErrors('Siswa harus dipilih');
+        }
+        if($request->id_mapel==0){
+            return back()->withErrors('Mata Pelajaran harus dipilih');
+        }
+        if($request->sesi==0){
+            return back()->withErrors('Sesi harus dipilih');
+        }
+        $soal = new Soal;
+        $jadwal = new Jadwal();
+        if (!is_null($request->soal)) {
+            $file =  $request->file('soal');
+            $extension = $file->getClientOriginalExtension();
+            $filename = $request->materi . '_' . $mapel->nama . '_' . date("Y-m-dTHis") . "." . $extension;
+            $path = $file->storeAs('private/soal', $filename);
+            $soal->file = $filename;
+            $soal->judul = $request->materi;
+            $soal->tgl_buat = date("Ymd");
+            $soal->id_mapel = $request->id_mapel;
+            $soal->save();
+            $jadwal->id_soal = $soal->id;
+        }
+        $jadwal->tanggal = $request->tanggal;
+        $jadwal->sesi = $request->sesi;
+        $jadwal->materi = $request->materi;
+        $jadwal->id_murid = $request->id_murid;
+        $jadwal->id_mapel = $request->id_mapel;
+        $jadwal->id_guru = Auth::user()->id;
+        $jadwal->status = 1;
+        $jadwal->save();
+        return redirect()->route('guru.jadwal')->withSuccess('Penambahan Jadwal Berhasil');
+    }
+
     public function edit(Request $request)
     {
         $mapel = Mapel::find($request->id_mapel);
@@ -95,5 +138,47 @@ class JadwalController extends Controller
         $jadwal->status = 1;
         $jadwal->save();
         return redirect()->route('murid.jadwal')->withSuccess('Penambahan Jadwal Berhasil');
+    }
+
+
+    public function edit_guru(Request $request)
+    {
+        $mapel = Mapel::find($request->id_mapel);
+        $this->validate($request, [
+            'soal' => 'mimes:pdf,doc,docx,pptx',
+            'materi' =>'required',
+            'sesi' =>'required',
+        ]);
+        if($request->id_murid==0){
+            return back()->withErrors('Siswa harus dipilih');
+        }
+        if($request->id_mapel==0){
+            return back()->withErrors('Mata Pelajaran harus dipilih');
+        }
+        if($request->sesi==0){
+            return back()->withErrors('Sesi harus dipilih');
+        }
+        $jadwal = Jadwal::find($request->id);
+        $soal = new Soal;
+        if (!is_null($request->soal)) {
+            $file =  $request->file('soal');
+            $extension = $file->getClientOriginalExtension();
+            $filename = $request->materi . '_' . $mapel->nama . '_' . date("Y-m-dTHis") . "." . $extension;
+            $path = $file->storeAs('private/soal', $filename);
+            $soal->file = $filename;
+            $soal->judul = $request->materi;
+            $soal->tgl_buat = date("Ymd");
+            $soal->id_mapel = $request->id_mapel;
+            $soal->save();
+            $jadwal->id_soal = $soal->id;
+        }
+        $jadwal->sesi = $request->sesi;
+        $jadwal->materi = $request->materi;
+        $jadwal->id_murid = $request->id_murid;
+        $jadwal->id_mapel = $request->id_mapel;
+        $jadwal->id_guru = Auth::user()->id;
+        $jadwal->status = 1;
+        $jadwal->save();
+        return redirect()->route('guru.jadwal')->withSuccess('Jadwal Berhasil Diubah');
     }
 }

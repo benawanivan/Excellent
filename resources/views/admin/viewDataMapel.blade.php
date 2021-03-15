@@ -56,8 +56,8 @@
                         <td class="text-center">{{$m->nama}}</td>
                         <td class="text-center">{{$m->tingkat}}</td>
                         <td class="text-center">
-                            <div class="btn-toolbar justify-content-center" role="toolbar">
-                                <form action="{{ url(route("admin.editMapel")) }}" method="GET">
+                            
+                                <form action="{{ url(route("admin.editMapel")) }}" method="GET" class = 'd-inline'>
                                     <div class="">
                                         <input class="" type="hidden" name="id"
                                             value="{{ $m->id }}">
@@ -71,17 +71,13 @@
                                     {{ csrf_field() }}
                                     
                                 </form> --}}
-                                {{ Form::open(['action' => ['App\\Http\\Controllers\\MapelController@delete', $m->id], 'method' => 'DELETE']) }}
+                                {{ Form::open(['action' => ['App\\Http\\Controllers\\MapelController@delete', $m->id], 'method' => 'DELETE','class'=>'d-inline']) }}
                                 {{-- {{ Form::submit('Delete', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus siswa?')"]) }} --}}
-                                <div class="form-group">
-                                    <button type="submit" class="btn  btn-outline-danger waves-effect px-3" onclick="return confirm('Apakah anda yakin akan menghapus mapel?')"><i
+                                    <button type="submit" class="btn  btn-danger waves-effect px-3" onclick="return confirm('Apakah anda yakin akan menghapus mapel?')"><i
                                             class="fas fa-trash-alt" aria-hidden="true"
                                             ></i></button>
-                                </div>
                                 {{ Form::close() }}
                                 @endif
-                                
-                            </div>
                         </td>
 
                     </tr>
@@ -89,4 +85,5 @@
             </tbody>
         </table>
     </div>
+    {{ $mapel->links() }}
 @endsection

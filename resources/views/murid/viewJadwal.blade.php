@@ -104,6 +104,19 @@
                                                             Jadwal Belum Diisi
                                                         </h2>
                                                     </div>
+                                                    <h6 class="text-white font-weight-normal mb-0 w-100 text-truncate text-center">
+                                                        @if ($j->sesi == 1)
+                                                            13.45-15.15
+                                                        @elseif($j->sesi==2)
+                                                            15.30-17.00
+                                                        @elseif($j->sesi==3)
+                                                            17.15-18.45
+                                                        @elseif($j->sesi==4)
+                                                            19.15-20.45
+
+                                                        @endif
+                                                    </h6>
+
                                                     {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@editJadwal'], 'method' => 'get']) }}
                                                     <input class="form-control" type="hidden" name="id" value="{{ $j->id}}">
                                                     <button

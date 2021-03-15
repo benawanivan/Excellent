@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Mapel;
+use App\Models\Admin;
 use App\Models\Soal;
 use App\Models\Murid;
 use App\Models\Guru;
 use App\Models\Laporan;
 use App\Models\Cabang;
+use App\Models\JadwalDefault;
 use Auth;
 use Hash;
 use Carbon\Carbon;
@@ -45,7 +47,7 @@ class AdminController extends Controller
     public function viewDataMurid()
     {
         $keyword = NULL;
-        $murid = Murid::all();
+        $murid = Murid::paginate(20);
         return view('admin.viewDataMurid',['murid'=>$murid,'keyword'=>$keyword],compact('murid'));
     }
     public function SearchMurid(Request $request)
@@ -75,7 +77,7 @@ class AdminController extends Controller
     public function viewDataGuru()
     {
         $keyword = NULL;
-        $guru = Guru::all();
+        $guru = Guru::paginate(20);
         return view('admin.viewDataGuru',['cabang'=>$guru,'keyword'=>$keyword],compact('guru'));
     }
     public function SearchGuru(Request $request)
@@ -102,7 +104,7 @@ class AdminController extends Controller
     public function viewDataCabang()
     {
         $keyword = NULL;
-        $cabang = Cabang::all();
+        $cabang = Cabang::paginate(20);
         return view('admin.viewDataCabang',['cabang'=>$cabang,'keyword'=>$keyword],compact('cabang'));
     }
     public function SearchCabang(Request $request)
@@ -122,7 +124,7 @@ class AdminController extends Controller
     public function viewDataMapel()
     {
         $keyword = NULL;
-        $mapel = Mapel::all();
+        $mapel = Mapel::paginate(20);
         return view('admin.viewDataMapel',['mapel'=>$mapel,'keyword'=>$keyword],compact('mapel'));
     }
     public function SearchMapel(Request $request)
@@ -157,9 +159,83 @@ class AdminController extends Controller
         ->leftjoinSub($laporan, 'laporan', function ($join) {
             $join->on('murid.id', '=', 'laporan.id_murid');
         })
-        ->get();
+        ->paginate(20);
         return view('admin.viewLaporan',['murid'=>$murid,'keyword'=>$keyword,'tanggal'=>$tanggal],compact('murid'));
     }
 
+    public function viewAturJadwal(Request $request){
+        $murid = Murid::find($request->id);
+        $jadwal = JadwalDefault::where('id_murid','=',$request->id)
+        ->orderBy('hari')
+        ->orderBy('sesi')
+        ->get();
+        return view('admin.viewAturJadwal',['murid'=>$murid,'jadwal'=>$jadwal],compact('murid'));
+    }
+    public function viewDataAdmin()
+    {
+        $keyword = NULL;
+        $admin = Admin::where('master','=',0)->paginate(20);
+        return view('admin.viewDataAdmin',['admin'=>$admin,'keyword'=>$keyword],compact('admin'));
+    }
+    public function SearchAdmin(Request $request)
+    {
+        $cabang = Cabang::where('nama','like',"%".$request->keyword."%")->get()->first();
+        $admin = Admin::where('nama','like',"%".$request->keyword."%")
+        ->orwhere('username','like',"%".$request->keyword."%")
+        ->orwhere('id_cabang','=',is_null($cabang)?"-999":$cabang->id)
+        ->paginate(20);
+        return view('admin.viewDataAdmin',['admin'=>$admin,'keyword'=>$request->keyword],compact('admin'));
+    }
+    public function addAdmin(){
+        $cabang = Cabang::all();
+        return view('admin.addAdmin')->with('cabang',$cabang);
+    }
+    public function editAdmin(Request $request){
+        $admin = admin::find($request->id);
+        $cabang = Cabang::all();
+        return view('admin.editAdmin',['admin'=>$admin,'cabang'=>$cabang],compact('admin'));
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            'password' => 'required|min:8',
+            'nama' => 'required',
+            'username' => 'required|unique:admin',
+            'id_cabang' => 'required',
+        ]);
+        $admin = new Admin();
+        $admin->nama = $request->nama;
+        $admin->username = $request->username;
+        $admin->id_cabang = $request->id_cabang;
+        $admin->password = Hash::make($request->password);
+        $admin->master = 0;
+        $admin->save();
+        return back()->with('success',"Data admin berhasil disimpan");
+    }
+    public function edit(Request $request)
+    {
+        $this->validate($request,[
+            'password' => 'required|min:8',
+            'nama' => 'required',
+            'username' => 'required|unique:admin'.($request->id ? ",id,$request->id" : ''),
+            'id_cabang' => 'required',
+        ]);
+        $admin = Admin::find($request->id);
+        $admin->nama = $request->nama;
+        $admin->username = $request->username;
+        $admin->id_cabang = $request->id_cabang;
+        $admin->password = Hash::make($request->password);
+        $admin->master = 0;
+        $admin->save();
+        return back()->with('success',"Data admin berhasil diubah");
+    }
+    public function delete($id)
+    {
+        $admin = Admin::find($id);
+        $admin->delete();
+        
+        return back()->with('success','Admin berhasil dihapus');
+    }
 }
 

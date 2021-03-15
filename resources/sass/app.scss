@@ -10,8 +10,14 @@
 $font-primary: 'Poppins',Arial, sans-serif;
 $primary: #f96332;
 
+th{
+  font-size:1rem !important;
+}
 div.scrollmenu {
   // background-color: #333;
+  @include media-breakpoint-up(xl){
+    width: 65rem;
+  }
   overflow: auto;
   white-space: nowrap;
 }

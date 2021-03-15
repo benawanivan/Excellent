@@ -10,11 +10,16 @@ class Admin extends Authenticatable
 {
     use HasFactory, Notifiable;
     protected $table = "admin";
+    public $timestamps = false;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    public function Cabang()
+    {
+        return $this->belongsTo(Cabang::class,'id_cabang','id');
+    }
     protected $fillable = [
         'name',
         'username',

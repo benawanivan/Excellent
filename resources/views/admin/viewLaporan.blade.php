@@ -13,21 +13,24 @@
     <div class="container ">
         <div class="row">
             <div class="pull-left" style="padding-left: 15px;">
-                <form action="{{ route('admin.laporan') }}" method="get">
+                <form action="{{ route('admin.laporan') }}" method="post">
+                    @csrf
                     <input class="form-control" type="hidden" name="tanggal"
                         value="{{ $tanggal->startOfWeek()->subDays(7) }}">
                     <button class="btn btn-primary"><i class="fas fa-chevron-left"></i></button>
                 </form>
             </div>
             <div class="pull-right" style="padding-right: 15px;">
-                <form action="{{ route('admin.laporan') }}" method="get">
+                <form action="{{ route('admin.laporan') }}" method="post">
+                    @csrf
                     <input class="form-control" type="hidden" name="tanggal"
                         value="{{ $tanggal->startOfWeek()->addDays(14) }}">
                     <button class="btn btn-primary"><i class="fas fa-chevron-right"></i></button>
                 </form>
             </div>
             <div class="pull-right" style="padding-right: 15px;">
-                <form action="{{ route('admin.laporan') }}" method="get">
+                <form action="{{ route('admin.laporan') }}" method="post">
+                    @csrf
                     <input class="form-control" type="hidden" name="tanggal" value="{{ \Carbon\Carbon::now() }}">
                     <button class="btn btn-primary">Today</i></button>
                 </form>
@@ -53,11 +56,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 0; ?>
+                    <?php $i = ($murid->currentpage()-1)* $murid->perpage() + 1;?>
                     @foreach ($murid as $m)
                         <tr class="{{ is_null($m->id) ? 'table-danger' : '' }}">
-                            <?php $i = $i + 1; ?>
+                            
                             <th class="text-center"><?php echo $i; ?></th>
+                            <?php $i = $i + 1; ?>
                             <td class="text-center">{{ $m->nama }}</td>
                             <td class="text-center">{{ $m->username }}</td>
                             <td class="text-center">{{ $m->asal_sekolah }}</td>
@@ -69,9 +73,8 @@
                                 <td class="text-center">Non Aktif</td>
                             @endif
                             <td class="text-center">
-                                <div class="btn-toolbar justify-content-center" role="toolbar">
                                     @if (!is_null($m->id))
-                                        <form action="{{ url(route('admin.downloadLaporan')) }}" method="post">
+                                        <form action="{{ url(route('admin.downloadLaporan')) }}" method="post" class="d-inline">
                                             @csrf
                                             <div class="">
                                                 <input class="" type="hidden" name="filename" value="{{$m->nama}}_{{$tanggal->format('Y-m-d')}}">
@@ -80,7 +83,7 @@
                                                     class="fas fa-download" aria-hidden="true" name='filename'></i></button>
                                         </form>
                                     @endif
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    <button type="button" class="btn btn-primary d-inline" data-toggle="modal"
                                         data-target="#laporanModal{{ $m->id_murid }}">Upload</button>
                                     {{-- <form action="{{ url(route('admin.uploadLaporan')) }}" method="post">
                                         <div class="">
@@ -89,7 +92,7 @@
                                         <button type="submit" class="btn  btn-primary waves-effect ">Upload</i></button>
                                     </form> --}}
 
-                                </div>
+                             
                             </td>
                         </tr>
                     @endforeach
@@ -97,6 +100,7 @@
             </table>
         </div>
     </div>
+    {{$murid->appends(request()->input())->links()}}
     @foreach ($murid as $m)
         <div class="modal fade" id="laporanModal{{ $m->id_murid }}" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalLabel" aria-hidden="true">

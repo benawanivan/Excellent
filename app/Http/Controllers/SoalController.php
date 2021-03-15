@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Mapel;
 use App\Models\Soal;
+use App\Models\Jadwal;
 use Validator;
 use File;
 use Illuminate\Support\Facades\Storage;
@@ -61,7 +62,11 @@ class SoalController extends Controller
     }
     public function deleteSoal(Request $request){
         $soal = Soal::find($request->id);
-                
+        $jadwal = Jadwal::where('id_soal','=',$soal->id)->first();
+        if(!is_null($jadwal)){
+            $jadwal->id_soal = NULL;
+            $jadwal->save();
+        }
         Storage::delete('private/soal/'.$soal->file);
         $soal->delete();
         
@@ -70,7 +75,16 @@ class SoalController extends Controller
     public function deleteAllSoal(Request $request){
         $soal = Soal::all();
         foreach ($soal as $s) {
+            $jadwal = Jadwal::where('id_soal','=',$s->id)->first();
+            if(!is_null($jadwal)){
+                $jadwal->id_soal = NULL;
+                $jadwal->save();
+            }
+
+        }
+        foreach ($soal as $s) {
             $s->delete();
+
         }
         Storage::deleteDirectory('private/soal');
         return back()->with('success','Semua soal berhasil dihapus');

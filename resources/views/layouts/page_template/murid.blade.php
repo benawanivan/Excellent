@@ -47,7 +47,7 @@
     </div>
     <!-- Page Content  -->
     <div id="content">
-        <nav class="navbar"style="position:fixed;z-index: 100;">
+        <nav class="navbar" style="position:fixed;z-index: 100;">
             <div class="container-fluid">
                 <div class="custom-menu-sidebar">
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">

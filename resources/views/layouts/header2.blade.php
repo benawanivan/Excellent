@@ -11,6 +11,7 @@
 	<!-- Favicon  -->
     <link rel="icon" href="images/logo_favicon.png">
 </head>
+
 <body data-spy="scroll" data-target=".fixed-top">
     
     <!-- Preloader -->

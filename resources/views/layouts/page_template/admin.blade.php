@@ -74,9 +74,10 @@
                         <span class="sr-only">Toggle Menu</span>
                     </button>
                 </div>
-             {{-- <div class="navbar-wrapper">
+
+             <div class="navbar-wrapper">
                  <a class="navbar-brand" href="#pablo"><p>Selamat Datang {{ \Auth::user()->nama }}</p> </a>
-                </div> --}}
+                </div>
                 <a href="{{ route('admin.logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                     <p>Logout</p>

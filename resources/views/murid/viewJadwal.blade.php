@@ -85,13 +85,25 @@
                                                 {{ Form::open(['action' => ['App\\Http\\Controllers\\MuridController@viewJadwalDetail'], 'method' => 'POST']) }}
                                                     <input class="form-control" type="hidden" name="id" value="{{ $j->id}}">
                                                     <button
-                                                        class="btn {{ $j->status == 1 ? 'btn-primary' : 'bg-danger' }} stretched-link"
+                                                        class="btn {{ $j->status == 1 ? 'btn-primary' : 'bg-danger' }}"
                                                         type="submit">
                                                         <span
                                                             class="text-white font-weight-normal mb-0 w-100 text-truncate">Detail</span>
                                                         <i data-feather="chevron-right" class="feather-icon text-white"></i>
                                                     </button>
                                                     {{ Form::close() }}
+                                                    @if($j->status == 1)
+                                                    <a target="_blank" href={{url($j->guru->link_meeting)}}>
+                                                    <input class="form-control" type="hidden" name="id" value="{{ $j->id}}">
+                                                    <button
+                                                        class="btn {{ $j->status == 1 ? 'btn-primary' : 'bg-danger' }} "
+                                                        type="submit">
+                                                        <span
+                                                            class="text-white font-weight-normal mb-0 w-100 text-truncate">Join</span>
+                                                        <i data-feather="chevron-right" class="feather-icon text-white"></i>
+                                                    </button>
+                                                    @endif
+                                                </a>
                                             </div>
                                         </div>
                                     @else

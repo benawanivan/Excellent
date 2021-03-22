@@ -43,7 +43,7 @@
                         <table class="card-footer d-flex align-self-center">
                             <th>
                             
-
+                                <a class="btn btn-primary" href="{{ $row->link }}" role="button" style="height:36.67px">Link</a>
                             {{-- <button type="button"
                                 class="btn  btn-elegant waves-effect px-3"><i class="fas fa-eye"
                                     aria-hidden="true"></i></button> --}}

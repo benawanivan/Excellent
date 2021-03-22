@@ -19,7 +19,7 @@ class JadwalController extends Controller
         $this->validate($request, [
             'soal' => 'mimes:pdf,doc,docx,pptx',
             'materi' =>'required',
-            'tanggal' =>'required',
+            'tanggal' =>'required|date',
             'sesi' =>'required',
         ]);
         if($request->id_guru==0){
@@ -30,6 +30,13 @@ class JadwalController extends Controller
         }
         if($request->sesi==0){
             return back()->withErrors('Sesi harus dipilih');
+        }
+        $jadwal_ = Jadwal::where('id_murid',Auth::user()->id)
+        ->where('sesi','=',$request->sesi)
+        ->where('tanggal','=',$request->tanggal)
+        ->get();
+        if(!is_null($jadwal_->first())){
+            return back()->withErrors('Terdapat jadwal pada tanggal dan sesi yang sama');
         }
         $soal = new Soal;
         $jadwal = new Jadwal();
@@ -62,7 +69,7 @@ class JadwalController extends Controller
         $this->validate($request, [
             'soal' => 'mimes:pdf,doc,docx,pptx',
             'materi' =>'required',
-            'tanggal' =>'required',
+            'tanggal' =>'required|date',
             'sesi' =>'required',
         ]);
         if($request->id_murid==0){
@@ -104,17 +111,14 @@ class JadwalController extends Controller
         $mapel = Mapel::find($request->id_mapel);
         $this->validate($request, [
             'soal' => 'mimes:pdf,doc,docx,pptx',
-            'materi' =>'required',
-            'sesi' =>'required',
+            'materi' =>'required|date',
+            
         ]);
         if($request->id_guru==0){
             return back()->withErrors('Pengajar harus dipilih');
         }
         if($request->id_mapel==0){
             return back()->withErrors('Mata Pelajaran harus dipilih');
-        }
-        if($request->sesi==0){
-            return back()->withErrors('Sesi harus dipilih');
         }
         $jadwal = Jadwal::find($request->id);
         $soal = new Soal;
@@ -130,7 +134,6 @@ class JadwalController extends Controller
             $soal->save();
             $jadwal->id_soal = $soal->id;
         }
-        $jadwal->sesi = $request->sesi;
         $jadwal->materi = $request->materi;
         $jadwal->id_guru = $request->id_guru;
         $jadwal->id_mapel = $request->id_mapel;

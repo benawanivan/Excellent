@@ -89,12 +89,35 @@ class MuridController extends Controller
     public function viewTryout()
     {
         $keyword = NULL;
-        $tryout = Tryout::paginate(12);
+        if(Auth::user()->kelas==6){
+            $tryout = Tryout::where('kelas','=','SD')->paginate(12);
+        }elseif(Auth::user()->kelas==9){
+            $tryout = Tryout::where('kelas','=','SMP')->paginate(12);
+        }elseif(Auth::user()->kelas==12){
+            $tryout = Tryout::where('kelas','=','SMA')->paginate(12);
+        }else{
+            return 'error';
+        }
+        
         return view('murid.viewTryout',['tryout'=>$tryout,'keyword'=>$keyword],compact('tryout'));
     }
 
     public function searchTryout(Request $request){
-        $tryout = Tryout::where('judul','like',"%".$request->keyword."%")->paginate(12);
+        if(Auth::user()->kelas==6){
+            $tryout = Tryout::where('kelas','=','SD')
+            ->where('judul','like',"%".$request->keyword."%")
+            ->paginate(12);
+        }elseif(Auth::user()->kelas==9){
+            $tryout = Tryout::where('kelas','=','SMP')
+            ->where('judul','like',"%".$request->keyword."%")
+            ->paginate(12);
+        }elseif(Auth::user()->kelas==12){
+            $tryout = Tryout::where('kelas','=','SMA')
+            ->where('judul','like',"%".$request->keyword."%")
+            ->paginate(12);
+        }else{
+            return 'error';
+        }
         return view('murid.viewTryout',['tryout'=>$tryout,'keyword'=>$request->keyword],compact('tryout'));
     }
 

@@ -135,7 +135,7 @@
                                                         class="btn btn-secondary stretched-link"
                                                         type="submit">
                                                         <span
-                                                            class="text-white font-weight-normal mb-0 w-100 text-truncate">(Klik untuk mengisi jadwal)</span>
+                                                            class="text-white font-weight-normal mb-0 w-100 text-truncate" style="white-space: normal;">(Klik untuk mengisi jadwal)</span>
                                                         <i data-feather="chevron-right" class="feather-icon text-white"></i>
                                                     </button>
                                                     {{ Form::close() }}

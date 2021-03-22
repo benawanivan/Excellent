@@ -10941,6 +10941,7 @@ div.scrollmenu a {
   padding: 0;
   margin-bottom: 40px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100% !important;
 }
 
 .navbar a p {
@@ -10963,6 +10964,7 @@ div.scrollmenu a {
 
 #sidebar2.active {
   margin-left: -260px;
+  position: relative;
 }
 
 #sidebar2.active .custom-menu-sidebar {
@@ -10970,11 +10972,13 @@ div.scrollmenu a {
 }
 
 #sidebar2 h1 {
+  position: fixed;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 #sidebar2 h1 .logo {
+  position: fixed;
   color: #fff;
 }
 
@@ -10982,7 +10986,12 @@ div.scrollmenu a {
   padding: 0;
 }
 
+#sidebar2 ul {
+  position: fixed !important;
+}
+
 #sidebar2 ul li {
+  width: 260px;
   font-size: 16px;
 }
 
@@ -11021,6 +11030,20 @@ div.scrollmenu a {
   #sidebar2 .custom-menu-sidebar {
     margin-right: -50px !important;
     top: 10px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .btnLogout {
+    position: fixed;
+    right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logoNavbar {
+    position: fixed;
+    right: 70px;
   }
 }
 
@@ -11070,6 +11093,7 @@ a[data-toggle=collapse] {
 }
 
 #content {
+  position: relative;
   width: 100%;
   padding: 0;
   min-height: 100vh;

@@ -53,7 +53,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{route('murid.login')}}"><span class="item-text">Siswa</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="{{route('ortu.login')}}"><span class="item-text">Wali Siswa</span></a>
+                        <a class="dropdown-item" href="{{route('ortu.login')}}"><span class="item-text">Orangtua/Wali</span></a>
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="{{route('guru.login')}}"><span class="item-text">Pengajar</span></a>
                     </div>
@@ -62,7 +62,7 @@
                     <a class="nav-link page-scroll" href="https://campsite.bio/daftar.excellent">Daftar Sekarang</a>
                 </li>
             </ul>
-            <a class="btn-solid-reg" href="http://api.whatsapp.com/send?phone=6283822837999&text=Halo%20saya%20ingin%20bertanya%20tentang%20program%20belajar%20di%20EXCELLENT"><i class="fab fa-whatsapp" style="line-height:0;padding-right:2px"></i> 083822837999</a>
+            <a class="btn-solid-reg" href="https://wa.link/tz7cd4"><i class="fab fa-whatsapp" style="line-height:0;padding-right:2px"></i> 083822837999</a>
         </div>
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->

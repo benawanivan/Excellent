@@ -1,4 +1,4 @@
-@extends('layouts.app', [
+@extends('layouts.login', [
     'namePage' => 'Login Murid',
     'class' => 'sidebar-mini',
     'activePage' => 'Login Murid',
@@ -6,6 +6,9 @@
 
 @section('content')
 <div class="container">
+    <div class="row justify-content-center">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent" style="width:200px;padding-bottom:1rem"> 
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -31,18 +34,6 @@
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    {{-- <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label> --}}
-                                </div>
-                            </div>
-                        </div>
                         @include('alerts.errors')
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
@@ -59,7 +50,7 @@
                         </div>
                     </form>
                     <div class="form-group row" style="justify-content: center;">
-                        <p>Belum memiliki akun? <a href="http://api.whatsapp.com/send?phone=6283822837999&text=Halo%20saya%20ingin%20bertanya%20tentang%20program%20belajar%20di%20EXCELLENT">Hubungi Kami<a></p>
+                        <p>Belum memiliki akun? <a href="https://wa.link/es0oe7">Hubungi Kami<a></p>
                     </div>
                 </div>
             </div>

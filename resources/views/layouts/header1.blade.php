@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="Bimbingan Belajar Online & Offline (Matematika, Fisika, Kimia) untuk SD, SMP, SMA (Nas, Nas+, Inter)
+	Bimbel Terbaik No. 1 di Indonesia (Semi-Privat, Guru Profesional, Belajar Sesuai Kebutuhan)">
+    <meta name="author" content="excellent-bimbel">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->

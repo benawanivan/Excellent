@@ -48,6 +48,9 @@ div.scrollmenu a:hover {
     padding:0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    
+      width:100% !important;
+    
 }
 
 .navbar a p{
@@ -72,14 +75,17 @@ div.scrollmenu a:hover {
 //   }
   &.active{
   	margin-left: -260px;
+    position: relative;
   	.custom-menu-sidebar{
         margin-right: -50px;
 	  }
   }
   h1{
+    position: fixed;
   	margin-bottom: 20px;
   	font-weight: 700;
   	.logo{
+      position: fixed;
   		color: $white;
   	}
   }
@@ -87,7 +93,9 @@ div.scrollmenu a:hover {
   	padding: 0;
   }
   ul{
+    position: fixed !important;
     li{
+      width: 260px;
     	font-size: 16px;
     	>ul{
     		margin-left: 10px;
@@ -126,6 +134,23 @@ div.scrollmenu a:hover {
   
 }
 
+.btnLogout{
+  @include media-breakpoint-up(md){
+    position: fixed;
+  // top: -10px;;
+   right:20px;
+  }
+  
+}
+.logoNavbar{
+  @include media-breakpoint-up(md){
+    position: fixed;
+  // top: -10px;;
+   right:70px;
+  }
+  
+}
+
 .custom-menu-sidebar{
     // display: inline-block;
     // position: absolute;
@@ -160,6 +185,7 @@ a[data-toggle="collapse"] {
 }
 
 #sidebarCollapse{
+  
 	span{
 		@include media-breakpoint-down(sm){
 	    display: none;
@@ -168,6 +194,7 @@ a[data-toggle="collapse"] {
 }
 
 #content {
+  position: relative;
   width: 100%;
   padding: 0;
   min-height: 100vh;

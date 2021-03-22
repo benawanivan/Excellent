@@ -14,8 +14,8 @@ class JadwalDefaultController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'tgl_mulai' =>'required',
-            'tgl_akhir' =>'required',
+            'tgl_mulai' =>'required|date',
+            'tgl_akhir' =>'required|date',
         ]);
         if($request->sesi==0){
             return back()->withErrors('Sesi harus dipilih');

@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent" style="width:200px;padding-bottom:1rem"> 
+        <img src="{{ asset('images/logo.png') }}" alt="Logo Excellent" style="width:23%;padding-bottom:1rem">  
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8">

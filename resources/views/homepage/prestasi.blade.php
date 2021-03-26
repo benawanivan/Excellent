@@ -48,6 +48,23 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-container">
+                            <h4 style="text-align:center;">SNMPTN 2021</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-5" style="text-align:center">
+                                <img class="img-fluid" src="images/snm1.jpeg" style="width:50%;padding-top:2rem;padding-bottom:2rem;">
+                            </div>
+                            <div class="col-md-5" style="text-align:center">
+                                <img class="img-fluid" src="images/snm2.jpeg" style="width:50%;padding-top:2rem;padding-bottom:2rem;">
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
                             <h4 style="text-align:center;">Nilai Raport Juni 2020:</h4>
                         </div>
                         <img class="img-fluid" src="images/siswaberprestasi.png">

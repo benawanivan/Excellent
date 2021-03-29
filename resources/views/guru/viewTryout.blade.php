@@ -52,7 +52,7 @@
                             <th>
                             <td>
                                 <div class="row">
-                                    <a class="btn btn-primary" href="{{ $row->link }}" role="button" style="height:36.67px">Link</a>
+                                    <a class="btn btn-primary" href="{{ $row->link }}" target="_blank" role="button" style="height:36.67px">Link</a>
                                     {{ Form::open(['action' => ['App\\Http\\Controllers\\TryoutController@delete', $row->id], 'method' => 'DELETE']) }}
                                     {{-- {{ Form::submit('Delete', ['class' => 'btn btn-danger','onclick'=>"return confirm('Apakah anda yakin akan menghapus data Tryout ini?')"]) }} --}}
                                     <div class="form-group">

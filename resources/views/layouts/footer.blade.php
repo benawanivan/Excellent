@@ -47,7 +47,7 @@
                         <div class="row" style="place-content: center">
                             <a class="nav-link page-scroll" href="https://campsite.bio/daftar.excellent"  style="color: #fff;font-size:120%;margin-bottom:10px"><b>Daftar Sekarang</b></a>
                         </div>
-                        <a class="btn-solid-white" href="http://api.whatsapp.com/send?phone=6283822837999&amp;text=Halo%20saya%20ingin%20bertanya%20tentang%20program%20belajar%20di%20EXCELLENT" style="padding: 2rem 2.5rem 2rem 2.5rem;font-size: 120%;place-content: center"><i class="fab fa-whatsapp" style="line-height:0; font-size:130%; padding-right:5px"></i> 083822837999</a>
+                        <a class="btn-solid-white" href="https://wa.link/tz7cd4" style="padding: 2rem 2.5rem 2rem 2.5rem;font-size: 120%;place-content: center"><i class="fab fa-whatsapp" style="line-height:0; font-size:130%; padding-right:5px"></i> 083822837999</a>
                     </div> 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

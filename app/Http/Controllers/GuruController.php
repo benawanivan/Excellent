@@ -140,7 +140,7 @@ class GuruController extends Controller
     public function edit(Request $request)
     {
         $this->validate($request,[
-            'password' => 'required|min:8',
+            // 'password' => 'min:8',
             'nama' => 'required',
             'link_meeting' => 'required',
             'username' => 'required|unique:guru'.($request->id ? ",id,$request->id" : ''),
@@ -151,7 +151,9 @@ class GuruController extends Controller
         $guru->username = $request->username;
         $guru->link_meeting = $request->link_meeting;
         $guru->id_cabang = $request->id_cabang;
-        $guru->password = Hash::make($request->password);
+        if(($request->password)!=''){
+            $guru->password = Hash::make($request->password);
+        }
         $guru->save();
         return back()->with('success',"Data guru berhasil diubah");
     }

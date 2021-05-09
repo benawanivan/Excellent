@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Mapel;
+use App\Models\Jadwal;
+use App\Models\Soal;
 
 class MapelController extends Controller
 {
@@ -34,6 +36,10 @@ class MapelController extends Controller
     public function delete($id)
     {
         $mapel = Mapel::find($id);
+        $jadwal = Jadwal::where('id_mapel','=',$id);
+        $jadwal->delete();
+        $soal = Soal::where('id_mapel','=',$id);
+        $soal->delete();
         $mapel->delete();
         
         return back()->with('success','Mapel berhasil dihapus');

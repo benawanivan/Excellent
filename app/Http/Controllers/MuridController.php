@@ -166,7 +166,7 @@ class MuridController extends Controller
     public function edit(Request $request)
     {
         $this->validate($request,[
-            'password' => 'required|min:8',
+            // 'password' => 'min:8|nullable',
             'nama' => 'required',
             'asal_sekolah' => 'required',
             'kelas' => 'required',
@@ -174,7 +174,7 @@ class MuridController extends Controller
             'id_cabang' => 'required',
             'status' =>'required',
             'no_telp' => 'required',
-            'password_ortu' => 'required|min:8',
+            // 'password_ortu' => 'min:8!nullable',
             'nama_ortu' => 'required',
             'username_ortu' => 'required|unique:ortu'.($request->id ? ",id,$request->id" : ''),
             'no_telp_ortu' => 'required',
@@ -188,13 +188,19 @@ class MuridController extends Controller
         $murid->asal_sekolah = $request->asal_sekolah;
         $murid->status = $request->status;
         $murid->no_telp = $request->no_telp;
-        $murid->password = Hash::make($request->password);
+        if(($request->password) != ''){
+            $murid->password = Hash::make($request->password);
+        }
         $murid->save();
         $ortu = $murid->ortu;
         $ortu->nama = $request->nama_ortu;
         $ortu->username = $request->username_ortu;
         $ortu->no_telp = $request->no_telp_ortu;
-        $ortu->password = Hash::make($request->password_ortu);
+        if(($request->password_ortu) != ''){
+            $ortu->password = Hash::make($request->password_ortu);
+        }else{
+            $ortu->password = $ortu->password;
+        }
         $ortu->id_murid;
         $ortu->save();
         return back()->with('success',"Data siswa berhasil diubah");

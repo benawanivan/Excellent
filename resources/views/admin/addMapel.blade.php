@@ -14,7 +14,7 @@
         'class'=>'form-upload']) }}
         @csrf
         <div class="form-group">
-            {{ Form::label('nama', 'Nama Cabang: ', ['class' => 'form-label']) }}
+            {{ Form::label('nama', 'Nama Mapel: ', ['class' => 'form-label']) }}
             {{ Form::text('nama', null, ['class' => 'form-control']) }}
         </div>
         <div class="form-group">

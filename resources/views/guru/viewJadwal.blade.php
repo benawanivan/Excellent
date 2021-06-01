@@ -6,6 +6,7 @@
 
 @section('content')
     <div class="container-fluid">
+    <br>
         @include('alerts.errors')
         @include('alerts.success')
         <h3 class="title title-dashboard">Jadwal Bimbingan Belajar</h3>

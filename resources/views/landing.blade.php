@@ -183,7 +183,7 @@
 
 
     <!-- Testimoni -->
-   <div id="testimoni" class="slider-2" style="padding-top:2rem;padding-bottom:2rem">
+    <div id="testimoni" class="slider-2" style="padding-top:2rem;padding-bottom:2rem">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

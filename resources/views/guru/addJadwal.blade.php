@@ -60,5 +60,6 @@
         {{ Form::submit('Tambah', ['class' => 'btn btn-primary']) }}
         <a href="{{route('guru.jadwal')}}" class="btn btn-danger">Kembali</a>
         {{ Form::close() }}
-    </div></div>
+    </div>
+</div>
 @endsection

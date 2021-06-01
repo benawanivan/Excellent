@@ -175,6 +175,7 @@ class JadwalController extends Controller
             $soal->save();
             $jadwal->id_soal = $soal->id;
         }
+        $jadwal->tanggal = $request->tanggal;
         $jadwal->sesi = $request->sesi;
         $jadwal->materi = $request->materi;
         $jadwal->id_murid = $request->id_murid;

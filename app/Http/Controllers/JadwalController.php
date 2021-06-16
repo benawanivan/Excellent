@@ -111,7 +111,7 @@ class JadwalController extends Controller
         $mapel = Mapel::find($request->id_mapel);
         $this->validate($request, [
             'soal' => 'mimes:pdf,doc,docx,pptx',
-            'materi' =>'required|date',
+            'materi' =>'required',
             
         ]);
         if($request->id_guru==0){
